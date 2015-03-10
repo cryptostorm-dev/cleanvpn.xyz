@@ -1,0 +1,91 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 12079960858262698075 (0xa7a4a465f15ef85b)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CA, ST=QC, L=Montreal, O=Katana Holdings Limite /  cryptostorm_darknet, OU=Tech Ops, CN=cryptostorm_is/emailAddress=certadmin@cryptostorm.is
+        Validity
+            Not Before: Apr 25 17:10:15 2014 GMT
+            Not After : Dec 22 17:10:15 2017 GMT
+        Subject: C=CA, ST=QC, L=Montreal, O=Katana Holdings Limite /  cryptostorm_darknet, OU=Tech Ops, CN=cryptostorm_is/emailAddress=certadmin@cryptostorm.is
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c9:68:e4:98:21:7f:ec:9b:ee:3f:3a:40:a0:c8:
+                    03:d8:07:f5:4f:8c:3a:3d:60:17:3e:cf:39:ca:1b:
+                    17:75:17:c7:c0:91:ea:9c:b8:fa:46:34:2c:4c:04:
+                    b3:ae:98:bb:01:77:12:dd:47:6b:29:a4:af:1c:bb:
+                    d9:18:c7:a8:3e:7c:15:10:b5:28:68:3a:3f:38:43:
+                    af:a7:e8:5e:03:a9:b8:ec:1e:52:f0:53:2d:2e:96:
+                    47:90:5a:4d:6f:bc:a2:a4:a4:15:62:19:51:6c:67:
+                    93:83:75:9e:9c:68:9d:94:63:60:b8:d4:e0:02:4d:
+                    07:5b:94:2a:9a:79:bb:0b:42:fa:7f:54:62:93:59:
+                    d8:7d:52:c1:90:dc:b6:92:4d:cc:6d:d0:fb:24:aa:
+                    91:a2:58:45:1e:38:61:b7:98:a1:34:29:6c:af:c6:
+                    de:8e:c7:d8:ac:f5:06:c3:5c:93:98:76:49:50:68:
+                    f5:fd:c9:4b:88:23:4d:c6:8f:7c:66:fa:f8:ba:ab:
+                    6b:f3:0f:95:72:98:e7:93:33:29:32:ec:67:9a:b5:
+                    b7:76:53:8e:7d:2f:0c:ee:fe:0f:bc:57:a1:10:97:
+                    ca:af:5a:b5:c4:49:7f:d9:5d:9b:cd:1b:c4:00:70:
+                    e5:d4:e2:4b:4d:04:ea:19:b7:0b:3a:4f:39:27:a5:
+                    01:77
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                38:58:E1:F7:5F:33:2F:8B:D1:F3:1D:6A:DE:F9:29:EA:7A:70:51:25
+            X509v3 Authority Key Identifier: 
+                keyid:38:58:E1:F7:5F:33:2F:8B:D1:F3:1D:6A:DE:F9:29:EA:7A:70:51:25
+                DirName:/C=CA/ST=QC/L=Montreal/O=Katana Holdings Limite /  cryptostorm_darknet/OU=Tech Ops/CN=cryptostorm_is/emailAddress=certadmin@cryptostorm.is
+                serial:A7:A4:A4:65:F1:5E:F8:5B
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha256WithRSAEncryption
+         0a:e8:1e:c0:38:4a:9b:69:88:d7:a3:28:57:79:62:b5:36:3a:
+         5c:08:b0:ae:45:cc:21:31:2b:df:fa:05:5f:ad:c3:2c:27:9c:
+         92:4c:78:39:89:1d:7f:2c:56:b2:20:41:85:b0:e1:44:a6:83:
+         64:63:81:f9:52:a2:e7:04:1c:b3:16:9e:79:9d:8c:2a:25:49:
+         8b:a9:af:e7:7c:87:34:bd:f8:97:2f:9a:c5:64:b6:a8:d2:7a:
+         4b:ad:3a:ff:8a:71:7f:85:e7:08:82:12:c6:54:37:95:70:2d:
+         b8:b8:87:60:7c:ca:f7:67:f1:17:4a:95:31:bc:52:c6:13:b1:
+         0b:96:c9:e6:a5:80:71:9b:4a:df:ee:cf:52:f7:0b:47:a3:a3:
+         e3:06:96:fd:8a:ea:c5:ec:ac:43:8e:85:ec:22:01:e6:60:01:
+         27:23:8f:ab:ac:0a:d0:aa:7e:e7:cb:8b:e0:bd:71:35:c5:f0:
+         24:14:f5:91:f1:3c:b5:66:5c:59:80:4c:b2:a5:39:08:5a:1a:
+         61:74:72:d2:76:27:e8:3a:aa:3c:de:c9:e6:08:e6:c7:83:21:
+         c6:db:3a:38:9e:35:c6:13:14:21:c5:2d:72:c0:fb:d9:25:1b:
+         7b:7e:18:e7:5f:4d:e6:40:fd:ec:b0:1b:36:61:13:51:e6:14:
+         79:70:c7:42
+
+
+-----BEGIN CERTIFICATE-----
+MIIFHjCCBAagAwIBAgIJAKekpGXxXvhbMA0GCSqGSIb3DQEBCwUAMIG6MQswCQYD
+VQQGEwJDQTELMAkGA1UECBMCUUMxETAPBgNVBAcTCE1vbnRyZWFsMTYwNAYDVQQK
+FC1LYXRhbmEgSG9sZGluZ3MgTGltaXRlIC8gIGNyeXB0b3N0b3JtX2RhcmtuZXQx
+ETAPBgNVBAsTCFRlY2ggT3BzMRcwFQYDVQQDFA5jcnlwdG9zdG9ybV9pczEnMCUG
+CSqGSIb3DQEJARYYY2VydGFkbWluQGNyeXB0b3N0b3JtLmlzMB4XDTE0MDQyNTE3
+MTAxNVoXDTE3MTIyMjE3MTAxNVowgboxCzAJBgNVBAYTAkNBMQswCQYDVQQIEwJR
+QzERMA8GA1UEBxMITW9udHJlYWwxNjA0BgNVBAoULUthdGFuYSBIb2xkaW5ncyBM
+aW1pdGUgLyAgY3J5cHRvc3Rvcm1fZGFya25ldDERMA8GA1UECxMIVGVjaCBPcHMx
+FzAVBgNVBAMUDmNyeXB0b3N0b3JtX2lzMScwJQYJKoZIhvcNAQkBFhhjZXJ0YWRt
+aW5AY3J5cHRvc3Rvcm0uaXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDJaOSYIX/sm+4/OkCgyAPYB/VPjDo9YBc+zznKGxd1F8fAkeqcuPpGNCxMBLOu
+mLsBdxLdR2sppK8cu9kYx6g+fBUQtShoOj84Q6+n6F4DqbjsHlLwUy0ulkeQWk1v
+vKKkpBViGVFsZ5ODdZ6caJ2UY2C41OACTQdblCqaebsLQvp/VGKTWdh9UsGQ3LaS
+Tcxt0PskqpGiWEUeOGG3mKE0KWyvxt6Ox9is9QbDXJOYdklQaPX9yUuII03Gj3xm
++vi6q2vzD5VymOeTMyky7Geatbd2U459Lwzu/g+8V6EQl8qvWrXESX/ZXZvNG8QA
+cOXU4ktNBOoZtws6TzknpQF3AgMBAAGjggEjMIIBHzAdBgNVHQ4EFgQUOFjh918z
+L4vR8x1q3vkp6npwUSUwge8GA1UdIwSB5zCB5IAUOFjh918zL4vR8x1q3vkp6npw
+USWhgcCkgb0wgboxCzAJBgNVBAYTAkNBMQswCQYDVQQIEwJRQzERMA8GA1UEBxMI
+TW9udHJlYWwxNjA0BgNVBAoULUthdGFuYSBIb2xkaW5ncyBMaW1pdGUgLyAgY3J5
+cHRvc3Rvcm1fZGFya25ldDERMA8GA1UECxMIVGVjaCBPcHMxFzAVBgNVBAMUDmNy
+eXB0b3N0b3JtX2lzMScwJQYJKoZIhvcNAQkBFhhjZXJ0YWRtaW5AY3J5cHRvc3Rv
+cm0uaXOCCQCnpKRl8V74WzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IB
+AQAK6B7AOEqbaYjXoyhXeWK1NjpcCLCuRcwhMSvf+gVfrcMsJ5ySTHg5iR1/LFay
+IEGFsOFEpoNkY4H5UqLnBByzFp55nYwqJUmLqa/nfIc0vfiXL5rFZLao0npLrTr/
+inF/hecIghLGVDeVcC24uIdgfMr3Z/EXSpUxvFLGE7ELlsnmpYBxm0rf7s9S9wtH
+o6PjBpb9iurF7KxDjoXsIgHmYAEnI4+rrArQqn7ny4vgvXE1xfAkFPWR8Ty1ZlxZ
+gEyypTkIWhphdHLSdifoOqo83snmCObHgyHG2zo4njXGExQhxS1ywPvZJRt7fhjn
+X03mQP3ssBs2YRNR5hR5cMdC
+-----END CERTIFICATE-----
