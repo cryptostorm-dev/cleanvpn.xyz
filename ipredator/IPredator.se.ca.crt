@@ -1,0 +1,90 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 12078339272342960243 (0xa79ee1930ca6f873)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, ST=Bryggland, L=Oeldal, O=Royal Swedish Beer Squadron, OU=Internetz, CN=Royal Swedish Beer Squadron CA/emailAddress=hostmaster@ipredator.se
+        Validity
+            Not Before: Aug  4 21:10:25 2012 GMT
+            Not After : Aug  2 21:10:25 2022 GMT
+        Subject: C=SE, ST=Bryggland, L=Oeldal, O=Royal Swedish Beer Squadron, OU=Internetz, CN=Royal Swedish Beer Squadron CA/emailAddress=hostmaster@ipredator.se
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a9:e4:cd:b6:7d:9b:70:b4:88:7a:32:ef:48:c0:
+                    2d:cd:da:d1:05:ab:23:53:10:fd:58:c9:76:ac:8d:
+                    ff:bb:54:d2:12:a9:2a:45:cb:eb:5f:0e:c1:c0:92:
+                    21:3d:59:bb:fc:28:53:3d:6c:ea:15:2b:52:63:74:
+                    3b:1e:b7:10:2b:9b:f4:4d:b1:45:a6:fd:23:72:55:
+                    b9:98:fb:97:b3:5f:f9:fd:e5:2e:e0:41:d3:22:6c:
+                    0e:f8:fc:80:f6:f8:ab:02:5d:46:3e:1c:d3:54:42:
+                    a1:69:c8:ae:bb:4b:4f:40:ea:bd:19:c0:f3:54:0d:
+                    b2:e0:1a:79:82:65:13:03:04:f0:87:09:b8:8a:e9:
+                    ee:bc:77:be:6f:e9:ff:f4:9d:8e:00:c8:00:00:ca:
+                    ac:00:10:b2:00:9f:ab:32:e2:bc:e8:3d:b6:a5:c5:
+                    c3:b7:dd:e5:b4:7d:41:bf:8a:be:35:aa:aa:3c:05:
+                    0a:d6:2b:21:1d:43:d8:32:f2:d1:84:a9:b2:d0:f8:
+                    1d:f4:6e:12:2f:06:1d:74:62:d5:aa:e9:f8:05:64:
+                    9c:d6:3f:a2:bc:6c:12:46:46:f8:a8:14:ec:90:1c:
+                    26:95:1f:df:14:8f:03:a6:fc:0a:8c:4e:0e:cb:c0:
+                    da:e9:44:91:9c:28:b1:f3:51:fd:e0:35:21:d0:18:
+                    77:f3
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                A5:1A:89:C5:A6:1D:BE:FD:D7:18:41:02:52:A8:FB:0C:92:7C:A6:DB
+            X509v3 Authority Key Identifier: 
+                keyid:A5:1A:89:C5:A6:1D:BE:FD:D7:18:41:02:52:A8:FB:0C:92:7C:A6:DB
+                DirName:/C=SE/ST=Bryggland/L=Oeldal/O=Royal Swedish Beer Squadron/OU=Internetz/CN=Royal Swedish Beer Squadron CA/emailAddress=hostmaster@ipredator.se
+                serial:A7:9E:E1:93:0C:A6:F8:73
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha1WithRSAEncryption
+         7c:9f:16:49:69:3b:cc:32:84:86:e3:b8:c3:db:0d:f5:ce:df:
+         68:ea:74:b1:f1:72:4a:a2:9f:f4:ac:c3:07:28:17:b5:40:15:
+         30:fe:7d:dc:94:6c:18:c4:15:bc:99:39:eb:5c:78:66:26:4c:
+         09:cc:0d:15:87:9d:b9:f9:d9:05:db:c1:34:23:e0:d2:8a:02:
+         94:5c:47:b0:21:9b:4a:8c:00:d8:4b:16:86:33:ee:36:ef:67:
+         a7:6c:9f:3a:25:e5:d4:84:df:28:17:d4:d3:f8:b2:a0:30:18:
+         2d:b7:dc:97:e6:8e:b7:12:4e:90:38:ac:28:bc:7e:64:7a:60:
+         ce:54:99:b0:69:ef:69:b5:74:04:59:f0:8f:0c:53:1c:ed:57:
+         d2:c5:2e:01:0c:15:62:9d:15:9e:31:66:6c:fb:60:16:79:6b:
+         b6:08:cb:23:73:1e:fe:07:e9:0f:6c:10:b3:7c:03:5a:9c:50:
+         c3:09:91:10:38:de:29:12:97:ca:d9:71:2b:84:eb:9d:28:42:
+         46:0a:5e:e9:b0:7f:bd:13:1f:ff:a6:ab:14:4b:8d:e7:54:df:
+         f8:b2:ac:9d:8b:06:e2:fb:04:2e:50:8d:cf:05:8b:6f:a8:f9:
+         d6:76:32:1d:7f:66:b2:01:04:02:5a:58:80:c7:df:8f:d3:7b:
+         db:79:fe:b2
+         
+         -----BEGIN CERTIFICATE-----
+MIIFJzCCBA+gAwIBAgIJAKee4ZMMpvhzMA0GCSqGSIb3DQEBBQUAMIG9MQswCQYD
+VQQGEwJTRTESMBAGA1UECBMJQnJ5Z2dsYW5kMQ8wDQYDVQQHEwZPZWxkYWwxJDAi
+BgNVBAoTG1JveWFsIFN3ZWRpc2ggQmVlciBTcXVhZHJvbjESMBAGA1UECxMJSW50
+ZXJuZXR6MScwJQYDVQQDEx5Sb3lhbCBTd2VkaXNoIEJlZXIgU3F1YWRyb24gQ0Ex
+JjAkBgkqhkiG9w0BCQEWF2hvc3RtYXN0ZXJAaXByZWRhdG9yLnNlMB4XDTEyMDgw
+NDIxMTAyNVoXDTIyMDgwMjIxMTAyNVowgb0xCzAJBgNVBAYTAlNFMRIwEAYDVQQI
+EwlCcnlnZ2xhbmQxDzANBgNVBAcTBk9lbGRhbDEkMCIGA1UEChMbUm95YWwgU3dl
+ZGlzaCBCZWVyIFNxdWFkcm9uMRIwEAYDVQQLEwlJbnRlcm5ldHoxJzAlBgNVBAMT
+HlJveWFsIFN3ZWRpc2ggQmVlciBTcXVhZHJvbiBDQTEmMCQGCSqGSIb3DQEJARYX
+aG9zdG1hc3RlckBpcHJlZGF0b3Iuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCp5M22fZtwtIh6Mu9IwC3N2tEFqyNTEP1YyXasjf+7VNISqSpFy+tf
+DsHAkiE9Wbv8KFM9bOoVK1JjdDsetxArm/RNsUWm/SNyVbmY+5ezX/n95S7gQdMi
+bA74/ID2+KsCXUY+HNNUQqFpyK67S09A6r0ZwPNUDbLgGnmCZRMDBPCHCbiK6e68
+d75v6f/0nY4AyAAAyqwAELIAn6sy4rzoPbalxcO33eW0fUG/ir41qqo8BQrWKyEd
+Q9gy8tGEqbLQ+B30bhIvBh10YtWq6fgFZJzWP6K8bBJGRvioFOyQHCaVH98UjwOm
+/AqMTg7LwNrpRJGcKLHzUf3gNSHQGHfzAgMBAAGjggEmMIIBIjAdBgNVHQ4EFgQU
+pRqJxaYdvv3XGEECUqj7DJJ8ptswgfIGA1UdIwSB6jCB54AUpRqJxaYdvv3XGEEC
+Uqj7DJJ8ptuhgcOkgcAwgb0xCzAJBgNVBAYTAlNFMRIwEAYDVQQIEwlCcnlnZ2xh
+bmQxDzANBgNVBAcTBk9lbGRhbDEkMCIGA1UEChMbUm95YWwgU3dlZGlzaCBCZWVy
+IFNxdWFkcm9uMRIwEAYDVQQLEwlJbnRlcm5ldHoxJzAlBgNVBAMTHlJveWFsIFN3
+ZWRpc2ggQmVlciBTcXVhZHJvbiBDQTEmMCQGCSqGSIb3DQEJARYXaG9zdG1hc3Rl
+ckBpcHJlZGF0b3Iuc2WCCQCnnuGTDKb4czAMBgNVHRMEBTADAQH/MA0GCSqGSIb3
+DQEBBQUAA4IBAQB8nxZJaTvMMoSG47jD2w31zt9o6nSx8XJKop/0rMMHKBe1QBUw
+/n3clGwYxBW8mTnrXHhmJkwJzA0Vh525+dkF28E0I+DSigKUXEewIZtKjADYSxaG
+M+4272enbJ86JeXUhN8oF9TT+LKgMBgtt9yX5o63Ek6QOKwovH5kemDOVJmwae9p
+tXQEWfCPDFMc7VfSxS4BDBVinRWeMWZs+2AWeWu2CMsjcx7+B+kPbBCzfANanFDD
+CZEQON4pEpfK2XErhOudKEJGCl7psH+9Ex//pqsUS43nVN/4sqydiwbi+wQuUI3P
+BYtvqPnWdjIdf2ayAQQCWliAx9+P03vbef6y
+-----END CERTIFICATE-----
