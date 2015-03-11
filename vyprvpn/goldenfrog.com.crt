@@ -1,0 +1,108 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 21182775703310284 (0x4b419f4d270fcc)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=Arizona, L=Scottsdale, O=GoDaddy.com, Inc., OU=http://certificates.godaddy.com/repository, CN=Go Daddy Secure Certification Authority/serialNumber=07969287
+        Validity
+            Not Before: Jun  5 16:23:41 2012 GMT
+            Not After : Jun  5 16:23:41 2015 GMT
+        Subject: O=www.goldenfrog.com, OU=Domain Control Validated, CN=www.goldenfrog.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b8:be:13:4b:57:35:6b:71:da:55:7e:91:04:55:
+                    e0:b2:e7:93:09:fd:dd:84:97:c7:1a:c2:d0:37:2d:
+                    b5:fe:b9:14:1b:37:d3:99:40:45:a2:da:11:75:8c:
+                    73:da:1d:3d:92:9d:a9:20:87:c1:e7:24:92:fc:87:
+                    f1:4a:96:be:35:f7:78:68:8d:81:31:8b:04:b2:23:
+                    56:f0:f7:0c:63:da:54:4d:78:e8:d4:7e:c1:58:7e:
+                    89:60:9f:d1:b1:64:bb:38:e3:fa:46:c5:fc:52:ca:
+                    78:5c:f2:30:8e:76:f8:dd:0f:44:6e:de:c6:7e:70:
+                    b8:e6:31:19:32:dd:16:fb:c4:2e:13:ce:e4:b7:36:
+                    ca:d7:f7:20:96:ed:9b:ff:5f:15:8b:46:9b:be:54:
+                    67:ca:c6:b3:80:02:b3:93:20:10:02:75:3f:68:50:
+                    5a:61:7b:ba:a0:15:54:97:ce:ab:df:43:97:b6:51:
+                    fe:3f:e3:8c:48:78:3e:0a:67:b7:db:84:88:47:d7:
+                    45:25:dd:df:14:38:a8:60:2a:79:fb:46:e9:1d:97:
+                    43:dd:74:5e:c6:07:65:69:62:71:3b:d3:6d:24:f7:
+                    df:e0:ae:28:17:f8:66:da:4b:94:3b:8f:01:9e:ed:
+                    95:90:57:28:e7:10:e6:63:96:9b:d0:63:cf:9b:01:
+                    0d:29
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.godaddy.com/gds1-71.crl
+
+            X509v3 Certificate Policies: 
+                Policy: 2.16.840.1.114413.1.7.23.1
+                  CPS: http://certificates.godaddy.com/repository/
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.godaddy.com/
+                CA Issuers - URI:http://certificates.godaddy.com/repository/gd_intermediate.crt
+
+            X509v3 Authority Key Identifier: 
+                keyid:FD:AC:61:32:93:6C:45:D6:E2:EE:85:5F:9A:BA:E7:76:99:68:CC:E7
+
+            X509v3 Subject Alternative Name: 
+                DNS:www.goldenfrog.com, DNS:goldenfrog.com
+            X509v3 Subject Key Identifier: 
+                72:4B:93:B0:63:1D:2D:CD:C7:B8:09:DA:33:99:C6:FB:7C:B1:17:83
+    Signature Algorithm: sha1WithRSAEncryption
+         28:9f:ef:c1:2f:cd:7f:d8:87:09:2e:b1:a1:62:c0:65:ef:ac:
+         0b:76:3d:05:2e:cd:0c:66:da:a9:a9:e0:50:96:35:7d:62:6a:
+         6c:91:8a:39:d3:0f:92:69:7e:c5:82:6e:29:10:3e:b8:a1:df:
+         d3:74:f9:ab:86:9f:69:de:90:3e:e8:f7:ec:0a:a7:13:73:ca:
+         d2:96:f9:59:3b:ad:57:02:0d:0e:8b:3e:4b:0d:8a:3f:c4:29:
+         70:81:fa:1a:a4:40:a1:21:b2:7e:72:18:3b:16:1c:a9:59:00:
+         2d:90:55:49:5b:82:c9:03:95:4a:9a:00:41:07:9b:76:e8:16:
+         a3:8f:68:f6:43:1c:32:af:8c:d5:44:e2:5d:da:94:54:f6:00:
+         ab:b4:6f:24:bb:11:33:cd:9b:ce:99:b9:72:67:b3:14:91:b0:
+         f8:4c:24:70:ef:c3:e4:1b:12:98:03:56:9e:ec:36:3a:48:73:
+         69:b7:2d:ae:4b:08:8b:5a:91:12:96:5c:dc:85:93:46:55:c6:
+         80:f2:0e:de:36:93:08:26:da:4f:9f:3a:cc:ba:be:40:a7:cd:
+         34:48:ee:d7:e0:8c:b3:1c:89:83:1d:6e:15:af:e9:1f:e3:98:
+         8a:ae:f2:ad:35:f2:ed:74:c1:f4:3e:53:e8:93:24:f4:17:68:
+         4b:26:de:ac
+         
+         -----BEGIN CERTIFICATE-----
+MIIFazCCBFOgAwIBAgIHS0GfTScPzDANBgkqhkiG9w0BAQUFADCByjELMAkGA1UE
+BhMCVVMxEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAY
+BgNVBAoTEUdvRGFkZHkuY29tLCBJbmMuMTMwMQYDVQQLEypodHRwOi8vY2VydGlm
+aWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkxMDAuBgNVBAMTJ0dvIERhZGR5
+IFNlY3VyZSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTERMA8GA1UEBRMIMDc5Njky
+ODcwHhcNMTIwNjA1MTYyMzQxWhcNMTUwNjA1MTYyMzQxWjBdMRswGQYDVQQKExJ3
+d3cuZ29sZGVuZnJvZy5jb20xITAfBgNVBAsTGERvbWFpbiBDb250cm9sIFZhbGlk
+YXRlZDEbMBkGA1UEAxMSd3d3LmdvbGRlbmZyb2cuY29tMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAuL4TS1c1a3HaVX6RBFXgsueTCf3dhJfHGsLQNy21
+/rkUGzfTmUBFotoRdYxz2h09kp2pIIfB5ySS/IfxSpa+Nfd4aI2BMYsEsiNW8PcM
+Y9pUTXjo1H7BWH6JYJ/RsWS7OOP6RsX8Usp4XPIwjnb43Q9Ebt7GfnC45jEZMt0W
++8QuE87ktzbK1/cglu2b/18Vi0abvlRnysazgAKzkyAQAnU/aFBaYXu6oBVUl86r
+30OXtlH+P+OMSHg+Cme324SIR9dFJd3fFDioYCp5+0bpHZdD3XRexgdlaWJxO9Nt
+JPff4K4oF/hm2kuUO48Bnu2VkFco5xDmY5ab0GPPmwENKQIDAQABo4IBwDCCAbww
+DwYDVR0TAQH/BAUwAwEBADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIw
+DgYDVR0PAQH/BAQDAgWgMDMGA1UdHwQsMCowKKAmoCSGImh0dHA6Ly9jcmwuZ29k
+YWRkeS5jb20vZ2RzMS03MS5jcmwwUwYDVR0gBEwwSjBIBgtghkgBhv1tAQcXATA5
+MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlmaWNhdGVzLmdvZGFkZHkuY29tL3Jl
+cG9zaXRvcnkvMIGABggrBgEFBQcBAQR0MHIwJAYIKwYBBQUHMAGGGGh0dHA6Ly9v
+Y3NwLmdvZGFkZHkuY29tLzBKBggrBgEFBQcwAoY+aHR0cDovL2NlcnRpZmljYXRl
+cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5L2dkX2ludGVybWVkaWF0ZS5jcnQwHwYD
+VR0jBBgwFoAU/axhMpNsRdbi7oVfmrrndplozOcwLQYDVR0RBCYwJIISd3d3Lmdv
+bGRlbmZyb2cuY29tgg5nb2xkZW5mcm9nLmNvbTAdBgNVHQ4EFgQUckuTsGMdLc3H
+uAnaM5nG+3yxF4MwDQYJKoZIhvcNAQEFBQADggEBACif78EvzX/YhwkusaFiwGXv
+rAt2PQUuzQxm2qmp4FCWNX1iamyRijnTD5JpfsWCbikQPrih39N0+auGn2nekD7o
+9+wKpxNzytKW+Vk7rVcCDQ6LPksNij/EKXCB+hqkQKEhsn5yGDsWHKlZAC2QVUlb
+gskDlUqaAEEHm3boFqOPaPZDHDKvjNVE4l3alFT2AKu0byS7ETPNm86ZuXJnsxSR
+sPhMJHDvw+QbEpgDVp7sNjpIc2m3La5LCItakRKWXNyFk0ZVxoDyDt42kwgm2k+f
+Osy6vkCnzTRI7tfgjLMciYMdbhWv6R/jmIqu8q018u10wfQ+U+iTJPQXaEsm3qw=
+-----END CERTIFICATE-----
