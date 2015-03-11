@@ -59,10 +59,6 @@ Certificate:
          1c:1e:5e:6d
 
 
-
-Bag Attributes: <No Attributes>
-subject=/C=KY/ST=GrandCayman/L=GeorgeTown/O=GoldenFrog-Inc/CN=GoldenFrog-Inc CA/emailAddress=admin@goldenfrog.com
-issuer=/C=KY/ST=GrandCayman/L=GeorgeTown/O=GoldenFrog-Inc/CN=GoldenFrog-Inc CA/emailAddress=admin@goldenfrog.com
 -----BEGIN CERTIFICATE-----
 MIIEpDCCA4ygAwIBAgIJANd2Uwt7SabsMA0GCSqGSIb3DQEBBQUAMIGSMQswCQYD
 VQQGEwJLWTEUMBIGA1UECBMLR3JhbmRDYXltYW4xEzARBgNVBAcTCkdlb3JnZVRv
