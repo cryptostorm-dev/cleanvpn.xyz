@@ -1,3 +1,72 @@
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 26 (0x1a)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=KY, ST=GrandCayman, L=GeorgeTown, O=GoldenFrog-Inc, CN=GoldenFrog-Inc CA/emailAddress=admin@goldenfrog.com
+        Validity
+            Not Before: Sep 13 19:43:56 2010 GMT
+            Not After : Sep 10 19:43:56 2020 GMT
+        Subject: C=KY, ST=GrandCayman, L=GeorgeTown, O=GoldenFrog-Inc, CN=goldenfrog-client/emailAddress=admin@goldenfrog.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:cc:0f:f9:4a:da:d5:db:d1:c1:63:9f:aa:84:11:
+                    67:ae:ad:55:9b:eb:b3:fb:da:7c:1b:0a:93:ad:ee:
+                    1e:5a:0b:3a:9f:37:65:ca:45:a5:ef:16:f8:2b:c4:
+                    22:0e:05:a9:f4:d1:08:27:d6:c1:5a:48:a1:c2:c4:
+                    5f:43:05:5d:ef:66:24:50:4c:da:99:77:90:eb:61:
+                    ce:cc:d9:dc:5b:e9:12:d7:2c:c1:c3:88:cb:8f:bd:
+                    99:e3:e0:e7:69:a8:89:d4:0b:70:5d:8b:ee:16:67:
+                    19:e7:11:ce:95:36:68:88:92:65:57:19:ab:8f:93:
+                    26:64:dc:c0:85:3e:34:cd:74:e0:85:88:f1:fa:6e:
+                    e4:26:4c:8e:30:ed:89:f5:0c:d6:a7:5f:71:89:02:
+                    c9:25:ea:29:76:14:75:37:fe:b1:09:65:3b:93:b5:
+                    69:d8:9e:dd:0b:c8:ea:86:5c:49:f1:b4:3f:35:7c:
+                    8e:c4:a9:ec:97:18:37:85:b1:67:97:dd:d8:bd:11:
+                    0d:15:ab:fe:34:35:69:7b:d9:d0:f3:10:52:15:f1:
+                    f9:45:7f:f6:06:1c:c1:4c:75:bd:82:c9:20:d6:9b:
+                    47:c9:d2:03:d5:83:bb:d0:e2:d9:9f:7a:25:51:78:
+                    d8:68:ea:59:c9:b4:6b:04:a4:9d:4b:b3:3c:27:07:
+                    fd:cd
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                ED:B0:51:0F:29:7E:5F:13:13:99:96:54:B8:BA:4D:B6:24:A7:25:BB
+            X509v3 Authority Key Identifier: 
+                keyid:E1:F4:78:8C:87:94:67:45:52:2D:FE:4B:57:75:D8:86:90:39:17:05
+                DirName:/C=KY/ST=GrandCayman/L=GeorgeTown/O=GoldenFrog-Inc/CN=GoldenFrog-Inc CA/emailAddress=admin@goldenfrog.com
+                serial:D7:76:53:0B:7B:49:A6:EC
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+         53:49:d4:f1:38:5c:7b:89:12:28:db:70:75:38:86:07:75:e9:
+         ae:25:34:6c:87:d6:45:86:bc:2b:e4:aa:c6:d1:f9:b3:02:07:
+         78:f2:d7:28:6e:67:18:59:0a:5d:8c:df:f9:93:f5:a3:9c:b3:
+         dd:07:7f:54:ff:66:1a:86:8e:53:3b:c4:65:6e:a8:52:d1:c9:
+         35:48:39:32:bf:91:af:68:d0:7d:92:33:a9:79:28:0c:fb:24:
+         33:a0:0f:0b:8c:2c:a5:63:66:88:c9:35:9e:ab:a6:40:f7:6a:
+         a1:ad:95:a0:b0:bc:dc:96:3a:37:c0:09:b3:01:7d:35:7e:cc:
+         63:0c:74:b4:46:9c:79:14:46:34:bf:d4:fe:08:f3:f4:f1:b4:
+         d9:31:cc:ae:b1:50:12:d6:e6:5c:15:2d:07:87:5c:a7:e7:a6:
+         2f:2a:46:e4:60:85:d8:51:78:9d:67:21:2a:65:a8:e9:33:15:
+         0b:3b:c7:32:51:0e:b0:30:9e:3e:72:2a:38:92:b9:62:61:ee:
+         64:fc:a9:96:d5:5a:69:40:29:b9:0d:a6:aa:4e:4b:56:66:77:
+         45:93:71:a5:85:c2:34:ac:d8:22:97:eb:38:9c:d4:84:f7:c9:
+         3c:23:dd:69:92:0c:d4:7e:88:bd:aa:6d:60:a3:20:cc:e8:23:
+         ba:47:77:45
+
+
+
 Bag Attributes
     localKeyID: B9 38 E7 E7 40 29 6C 59 BA EB 94 B7 77 A6 95 16 5C 90 A4 32 
 subject=/C=KY/ST=GrandCayman/L=GeorgeTown/O=GoldenFrog-Inc/CN=goldenfrog-client/emailAddress=admin@goldenfrog.com
