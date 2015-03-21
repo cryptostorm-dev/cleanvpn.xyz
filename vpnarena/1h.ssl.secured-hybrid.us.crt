@@ -1,0 +1,62 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 11375358675014476071 (0x9ddd647218e56127)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PA, ST=NA, L=Panama, O=1H Software LLC., OU=Internet, CN=1h.ssl.secured-hybrid.us/emailAddress=sysadmin@1h.com
+        Validity
+            Not Before: Mar 23 14:54:24 2014 GMT
+            Not After : Mar 23 14:54:24 2015 GMT
+        Subject: C=PA, ST=NA, L=Panama, O=1H Software LLC., OU=Internet, CN=1h.ssl.secured-hybrid.us/emailAddress=sysadmin@1h.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d4:47:0c:d2:b5:a0:b2:dd:c7:03:d6:c7:28:18:
+                    53:fc:e9:7e:10:92:be:12:e2:44:19:2a:97:92:49:
+                    db:69:30:6a:b6:27:49:4b:f0:ed:e9:47:67:2e:c9:
+                    cd:33:4f:18:e6:21:cc:b9:ab:80:a8:8b:2a:96:d9:
+                    33:13:98:4c:92:34:44:11:a5:4c:6f:b6:ab:45:8e:
+                    41:38:f5:78:c2:82:02:03:67:23:65:c8:62:6c:c2:
+                    25:c8:ea:7f:88:10:d9:5c:9b:b6:10:f6:f7:dd:c7:
+                    1a:78:25:b9:93:60:d5:0f:94:14:c1:df:d7:a5:41:
+                    da:8e:00:3c:3c:2d:1d:f5:41
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                9D:69:69:05:8E:0B:BC:D2:0C:9C:6A:E8:27:21:32:0C:E1:66:FD:AA
+            X509v3 Authority Key Identifier: 
+                keyid:9D:69:69:05:8E:0B:BC:D2:0C:9C:6A:E8:27:21:32:0C:E1:66:FD:AA
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha1WithRSAEncryption
+         5d:8a:7b:18:e3:72:1b:d3:0a:4f:69:82:7c:3e:73:df:ed:e6:
+         75:9d:52:81:2a:57:37:34:fc:3e:be:68:d6:bc:f1:59:3f:42:
+         92:88:71:73:32:2c:c1:4f:6b:17:5f:f5:a6:2a:27:81:0d:de:
+         76:3f:3c:79:6f:fa:c5:35:00:a5:e5:95:2d:bb:12:69:8d:34:
+         79:fc:91:b8:6a:75:8a:8d:e7:97:42:ac:3e:b5:de:cf:02:21:
+         21:33:25:af:35:05:c1:d0:5a:5c:42:f6:d6:bd:08:56:5e:37:
+         dd:18:64:70:4d:07:6a:94:6c:35:b0:5b:e9:71:c2:9d:0f:2c:
+         ac:e5
+         
+         
+-----BEGIN CERTIFICATE-----
+MIIDCDCCAnGgAwIBAgIJAJ3dZHIY5WEnMA0GCSqGSIb3DQEBBQUAMIGcMQswCQYD
+VQQGEwJQQTELMAkGA1UECAwCTkExDzANBgNVBAcMBlBhbmFtYTEZMBcGA1UECgwQ
+MUggU29mdHdhcmUgTExDLjERMA8GA1UECwwISW50ZXJuZXQxITAfBgNVBAMMGDFo
+LnNzbC5zZWN1cmVkLWh5YnJpZC51czEeMBwGCSqGSIb3DQEJARYPc3lzYWRtaW5A
+MWguY29tMB4XDTE0MDMyMzE0NTQyNFoXDTE1MDMyMzE0NTQyNFowgZwxCzAJBgNV
+BAYTAlBBMQswCQYDVQQIDAJOQTEPMA0GA1UEBwwGUGFuYW1hMRkwFwYDVQQKDBAx
+SCBTb2Z0d2FyZSBMTEMuMREwDwYDVQQLDAhJbnRlcm5ldDEhMB8GA1UEAwwYMWgu
+c3NsLnNlY3VyZWQtaHlicmlkLnVzMR4wHAYJKoZIhvcNAQkBFg9zeXNhZG1pbkAx
+aC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANRHDNK1oLLdxwPWxygY
+U/zpfhCSvhLiRBkql5JJ22kwarYnSUvw7elHZy7JzTNPGOYhzLmrgKiLKpbZMxOY
+TJI0RBGlTG+2q0WOQTj1eMKCAgNnI2XIYmzCJcjqf4gQ2VybthD2993HGngluZNg
+1Q+UFMHf16VB2o4APDwtHfVBAgMBAAGjUDBOMB0GA1UdDgQWBBSdaWkFjgu80gyc
+augnITIM4Wb9qjAfBgNVHSMEGDAWgBSdaWkFjgu80gycaugnITIM4Wb9qjAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAF2KexjjchvTCk9pgnw+c9/t5nWd
+UoEqVzc0/D6+aNa88Vk/QpKIcXMyLMFPaxdf9aYqJ4EN3nY/PHlv+sU1AKXllS27
+EmmNNHn8kbhqdYqN55dCrD613s8CISEzJa81BcHQWlxC9ta9CFZeN90YZHBNB2qU
+bDWwW+lxwp0PLKzl
+-----END CERTIFICATE-----
