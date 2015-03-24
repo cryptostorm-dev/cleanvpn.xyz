@@ -1,0 +1,104 @@
+<style type="text/css">
+			/* HTML */
+span.icon, input.icon, div.icon {
+  background-repeat: no-repeat;
+}
+span.icon, input.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+}
+span.icon.loading_transparent, input.icon.loading_transparent, div.icon.loading_transparent {
+  background-image: url(../../shared/images/hush-0.2/loading-transparent.gif);
+}
+input.button.basic.action.loading, label.basic.action.loading.button, input.button.basic.action[disabled], label.basic.action[disabled].button, a.button.basic.action.loading, a.button.basic.action[disabled], button.button.basic.action.loading, button.button.basic.action[disabled], div.button.basic.action.disabled {
+  font-weight: normal;
+  color: #D7E4F0;
+}
+input.button.basic.disabled, label.basic.disabled.button, a.button.basic.disabled, button.button.basic.disabled {
+  border: solid 1px #f9f9f9;
+  background-color: #f9f9f9;
+}
+body{padding: 6px 11px 0 11px;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 14px;color:#08253d}
+footer{padding-top:0px;}
+footer hr{margin-bottom: 10px;}
+form{margin:0;}
+input:focus, textarea:focus{border-color: #ddd!important;-webkit-box-shadow: inherit!important;-moz-box-shadow: inherit!important;box-shadow: inherit!important;}
+h1{margin:0 0 25px 0;font-size:24px;font-weight:normal;color:#ff6600;}
+h2{margin:24px 0 12px 0;font-size:22px;color:#1664a3;font-weight:normal;line-height:30px;}
+a{color:#ff6600;text-decoration:underline;}
+
+/* Toolbar */
+
+.HushmailToolbar .separator{color:#777;padding: 0 1px 0 1px;}
+.HushmailToolbar a,footer a{color:#457DBB;color:#777;text-decoration:underline;}
+
+/* Header */
+
+.HushmailHeader{padding:27px 0 22px 0;}
+.HushmailLogo a{display:inline-block;margin-left:-5px;width:200px;height:45px;background:url(/branding/hushmail.com/image/logo_small.gif)}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .HushmailLogo a{
+        background:url(/branding/hushmail.com/image/logo_small@2x.gif);background-size:200px 45px;
+    }
+}
+
+/* Bootstrap */
+.form-control{height:29px;padding:0 8px 0 8px}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */  
+select.form-control{padding-right:0!important;}   
+}
+
+/* Formatting */
+
+.HushmailUpgradeBar{text-align:center;margin:0 0 30px 0;}
+.HushmailInlineError{color:#aa2222;margin:0 0 5px 0;}
+p.HushmailLarge{font-size:24px;line-height:1.25em;font-weight:normal;margin-bottom:0px;}
+p.HushmailMedium{font-size:18px;line-heght:1.25em;font-weight:normal;margin:0 0 30px 0;}
+.HushmailLabel{margin-bottom:0!important;}
+
+/* Buttons */
+
+.HushmailOrangeButtonNew{color:#ffffff;background-color:#ff6600;padding:0 20px 0 20px;font-size:20px;text-decoration:none;
+    border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;cursor:pointer;border:solid 1px #fff;display:inline-block;
+    height:48px;line-height:46px;margin-bottom:25px}
+.HushmailOrangeButtonNew:hover{color:#fff;background-color:#ff8800;text-decoration:none;}
+
+.HushmailDarkButtonNew{padding:0 8px 0 8px;background-color:#14578e;color:#f3f8fc;text-decoration:none;
+    border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;cursor:pointer;font-weight:bold;border:none;display:inline-block;
+    height:29px;line-height:27px;}
+.HushmailDarkButtonNew:hover{text-decoration:none;color:#fff}
+a.HushmailDarkButtonNew{padding-top:2px}
+/* Boxes */
+.HushmailBox{border-radius:7px;-webkit-border-radius:7px;-moz-border-radius:7px;background-color:#f3f8fc;margin-bottom:30px;padding:7px 9px 14px 14px;color:#0f4570;font-size:14px;line-height:1.5em;}
+
+/* Special Boxes */
+
+.HushmailBox.HushmailMainBox{padding:0;text-align:center;}
+.HushmailBox.HushmailDarkBox{background-color:#1C7DCC;color:#d2e5f5;}
+.HushmailBox.HushmailDarkBox h1{color:inherit;}
+.HushmailBox.HushmailBenefit{height:202px;}
+.HushmailBox.HushmailMainBox h1{font-weight:200;font-size:30px;letter-spacing:0px;line-height:1.2em;margin:20px 0 30px 0}
+.HushmailBox.HushmailMainBox h1 strong{font-weight:600;}
+.HushmailBox.HushmailDarkBox h2{color:#fff;}
+.HushmailBox.HushmailDarkBox a{color:#fff;}
+.HushmailWarningBox{background-color:#F9324E;color:#feebee;text-align:center;padding:25px;}
+.HushmailWarningBox h1, .HushmailWarningBox a{color:#fff;}
+.HushmailWarningBox h1 .glyphicon{color:#F9F941;font-size:20px}
+.HushmailBox.HushmailBoxCentered{text-align:center;}
+.HushmailBox.HushmailBoxCentered h2{margin:5px 0 10px 0}
+.HushmailBox.HushmailBoxCentered ul{margin:0;padding:0;list-style-type:none}
+.HushmailBox h2{font-size:20px;margin:2px 0 2px 0}
+.HushmailBox form label{margin:5px 0 10px 0;font-size:15px;color:#14578e;font-weight:bold}
+.HushmailBox form .checkbox label{margin:inherit;font-size:inherit;color:inherit;font-weight:inherit;}
+.HushmailBox form div.checkbox{margin-top:0}
+.HushmailBox form hr{border-color:#fff;margin:20px -15px 10px -15px}
+.HushmailBox table.HushmailSummary{width:auto;border-radius:7px;background-color:#fff;}
+.HushmailBox table.HushmailSummary td,.HushmailBox table.HushmailSummary th{border-color:#f3f8fc;vertical-align:middle}
