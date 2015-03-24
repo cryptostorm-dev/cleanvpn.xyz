@@ -1,0 +1,283 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style> 
+	.A { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -64px scroll; width:16px; height:16px; }
+	.B { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -64px scroll; width:16px; height:16px; }
+	.C { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -48px -64px scroll; width:16px; height:16px; }
+	.D { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -64px scroll; width:16px; height:16px; }
+	.E { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -64px scroll; width:16px; height:16px; }
+	.F { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -64px scroll; width:16px; height:16px; }
+	.G { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -64px scroll; width:16px; height:16px; }
+	.H { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -128px -64px scroll; width:16px; height:16px; }
+	.I { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -144px -64px scroll; width:16px; height:16px; }
+	.J { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -64px scroll; width:16px; height:16px; }
+	.K { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -176px -64px scroll; width:16px; height:16px; }
+	.L { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -192px -64px scroll; width:16px; height:16px; }
+	.M { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -208px -64px scroll; width:16px; height:16px; }
+	.N { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -224px -64px scroll; width:16px; height:16px; }
+	.O { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -64px scroll; width:16px; height:16px; }
+
+
+	.P { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -0px -80px scroll; width:16px; height:16px; }
+	.Q { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -80px scroll; width:16px; height:16px; }
+	.R { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -80px scroll; width:16px; height:16px; }
+	.S { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -48px -80px scroll; width:16px; height:16px; }
+	.T { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -80px scroll; width:16px; height:16px; }
+	.U { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -80px scroll; width:16px; height:16px; }
+	.V { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -80px scroll; width:16px; height:16px; }
+	.W { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -80px scroll; width:16px; height:16px; }
+	.X { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -128px -80px scroll; width:16px; height:16px; }
+	.Y { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -144px -80px scroll; width:16px; height:16px; }
+	.Z { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -80px scroll; width:16px; height:16px; }
+
+	.a { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -96px scroll; width:16px; height:16px; }
+	.b { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -96px scroll; width:16px; height:16px; }
+	.c { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -48px -96px scroll; width:16px; height:16px; }
+	.d { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -96px scroll; width:16px; height:16px; }
+	.e { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -96px scroll; width:16px; height:16px; }
+	.f { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -96px scroll; width:16px; height:16px; }
+	.g { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -96px scroll; width:16px; height:16px; }
+	.h { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -128px -96px scroll; width:16px; height:16px; }
+	.i { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -144px -96px scroll; width:16px; height:16px; }
+	.j { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -96px scroll; width:16px; height:16px; }
+	.k { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -176px -96px scroll; width:16px; height:16px; }
+	.l { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -192px -96px scroll; width:16px; height:16px; }
+	.m { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -208px -96px scroll; width:16px; height:16px; }
+	.n { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -224px -96px scroll; width:16px; height:16px; }
+	.o { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -96px scroll; width:16px; height:16px; }
+
+
+	.p { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -0px -112px scroll; width:16px; height:16px; }
+	.q { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -112px scroll; width:16px; height:16px; }
+	.r { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -112px scroll; width:16px; height:16px; }
+	.s { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -48px -112px scroll; width:16px; height:16px; }
+	.t { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -112px scroll; width:16px; height:16px; }
+	.u { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -112px scroll; width:16px; height:16px; }
+	.v { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -112px scroll; width:16px; height:16px; }
+	.w { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -112px scroll; width:16px; height:16px; }
+	.x { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -128px -112px scroll; width:16px; height:16px; }
+	.y { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -144px -112px scroll; width:16px; height:16px; }
+	.z { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -112px scroll; width:16px; height:16px; }
+
+	.n0 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -0px -48px scroll; width:16px; height:16px; }
+	.n1 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -48px scroll; width:16px; height:16px; }
+	.n2 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -48px scroll; width:16px; height:16px; }
+	.n3 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -48px -48px scroll; width:16px; height:16px; }
+	.n4 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -48px scroll; width:16px; height:16px; }
+	.n5 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -48px scroll; width:16px; height:16px; }
+	.n6 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -48px scroll; width:16px; height:16px; }
+	.n7 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -48px scroll; width:16px; height:16px; }
+	.n8 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -128px -48px scroll; width:16px; height:16px; }
+	.n9 { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -144px -48px scroll; width:16px; height:16px; }
+
+	.colon { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -48px scroll; width:16px; height:16px; }
+	.semicolon { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -176px -48px scroll; width:16px; height:16px; }
+	.equal { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -208px -48px scroll; width:16px; height:16px; }
+	.underscore { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -80px scroll; width:16px; height:16px; }
+	.question { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -48px scroll; width:16px; height:16px; }
+	.att { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -16px -32px scroll; width:16px; height:16px; }
+	.slash { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -32px scroll; width:16px; height:16px; }
+	.comma { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -192px -32px scroll; width:16px; height:16px; }
+	.quot { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -32px -32px scroll; width:16px; height:16px; }
+	.dollar { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -64px -32px scroll; width:16px; height:16px; }
+	.singlequot { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -112px -32px scroll; width:16px; height:16px; }
+	.amp { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -96px -32px scroll; width:16px; height:16px; }
+	.percent { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -80px -32px scroll; width:16px; height:16px; }
+	.star { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -160px -32px scroll; width:16px; height:16px; }
+	.plus { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -176px -32px scroll; width:16px; height:16px; }
+	.space { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -0px -32px scroll; width:16px; height:16px; }
+	.OE { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -0px -48px scroll; width:16px; height:16px; }
+	.AA { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -240px -128px scroll; width:16px; height:16px; }
+	.dot { float:left;background:#aaa url(/images/c64charset.gif) no-repeat -224px -32px scroll; width:16px; height:16px; }
+
+	.newline { float:none;clear:left;; }
+	.none { float:left; width:0px; height:0px; }
+
+	* { margin:0px;padding:0px; }
+	body { background:#7b73de }
+	#c64background { height:400px; width:640px; background:#3931a5; }
+	.cont { text-align:left;margin-top:168px;width:640px; color:#7b73de; font-family: verdana; font-size:24px; font-weight:bold;}
+	#cursor { position:relative; top:-0px; left:-3px; color:#7b73de;background:#7b73de;width:20px;height:21px; font-size:1px;display:block}
+	#cursor { position:absolute; top:168px; color:#7b73de;background:#7b73de;width:16px;height:16px; font-size:1px;display:block}
+	kbd { float:left;display:none; }
+</style>
+ 
+<script language="JavaScript"> 
+ 
+	// c64 404 page not found by Klaus Hessellund / 200709
+	// Feel free to copy this script to you own page. Some credits would be nice, but not mandatory :p
+	// c64 charset found here : http://www.dwarffortresswiki.net/index.php/List_of_user_tilesets
+	var splitStar = String.fromCharCode(164); // �
+	var text="  \n";
+	text += "     **** COMMODORE 64 BASIC V2 ****\n \n";
+	text += " 64K RAM SYSTEM  38911 BASIC BYTES FREE\n \n";
+	text += "READY.\n";
+	text += "\nError 404: PAGE NOT FOUND \n \n"+splitStar+"Go back or go home.";
+	
+	var textlen = text.length;
+	var textidx=0;
+  var fontwidth=16;
+	var typing=1;
+	var pause=0;
+	var reset=0;
+ 
+	function parsechar (c) {
+		movecursor=1;
+		if (c == ' ') { c='space'; }
+		else if (c == '�') { c='OE'; }
+		else if (c == '�') { c='AA'; }
+		else if (c == '.') { c='dot'; }
+		else if (c == '*') { c='star'; }
+		else if (c == '$') { c='dollar'; }
+		else if (c == '/') { c='slash'; }
+		else if (c == '"') { c='quot'; }
+		else if ((c>0 && c<=9)) { c='n'+c; }
+		else if ((c== '0')) { c='n'+c; }
+		else if (c == ',') { c='comma'; }
+		else if (c == '!') { c='att'; }
+		else if (c == '?') { c='question'; }
+		else if (c == '_') { c='underscore'; }
+		else if (c == '\'') { c='singlequot'; }
+		else if (c == ':') { c='colon'; }
+		else if (c == ';') { c='semicolon'; }
+		else if (c == '&') { c='amp'; }
+		else if (c == '=') { c='equal'; }
+		else if (c == '%') { c='percent'; }
+		else if (c == '+') { c='plus'; }
+		else if (c == '\n') { c='newline'; movecursor=0; }
+		else if (c == '�') { reset=1; movecursor=0; }
+		else if (c == '�') { c='none'; typing = 0; movecursor=0; }
+		else if (c == '�') { c='none'; typing = 1; movecursor=0; }
+		else if (c == splitStar) { c='none'; pause = 1; movecursor=0; }
+ 
+		return (c);
+	}
+ 
+	var t;
+	var c;
+	var b;
+	
+	var browser = navigator.appName;
+	var isie = 0;
+	if (browser.indexOf("Microsoft") !=-1) isie = 1;
+ 
+	function writetext() {
+ 
+ 
+		if (reset) {
+			initWrite();
+			return;
+		}
+ 
+		var getchar = text.charAt(textidx);
+		c64char = '<div id="i' + textidx + '" class="' + parsechar(getchar) + '"></div>';
+		t.innerHTML = t.innerHTML + c64char;
+		
+		var elid='i' + textidx;
+		var el = document.getElementById(elid);
+		var addwidth = movecursor ? fontwidth : 0 ;
+ 
+		var posarr = findPos (el);
+		
+		var curleft = posarr[0]+addwidth;
+		var curtop = posarr[1];
+ 
+		if (textlen != textidx) {
+			textidx++;
+			c.style.top = curtop + 'px';
+			c.style.left = curleft + 'px';
+			
+			if (typing) {
+				if (randx(10) > 7) {
+					rand=randx(150);
+				} else {
+					rand=randx(50);
+				}
+				fixedrand=10;
+			} else {
+				rand=0;
+				fixedrand=0;
+			}
+			if (pause) {
+				rand=1500; pause=0; 
+			} else {
+				flipcursor(1);
+			}
+ 
+			if (rand==0) {
+				writetext();
+			} else {
+				setTimeout ('writetext()',fixedrand+rand);
+			}
+ 
+		} else {
+ 
+		}
+	}
+ 
+	function findPos(obj) {
+		var fcurleft = fcurtop = 0;
+		if (obj.offsetParent) {
+			fcurleft = obj.offsetLeft
+			fcurtop = obj.offsetTop
+			while (obj = obj.offsetParent) {
+				fcurleft += obj.offsetLeft
+				fcurtop += obj.offsetTop
+			}
+		}
+ 
+		return [fcurleft,fcurtop];
+	}
+ 
+ 
+	function flipcursor(nosettime) {
+ 
+		var cursor=document.getElementById("cursor");
+ 
+		if (cursor.style.visibility == 'hidden') {
+			cursor.style.visibility = '';
+		} else {
+			cursor.style.visibility = 'hidden';
+		}
+		if (!nosettime) {
+			setTimeout('flipcursor()',300);
+		}
+	}
+ 
+	function randx(n) {
+ 		return ( Math.floor ( Math.random ( ) * n + 1 ) );
+	}
+ 
+	function initWrite () {
+		t = document.getElementById("thetext");
+		c = document.getElementById("cursor");
+		b = document.getElementById("body");
+		t.innerHTML="";
+		textidx=0;
+		reset=0;
+		writetext();
+	}
+ 
+	var bgflipped = 1;
+	function flipbackground() {
+		bgflipped ? b.style.background="white" : b.style.background="black";
+		bgflipped = bgflipped ? 0 : 1;
+		setTimeout('flipbackground()',0);
+	}
+ 
+ 
+</script>
+</head>
+<body id="body" onload="flipcursor(0);initWrite();">
+<center>
+<div style="height:100px">&nbsp;<br><br><br></div>
+<div id="c64background">
+<div id="thetext"></div>
+<div id="cursor">&nbsp;</div>
+</div>
+</center>
+</body>
+</html>
+
