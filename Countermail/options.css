@@ -1,0 +1,265 @@
+#adminyes, #adminno
+{
+	color: #555;
+}
+
+#selecteddomain
+{
+	color: #ddd;
+	background-color: #222;
+	font-size: 15px;
+	border: 1px solid;
+	margin-top: 1px;
+}
+
+.admindomain td
+{
+	vertical-align: top;
+}
+
+.admindomain
+{
+	margin: 0px;
+	padding: 0px;
+	padding-left: 5px;
+	border-color: #000;
+	border: 1px solid #000;
+	background-color: #000;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+
+#adminquota
+{
+	margin: 0px; 
+	padding: 0px;
+	border: 0px;
+	background: #444;
+}
+
+
+#optionGroups   table   {
+    border: 1px solid #444;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+}
+
+#optionGroups   td  {
+    width: 50%;
+    padding: 2px;
+    vertical-align: top;
+}
+
+#optionGroups   td.title    {
+    background: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+#optionGroups   td.optionElement    {
+    height: 100%;
+    padding: 10px; 
+}
+
+#optionGroups   td.optionElement    table   {
+    border:0px solid #444;
+    height: 100%;
+}
+
+
+#optionGroups   td.optionName   {
+    background: #333;
+    text-align: left;
+    height: 1%;
+}
+
+#optionGroups   td.optionDesc   {
+    text-align: left;
+    background: #000;
+}
+
+#optionPop  table   {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+	 padding-bottom: 2px;
+    width: 95%;
+    border: 1px solid #444;
+}
+
+
+#optionDisplay  table.optionInfo  {
+    width: 80%;
+    text-align: left;
+    border: 0px;
+}
+
+#optionDisplay  {
+    text-align:left;
+}
+
+#optionDisplay  table   {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+	 padding-bottom: 2px;
+    width: 95%;
+    border: 1px solid #444; 
+}
+
+#optionPop  td  {
+    padding-top: 2px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    white-space: nowrap;
+ }
+
+#optionPop td.optionName 
+{
+	width: 200px;
+}
+
+ 
+.optionName 
+ {
+	padding:3px;
+	padding-right: 10px;
+	padding-left: 5px;
+	width: 25%;
+}
+
+.optionValue  
+{
+	padding:1px;
+}
+
+.optionValue   a:hover
+{
+	color: #5A7B3F;
+	text-decoration: underline;
+}
+ 
+#invtext
+{
+	background: #000;
+	color: #DDD;
+}
+ 
+#sqmtextfield
+{
+	background:  #222;
+	color: #EEE;
+	padding-top: 0px;
+	padding-bottom: 1px;
+   border: 1px solid;
+	border-color: #000 #000 #666 #000; 
+}
+ 
+#optionDisplay  td.optionName   {
+	width: 25%;
+	vertical-align: top;
+   text-align: left;
+}
+
+#optionDisplay  td.optionValue  {
+   text-align: left;
+}
+
+#optionOrder  {
+    text-align: left;
+}
+
+#optionOrder    table   {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 95%;
+    border: 1px solid #444;
+}
+
+#optionOrder    table.moveFields    {
+    width: auto;
+}
+
+#optionOrder    table.moveFields    td  {
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#optionOrder    td.moveLink  {
+    text-align: right;
+    font-size: 75%;
+    vertical-align: bottom;
+}
+
+#optionOrder    td.fieldName    {
+    text-align: left;
+}
+
+#optionHightlightList   {
+    text-align: center;
+}
+
+#optionHighlightList    table   table   {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+}
+
+#optionHighlightList    td.ruleButtons  {
+    text-align: center;
+    width: 1%;
+}
+
+#optionHighlightList    td.ruleName {
+    text-align: left;
+    width: 30%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#optionHighlightAdd {
+    text-align: center;
+}
+
+#optionHighlightAdd    table   table   {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+}
+
+#optionHighlightAdd td.ruleField    {
+    text-align: right;
+    font-weight: bold;
+    width: 40%;
+}
+
+#optionHighlightAdd td.fieldValue   {
+    text-align: left;
+}
+
+#optionHighlightAdd td.colorTable  {
+    text-align: center;
+}
+
+#optionHighlightAdd table.colorTable    {
+    margin-left: auto;
+    margin-right: auto;
+}
+#optionMessage {
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+    color: red;
+    font-weight: bold;
+}
