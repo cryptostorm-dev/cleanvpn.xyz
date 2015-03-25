@@ -1,0 +1,687 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CounterMail - protecting your privacy - encrypted pgp email webmail</title>
+<meta name="keywords" content="encrypted email, secure email, anonymous email, openpgp, krypterad mail, anonym e-post" /><meta name="description" content="The world's most secure web based email service" /><script language="javascript" type="text/javascript" src="www.js"></script>
+<link href="https://countermail.com/default.css" rel="stylesheet" type="text/css" />
+</head><body >
+<div id="holder">
+	<div id="header">
+		<img src="images/cm_www_green.gif">
+	</div>
+	 <div id="menu">
+		<table align="left" border="0" cellspacing="0" cellpadding="0" height=29>
+		<tr>
+			<td width="82"><a href="?p=start" id="btnm">Home</a></td>
+			<td width="82"><a href="?p=about" id="btnm">About us</a></td>
+			<td width="82"><a href="?p=services" id="btnm">Services</a></td>
+			<td width="82"><a href="?p=privacy" id="btnm">Privacy</a></td>
+			<td width="82"><a href="?p=signup" id="btnm">Register</a></td>
+			<td width="82"><a target="_blank" href="https://support.countermail.com/kb/index.php" id="btnm">Support</a></td>
+			<td width="82"><a href="?p=tools" id="btnm">Tools</a></td>
+			<td width="82"><a href="?p=contact" id="btnm">Contact</a></td>
+			<td width="395" align="right"><a href="https://countermail.com/?p=javatest&d=login" id="btnm">Login</a></td>
+			<td width="15"></td>
+		</tr>
+		</table>
+	</div>
+	<div id="content" >
+	<table width="100%" cellspacing="0" border="0" cellpadding="0" height="100%" align="center">
+	<tr>
+	<td id="colone"><script language='javascript'>
+var cmapp= new Object();
+var loaded = false;
+var mitmprot = false;
+var fetchField =  null;
+var http;
+
+window.onload = setApplet;
+
+function setApplet()
+{
+	var out='<applet name="CounterMailEngine" class="appletclass" code="CounterMailEngine.class"  height="0" width="0" archive="https://countermail.com/CounterMailEngine174.txt" viewastext MAYSCRIPT>';
+	out +='<param name="permissions" value="all-permissions" />';
+	out +='<param name="url"  value="3d6990d7fef65c062ad387ccab8056d0462d939aa534d461035bc3ac516de0c48237fd997baf52dc578b5fd1d9021effdd1882fc04b34cee7e304f880593e0e895dcf87dc31d2bae6785a83c4d7f9fb9f6f31197fc4305e4703ab562afe83c479dcf24fad0177b2270b85ffcf00abb08e2cc5084b5785d1b5df8fff391286e8532b2e73d46b9d0c4cffb9e1037627e61f556d975d954d6fd54a3537827a35eefe38020596e48c911bb297c736255602ac1c5352da76e059443c385c0c0a4d65ce5d702a3fedbd2f91e2e2503c6f27b4df7f711bc89ee7b8f57a25377438d31125da07b5bb425c09d8b97a6c19f37e4880214dce5f7f8c7e8e17e656fe0854a0d" />';
+	out +='<param name="url2"  value="5096af195c29cbd7aacf09ec0447fc0ace6ae02f118fad57427eac7ab04870ce7e81c20aa26fc60e7f8953b633664bb42681eb3e8cde86e5921e81ca34b5e8cd1432a34214e103e201c79fd5d486c4dcb84f0bbcd1b495fc75e990b77135c5cabd72e80ff3c11e2e44f4ba89adbe77fd46cb1ee902071bbc93677d6275adf12f4822b1133e48527c3d17924d6a4c99d86c4b8f264749636c0a1230eb612e4579856a662e8cd60ebe699c568e34bce317a4f0da41e32d2a24884795293f2de84b65e0f40b843f187e225e4a4f67d1a06b6384d2148172db5103b411caf8b14b9d293c90eaf9c206e223ec271a035fea758755c3fcc2cc5373d58b23add552600b" />';
+	out +='<param name="bgcolor" value="#000000" /><param name="inittype" value="1" /><param name="instance" value="tools" />';
+	out +='<param name="scriptable" value="true" />';
+	out +='<param name="mayscript" value="true" />';
+	out +='<param name="mitmprot" value="0" /></applet>';
+	document.getElementById('cmengin').innerHTML=out;
+}
+
+
+function AjaxResponse()
+{
+/*Holds the status of the XMLHttpRequest. Changes from 0 to 4:
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready*/
+	if (http.status!="200")
+	{
+		alert("Page not found!");
+		return;
+	}
+	if (http.readyState != 4) return;
+	var text = http.responseText;
+	
+	if (text.indexOf("Error")>=0)
+	{
+		fetchField.value=text;
+		return;
+	}
+	fetchField.value=text;
+}
+
+
+function AjaxSearch(type,data,formfield)
+{
+	if (type=="keyidview")
+	{
+		var test=trim(data);
+		if (test.substr(0,2)=="0x") test=test.substr(2,test.length);
+		if (test.length!=8 && test.length!=16)
+		{
+			alert("KeyId must be 8 or 16 hex characters, prefixes such as 0x will be automatically removed.");
+			return;
+		}
+	}
+	
+	fetchField=formfield;
+	try
+	{
+		http = new XMLHttpRequest();
+	}
+	catch(e)
+	{
+		// assume IE6 or older
+		try
+		{
+			http = new ActiveXObject("Microsoft.XMLHttp");
+		}
+		catch(e) { }
+	}
+	// return the created object or display an error message
+	if (!http)
+	{
+		alert("Error creating the XMLHttpRequest object.");
+		return false;
+	}
+
+	var data=trim(data);
+	if (data==null || data.length<3)
+	{
+		alert("You must enter data to search for");
+		return false;
+	}
+	var url = "https://countermail.com/process.php";
+	sendtype=encodeURIComponent(type);
+	senddata=encodeURIComponent(data);
+	var parameters="toolcnt=yes&CMID=tools&"+sendtype+"="+senddata;
+	http.open("POST", url, true)
+	http.onreadystatechange = AjaxResponse;
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	http.send(parameters)
+	
+}
+
+
+
+function AjaxRequest(type,data,divID)
+{
+	if (type=="keyidview")
+	{
+		var test=trim(data);
+		if (test.substr(0,2)=="0x") test=test.substr(2,test.length);
+		if (test.length!=8 && test.length!=16)
+		{
+			alert("KeyId must be 8 or 16 hex characters, prefixes such as 0x will be automatically removed.");
+			return;
+		}
+	}
+	
+	fetchField=divID;
+	try
+	{
+		http = new XMLHttpRequest();
+	}
+	catch(e)
+	{
+		// assume IE6 or older
+		try
+		{
+			http = new ActiveXObject("Microsoft.XMLHttp");
+		}
+		catch(e) { }
+	}
+	// return the created object or display an error message
+	if (!http)
+	{
+		alert("Error creating the XMLHttpRequest object.");
+		return false;
+	}
+
+	var data=trim(data);
+	if (data==null || data.length<3)
+	{
+		alert("You must enter data to search for");
+		return false;
+	}
+	var url = "https://countermail.com/toolbox.php";
+	sendtype=encodeURIComponent(type);
+	senddata=encodeURIComponent(data);
+	var parameters="CMID=tools&"+sendtype+"="+senddata;
+	http.open("POST", url, true)
+	http.onreadystatechange = AjaxResponse2;
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	http.send(parameters)
+	
+}
+
+function AjaxResponse2()
+{
+/*Holds the status of the XMLHttpRequest. Changes from 0 to 4:
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready*/
+	if (http.status!="200")
+	{
+		alert("Page not found!");
+		return;
+	}
+	if (http.readyState != 4) return;
+	var text = http.responseText;
+	
+	if (text.indexOf("Error")>=0)
+	{
+		document.getElementById(fetchField).innerHTML=text;
+		return;
+	}
+	document.getElementById(fetchField).innerHTML=text;
+}
+
+
+function mitmSet(status)
+{
+	if (status==1) top.mitmprot=true;
+	else  top.mitmprot=false;
+}
+
+
+function Loaded(result)
+{
+	loaded = (result == "") ? true : false;
+	if (!loaded) alert(result);
+	else 
+	{
+		cmapp=document.applets[0];
+		window.setTimeout("document.getElementById('version').innerHTML=document.CounterMailEngine.GetVersion();",300);
+	}
+}
+
+
+function utf8Todecimal(form)
+{
+  var s = form.emailob.value;
+  ret = ''; 
+  for (i=0; i<s.length; i++)  ret += '&#' + s.charCodeAt(i) + ';'; 
+  form.emailob.value=ret;
+  document.getElementById('obashtml').innerHTML="<br>The above HTML codes will look like this the webbrowser: "+ret;
+}
+
+function trim(s)
+{
+	if (s==null) return "";
+	return s.replace( /^\s*/, "" ).replace( /\s*$/, "" );
+}
+
+
+function removePGPHeaders(instr)
+{
+	var lines=instr.replace(/\r/g,"").split("\n");
+	var ret="";
+	var PGP_signstart="-----BEGIN PGP SIGNED MESSAGE-----";	
+	var PGP_signend="-----BEGIN PGP SIGNATURE-----";	
+	var headfound = false;
+	var headend = false;
+	var i=0;
+	if (lines.length ==0) return instr;
+	while (i<lines.length)
+	{
+		if (!headfound && trim(lines[i])==PGP_signstart) headfound = true;
+		else if (headfound && !headend && trim(lines[i])!="") { headend=true; i++; }
+		else if (headfound && trim(lines[i])==PGP_signend) break;
+		else ret += lines[i]+"\n";
+		i++;
+	}
+	return ret;
+}
+
+function Checkit(sig)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait."+document.applets[0].GetLastError());
+		return false;
+	}
+	else
+	{
+		cmapp=document.CounterMailEngine;
+		ret = cmapp.PGP_Sign(false,false,true,sig);
+		if (ret.substring(0,2)!="ok") ret = cmapp.PGP_Sign(false,false,false,sig);
+		if (ret.substring(0,2)=="ok") alert("Digital signature is correct. Message was signed by "+ret.substring(2,ret.indexOf("\n\n"))+"\n\nMessage:\n\n"+removePGPHeaders(sig));
+		else alert(ret);
+	}
+}
+
+function Base64(forEncode,form)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait.");
+		return false;
+	}
+	else
+	{
+		cmapp=document.applets[0];
+		if (forEncode)	ret = cmapp.base64encode(form.base64text.value);
+		else ret = cmapp.base64decode(form.base64text.value);
+		form.base64text.value=ret;
+	}
+}
+
+
+function PBE(type,form)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait.");
+		return false;
+	}
+	else
+	{
+		if (form.pass.value=="")
+		{
+			alert("Empty password!");
+			return
+		}
+		cmapp=document.CounterMailEngine;
+		ret = cmapp.PGP_PBE(type, form.pass.value, parseInt(form.algo.value), form.pbemess.value);
+		if (ret.indexOf("Error:")==0) alert(ret);
+		else form.pbemess.value=ret;
+	}
+}
+
+function Hash(form)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait.");
+		return false;
+	}
+	else
+	{
+		if (form.hashtext.value=="")
+		{
+			alert("Empty text!");
+			return
+		}
+		cmapp=document.CounterMailEngine;
+		ret = cmapp.HashIt(form.hashalgo.value, form.hashtext.value);
+		if (ret.indexOf("Error:")==0) alert(ret);
+		else form.hashresult.value=ret;
+	}
+}
+
+
+function CheckSSL(form)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait.");
+		return false;
+	}
+	else
+	{
+		if (form.url.value=="")
+		{
+			alert("Empty server name!");
+			return;
+		}
+		cmapp=document.CounterMailEngine;
+		ret = cmapp.CheckSSL(form.url.value,form.ssltype.value);
+		form.sslcert.value=ret;
+	}
+}
+
+function CheckMX(form)
+{
+	if (!loaded) 
+	{
+		alert("Applet is not loaded yet. Please wait.");
+		return false;
+	}
+	else
+	{
+		if (form.mxdomain.value=="")
+		{
+			alert("Empty domain name!");
+			return;
+		}
+		cmapp=document.CounterMailEngine;
+		ret = cmapp.getMX(form.mxdomain.value);
+		form.mxresult.value=ret;
+	}
+}
+
+function ShowPubkeyUsers()
+{
+	var ret=cmapp.ListPubKeyUsers(document.creation.pubkey.value);
+	if (ret.indexOf("Error")>=0) alert(ret);
+	else alert("UserIDs in the public key:\n\n"+ret);
+}
+
+
+function ShowMasterKeyID()
+{
+	var ret=cmapp.GetMasterKeyID(document.creation.pubkey.value);
+	alert(ret);
+}
+
+function ShowSubKeyID()
+{
+	var ret=cmapp.GetSubKeyID(document.creation.pubkey.value);
+	alert(ret);
+}
+
+
+function ShowPrivkeyUsers()
+{
+	var ret=cmapp.ListPrivKeyUsers(document.creation.privkey.value);
+	if (ret.indexOf("Error")>=0) alert(ret);
+	else alert("UserIDs in the private key:\n\n"+ret);
+}
+
+
+function KeyGeneration(retvalue) // Callback function from applet
+{
+	var splitLine	= String.fromCharCode(124); // |
+	if (retvalue.indexOf("Error")>=0) alert(retvalue);
+	else
+	{
+		keys=retvalue.split(splitLine);
+		if (keys[0].length>0) document.creation.pubkey.value=cmapp.base64decode(keys[0]);
+		if (keys[1].length>0) document.creation.privkey.value=cmapp.base64decode(keys[1]);
+	}
+}
+
+
+function PGP_Encrypt()
+{
+	var hideKeyid=false;
+	var PGP_start="-----BEGIN PGP MESSAGE-----";	
+	var plaintext=document.creation.pgptext.value;
+	if (plaintext.indexOf(PGP_start)>=0)
+	{
+		alert("Message is already encrypted!");
+		return false;
+	}
+	
+	var email=trim(document.creation.useremail.value);
+	if (email==null || email.length<3)
+	{
+		var IDs=cmapp.ListPubKeyUsers(document.creation.pubkey.value);
+		pos =IDs.indexOf("<");	
+		end =IDs.indexOf(">");
+		if (pos<0 || end<0)
+		{
+			alert("No email found in public key!");
+			return;
+		}
+		email=IDs.substring(pos+1,end);
+		document.creation.useremail.value=email;
+	}
+	var ret = cmapp.PGP_Encrypt(plaintext,document.creation.pubkey.value,email,hideKeyid);
+	if (ret.indexOf("Error")>=0) alert(ret);
+	else document.creation.pgptext.value=ret;
+}
+
+
+function PGP_Decrypt()
+{
+	var hideKeyid=false;
+	var PGP_start="-----BEGIN PGP MESSAGE-----";	
+	var ciptext=trim(document.creation.pgptext.value);
+	var pass=document.creation.privpass.value;
+	if (pass==null || pass.length<7) 
+	{
+		alert("You must enter the password for the private key!");
+		return false;
+	}
+	if (ciptext.indexOf(PGP_start)<0)
+	{
+		alert("Message is not encrypted!");
+		return false;
+	}
+	var ret = cmapp.PGP_Decrypt(ciptext,document.creation.privpass.value,document.creation.pubkey.value,document.creation.privkey.value);
+	if (ret.indexOf("Error")>=0) alert(ret);
+	else document.creation.pgptext.value=ret;
+}
+
+
+</script><h2>Cryptography Tools</h2>
+<table><tr>
+<td width='40'  align='center'>
+<br>
+</td>
+<td width='630' height='350'>
+	<form name='creation'>	
+	<br>
+	<noscript>Error: Javascript and Java must be enabled!<br></noscript>
+	<strong>CounterMail Applet version:<div id="version"></div></strong><br>
+	<strong>Verify signature</strong><br>
+	Paste the entire message,<br>from (and including) the start "-----BEGIN PGP SIGNED MESSAGE-----"<br>to (and including) the end "-----END PGP SIGNATURE-----"
+	<textarea name="verify" rows="10" cols="69"></textarea>
+	<input id='submit' type='button' value='Verify message' onclick='javascript:Checkit(this.form.verify.value);'>
+	<br><br><br>
+	<strong>Public key search (in our database)</strong><br>
+	Search by E-mail: <input class='text' name="searchkey" type='text' size='35' value=''> <input id='submit' type='button' value='Search' onclick='AjaxSearch("searchkey",this.form.searchkey.value,this.form.pubkey);'><br>
+	Search by Keyid: <input class='text' name="keyid" type='text' size='30' value=''> <input id='submit' type='button' value='Search' onclick='AjaxSearch("keyidview",this.form.keyid.value,this.form.pubkey);'>
+	<br>
+	Public key &nbsp;&nbsp;&nbsp;<input type='button' id='submit' value='Show userIDs in Pubkey' onclick='javascript:ShowPubkeyUsers();'>
+	<input type='button' id='submit' value='Show MasterKey ID' onclick='javascript:ShowMasterKeyID();'>
+ 	<input type='button' id='submit' value='Show SubKey ID' onclick='javascript:ShowSubKeyID();'>
+	<br>
+	<textarea name="pubkey" rows="9" cols="69"></textarea>
+	<br><br>
+	<strong>Create PGP keypair</strong><br> 
+	Select private key password: <input class='text' name="privpass" size=16 type='text' value=''> 	Select Bitsize: 
+	<select name="bitsize"><option value="1024">1024</option>
+	<option selected value="2048">2048</option>
+	<option value="4096">4096</option>
+	<option value="8192">8192</option>
+	</select><br>Select UserID (email): <input class='text' name="useremail" size=20 type='text' value=''> <input id='submit' type='button' value='Generate keypair' onclick='cmapp.CreatePGPKeyPair(this.form.privpass.value,this.form.useremail.value,this.form.bitsize.value);'><br>
+	Private key (encrypted) &nbsp;&nbsp;&nbsp;<input type='button' id='submit' value='Show userIDs in Privkey' onclick='javascript:ShowPrivkeyUsers();'>
+	<br>
+	<textarea name="privkey" rows="8" cols="69"></textarea>
+	<br><br>
+	Enter text to Encrypt or Decrypt, using the above keypair:</br>
+	<textarea name="pgptext" rows="8" cols="69"></textarea><br>
+	<input id='submit' type='button' value='PGP Encrypt text above' onclick='javascript:PGP_Encrypt();'> <input id='submit' type='button' value='PGP Decrypt text above' onclick='javascript:PGP_Decrypt();'>
+	<br><br><br>
+	<strong>Password based OpenPGP encryption</strong><br>
+	Write the message to be encrypted/decrypted<br>
+	<textarea name="pbemess" rows="8" cols="69"></textarea><br>
+	Password: <input class='text' name="pass" type='text' value=''> Algorithm: <select name="algo">
+	<option value="7">AES-128</option>
+	<option value="8">AES-192</option>
+	<option value="9">AES-256</option>
+	<option value="10">TwoFish</option>
+	<option value="4">Blowfish</option>
+	<option value="6">DES</option>
+	<option value="2">3DES</option>
+	<option value="3">Cast5</option>
+	<option value="5">Safer</option>
+	</select><br>
+	<input id='submit' type='button' value='Encrypt message' onclick='javascript:PBE(true,this.form);'> 
+	<input id='submit' type='button' value='Decrypt message' onclick='javascript:PBE(false,this.form);'>
+	<br><br><br>
+	<strong>Check domain MX-records</strong><br>
+	Domain name: <input class='text' name="mxdomain" type='text' size='35' value=''>  <input id='submit' type='button' value='Check Domain' onclick='javascript:CheckMX(this.form);'><br>
+	<textarea name="mxresult" rows="4" cols="69"></textarea>
+	<br><br><br>
+	<strong>Analyze SSL certificate</strong><br>
+	Type: <select name="ssltype">
+	<option selected value="443">HTTP(S)</option>
+	<option value="993">IMAP(S)</option>
+	<option value="995">POP3(S)</option>
+	<option value="465">SMTP(S)</option>
+	</select>&nbsp;&nbsp;
+	Server: <input class='text' name="url" type='text' size=35 value=''> <input id='submit' type='button' value='Check Domain' onclick='javascript:CheckSSL(this.form);'><br>
+	<textarea name="sslcert" rows="20" cols="69"></textarea>
+	<br><br><br>
+	<strong>Base64 Encode/Decode</strong><br>
+	<textarea name="base64text" rows="8" cols="69"></textarea><br>
+	<input id='submit' type='button' value='Encode' onclick='javascript:Base64(true,this.form);'> 
+	<input id='submit' type='button' value='Decode' onclick='javascript:Base64(false,this.form);'>
+	<br><br><br>
+	<strong>Hash functions</strong><br>Enter text<br>
+	<textarea name="hashtext" rows="5" cols="69"></textarea><br>
+	<select name="hashalgo">
+	<option value="MD5">MD5</option>
+	<option value="RIPEMD160">RMD160</option>
+	<option value="SHA1">SHA1</option>
+	<option value="SHA224">SHA224</option>
+	<option value="SHA256">SHA256</option>
+	<option value="SHA384">SHA384</option>
+	<option value="SHA512">SHA512</option>
+	</select><input id='submit' type='button' value='Hash it' onclick='javascript:Hash(this.form);'><br>
+	Result<br><textarea name="hashresult" rows="2" cols="69"></textarea>
+	<br><br>
+	Email obfuscator for spam protection (enter your email):
+	<textarea name="emailob" rows="1" cols="69"></textarea><br>
+	<input id='submit' type='button' value='Obfuscate' onclick='javascript:utf8Todecimal(this.form);'><br><div id='obashtml'></div>
+	<br><br>
+	<strong>PGP packet analyzer</strong> (paste PGP-key or PGP-message below)<br>
+	<textarea name="packetToAnalyze" rows="9" cols="69"></textarea><br>
+	<input id='submit' type='button' value='Analyze' onclick='AjaxRequest("analyze",this.form.packetToAnalyze.value,"packetresult");'>
+	<br><br>Result<br>
+	<div style='overflow: hidden; font-family: "Courier New", monospace; white-space: pre-wrap;'>
+		<div id="packetresult"></div>
+		<div id="right"><p></p></div>
+		<div style="clear:both"></div>
+	</div>
+	<br><br>
+	</form>
+   <div id='cmengin'></div>
+</td></tr></table></td><td id="bar"></td><td id="coltwo"><h2>Last update</h2><p><a href='?p=changelog&t=1425255505'>Mar 2, 2015</a></p>
+<h2>News</h2>
+<h3>2015-03-02</h3>
+<p>Added VCARD-Export and VCARD-Import for Contacts</p>
+<h3>2015-02-08</h3>
+<p>Added PGP-packet analyzer on our Tools-page</p>
+<h3>2015-01-08</h3>
+<p>Changed Trial accounts restrictions, <a href='?p=changelog&t=1'>read more</a>.</p>
+<h3>2015-01-07</h3>
+<p>New SSL/TLS certificate, <a href='?p=changelog#hashsums'>fingerprints</a>.</p>
+<h3>2014-12-01</h3>
+<p>More storage space for members with 12 or 24 months subscriptions.<br><a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2014-11-28</h3>
+<p>Updated our Tools-page.<br><a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2014-11-24</h3>
+<p>We are working to open up the webmail for our Two Factor Auth-mobile app. We will send an email to our users when it's ready</p>
+<h3>2014-09-17</h3>
+<p>Improved spam blocking</p>
+<h3>2014-02-17</h3>
+<p>Added FAQ: <a href='https://support.countermail.com/kb/faq.php?id=191'>How do I create good passwords?</a></p>
+<h3>2014-01-30</h3>
+<p>Changed spam flag to minimize false Spam classifications. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2014-01-27</h3>
+<p>Updated CounterMailPortable. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2013-12-27</h3>
+<p>Bugfixes and Updated Offline Login and more. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2013-12-19</h3>
+<p>Updated our Tools page. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2013-12-02</h3>
+<p>Added Quota warnings. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2013-10-22</h3>
+<p>Changed new public keysize to 4096 bits.</p>
+<h3>2013-07-23</h3>
+<p>New USB routine. <a href='?p=changelog&t=1'>Read more</a></p>
+<h3>2013-05-01</h3>
+<p>Changed Trial account period to 7 days</p>
+<h3>2013-03-24</h3>
+<p>Opened up our XMPP chat server.</p>
+<h3>2013-03-17</h3>
+<p>Added new Support-system and a new FAQ</p>
+<h3>2013-02-01</h3>
+<p>Updated Java <a href='https://countermail.com/?p=javainfo'>info page</a></p>
+<h3>2013-01-12</h3>
+<p>Added MacOS support for our USB-key</p>
+<h3>2012-12-20</h3>
+<p>Added <a href='https://countermail.com/?p=portable'>Countermail Portable</a> for Windows</p>
+<h3>2012-12-09</h3>
+<p>Added <a href='https://countermail.com/?p=safebox'>Safebox feature</a></p>
+<h3>2012-08-28</h3>
+<p>Scheduled Maintenance - August 30, 13:00 GMT. Servers will be down for approx. 2-3 hours.</p>
+<h3>2012-05-31</h3>
+<p>Added subfolder creation.</p>
+<h3>2012-03-22</h3>
+<p>Applet and Certificate update</p>
+<h3>2012-03-10</h3>
+<p>Added Wire transfer payment</p>
+<h3>2012-01-01</h3>
+<p>Third party IMAP-clients need to clean their cache.<a href='?p=downtime'> Read here</a>.</p>
+<h3>2011-10-25</h3>
+<p>Added Domain Panel for all domain administrators</p>
+<h3>2011-08-24</h3>
+<p>Added quick search</p>
+<h3>2011-08-02</h3>
+<p>Added default Compose-alias</p>
+<h3>2011-07-17</h3>
+<p>Added new session option for TOR/VPN/Proxy-surfing. Settings/Personal info - Lock IP-address</p>
+<h3>2011-06-08</h3>
+<p>Added iPhone <a href='https://countermail.com/?p=iphone'>information</a></p>
+<h3>2011-05-10</h3>
+<p>Added <a href='https://countermail.com/images/sieve_filter.gif' target='_blank'>message filters</a></p>
+<h3>2011-04-30</h3>
+<p>Updated <a href='?p=alias'>alias</a> function</p>
+<h3>2011-02-15</h3>
+<p>Added new white theme</p>
+<h3>2011-01-07</h3>
+<p>Added <a href='?p=mailnotify'>email notification</a></p>
+<h3>2010-12-06</h3>
+<p>Added more server-side <a href='http://en.wikipedia.org/wiki/E-mail_spam' target='_blank'>SPAM</a> protection</p>
+<h3>2010-12-01</h3>
+<p>New <a href='?p=compose'>Compose</a> window</p>
+<h3>2010-11-20</h3>
+<p>Added instructions for <a href='?p=android'>Android phones</a></p>
+<h3>2010-10-17</h3>
+<p>Added new feature:<br><a href='?p=secure_forms'>Secure Forms</a></p>
+<h3>2010-05-24</h3>
+<p>Opened up for all !</p>
+<h3>2009-11-21</h3>
+<p>Open website for Beta-testers</p>
+<h3>2009-05-19</h3>
+<p>Installed our primary login and database servers</p>
+<h3>2009-05-16</h3>
+<p>Comodo Usertrust certified our company for Java applet code signing</p>
+<h3>2008-05-11</h3>
+<p>Domain name registration. Official start of the project.</p><div id="rss"></div></br></td></tr></table><br></div><div id="footer" >
+		<div id="smallmenu">
+			<a href="webmail.php" id="smallmenu">Login</a>
+			<a href="?p=about" id="smallmenu">About us</a>
+			<a href="?p=services" id="smallmenu">Services</a>
+			<a href="?p=privacy" id="smallmenu">Privacy Policy</a>
+			<a href="?p=terms" id="smallmenu">Terms</a>
+			<a href="?p=support" id="smallmenu">Support</a>
+			<a href="?p=contact" id="smallmenu">Contact us</a>
+			&nbsp;&nbsp;&nbsp;Copyright &copy; 2013 CounterMail.com. All rights reserved.
+		</div>
+	</div>
+</div>
+</body></html>
