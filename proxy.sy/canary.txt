@@ -1,0 +1,356 @@
+Proxy.sh Warrant Canary
+
+Proxy.sh believes that respect of privacy is of the utmost importance in today's world. Nonetheless, many jurisdictions throughout the world still permit some legitimate or illegitimate authorities to compromise people's privacy in the context of the rules of law. This includes, but is not limited to, the U.S. Patriot Act or the British H.R. 1981. Such laws would provide relevant warrant, search or seizure in the context of criminal investigations, while forbidding the disclosure of such events to the entire affected user base.
+
+Proxy.sh already stated through its Ethical Policy that it would not hesitate to relocate to another jurisdiction if such law is employed in such way that would lead to compromising the privacy of its customers.
+
+Nonetheless, Proxy.sh believes a Warrant Canary is a valuable addition, in order to confer always the most useful transparency. Indeed, between the time we are served with a legal request that would compromise our customers' privacy and the well being of our ethical policy, and the time we can technically cease operations in a specific jurisdiction and relocate to somewhere else, we might be subject to the terrible consequences explained earlier.
+
+This is to tackle this problem that Proxy.sh will make available, on a daily basis, a "warrant canary" in the form of a cryptographically signed message containing the following:
+
+- A declaration of honor, provided by our senior network engineer, Boian Mihailov, who certifies that, to the date of publication, no warrants, searches or seizures that have not been reported in our Transparency Report, have actually taken place;
+
+- An excerpt of headlines from the Financial Times, a news source with great reputation, in order to establish the date.
+
+As per pointed out by our comrades from rsync.net, "special note should be taken if these messages ever cease being updated, or are removed from this page."
+
+The below "warrant canary" has been generated on: 2015-03-28
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Right now, we are Saturday, March 28. 2015 Saturday - 09:00 CET: Thick Cloud, 6°C (43°F) in Amsterdam, Netherlands.
+
+To this date, there has been no warrants, searches or seizures that have not been reported in our Transparency Report, and that have actually taken place. The sky is blue :)
+
+No warrants, searches or seizures of any kind, other than those reported via our Transparency Report, have ever been performed on proxy.sh assets, including in the following locations:
+
+Australia 1
+Australia 2
+Australia 3
+Austria 1
+Austria 2
+Austria 3
+Belgium 1
+Belgium 2
+Boost - Japan - SoftLayer
+Boost - U.S. East - SoftLayer
+Boost - U.S. South - SoftLayer
+Boost - U.S. West - SoftLayer
+Boost - United Kingdom - SoftLayer
+Brazil 1
+Brazil 2
+Bulgaria
+Canada 1
+Canada 2
+Canada 3
+Canada 4
+Canada 5
+Canada 6
+Canada 7
+Canada 8
+Canada 9
+Chile
+China
+Czech Republic 1
+Czech Republic 2
+Czech Republic 3
+Czech Republic 4
+Czech Republic 5
+Estonia
+Finland
+France 1
+France 2
+France 3
+France 4
+France 5
+France 6
+France 7
+France 8
+France 9
+France 10
+France 11
+France 12
+France 13
+France 14
+France 15
+France 16
+Germany 1
+Germany 2
+Germany 3
+Germany 4
+Germany 5
+Germany 6
+Germany 7
+Germany 9
+Germany 10
+Germany 11
+Germany 12
+Germany 13
+Germany 15
+Germany 16
+Germany 17
+Hong Kong 1
+Hong Kong 2
+Hong Kong 3
+Hong Kong 4
+Hungary
+Iceland 1
+Iceland 2
+India
+Ireland
+Isle of Man
+Israel 1
+Israel 2
+Italy 1
+Italy 2
+Italy 3
+Japan 1
+Japan 2
+Japan 3
+Japan 4
+Latvia
+Lichtenstein
+Lithuania
+Luxembourg 1
+Luxembourg 2
+Luxembourg 3
+Moldova 1
+Moldova 2
+Netherlands 1
+Netherlands 2
+Netherlands 3
+Netherlands 4
+Netherlands 5
+Netherlands 6
+Netherlands 7
+Netherlands 8
+Netherlands 9
+Netherlands 10
+Netherlands 11
+Netherlands 12
+Netherlands 13
+Netherlands 14
+Netherlands 15
+Netherlands 16
+Netherlands 17
+Netherlands 18
+Netherlands 19
+Netherlands 20
+Netherlands 21
+Netherlands 22
+Netherlands 23
+Netherlands 24
+Netherlands 25
+New Zealand 1
+New Zealand 2
+Panama
+Poland 1
+Poland 2
+Poland 3
+Poland 4
+Portugal 1
+Portugal 2
+Romania 1
+Romania 2
+Russia 1
+Russia 2
+Russia 3
+Russia 4
+Russia 5
+Russia 6
+Singapore 1
+Singapore 2
+Singapore 3
+Singapore 4
+Singapore 5
+South Africa 1
+South Africa 2
+South Africa 3
+Spain 1
+Spain 2
+Spain 3
+Spain 4
+Spain 5
+Sweden 1
+Sweden 2
+Sweden 3
+Sweden 4
+Sweden 5
+Sweden 6
+Sweden 7
+Sweden 8
+Sweden 9
+Sweden 10
+Sweden 11
+Switzerland 1
+Switzerland 2
+Switzerland 3
+Switzerland 4
+Switzerland 5
+Switzerland 6
+Switzerland 7
+Switzerland 8
+Thailand
+Turkey
+U.S. Arizona 1
+U.S. Arizona 2
+U.S. Arizona 3
+U.S. Arizona 4
+U.S. Arizona 5
+U.S. California 1
+U.S. California 2
+U.S. California 3
+U.S. California 4
+U.S. California 5
+U.S. California 6
+U.S. California 7
+U.S. California 8
+U.S. California 9
+U.S. California 10
+U.S. California 11
+U.S. California 12
+U.S. California 13
+U.S. California 14
+U.S. California 15
+U.S. California 16
+U.S. California 17
+U.S. California 18
+U.S. California 19
+U.S. California 20
+U.S. California 21
+U.S. California 22
+U.S. Florida 1
+U.S. Florida 2
+U.S. Florida 3
+U.S. Florida 4
+U.S. Florida 5
+U.S. Florida 6
+U.S. Georgia 1
+U.S. Georgia 2
+U.S. Georgia 3
+U.S. Georgia 4
+U.S. Georgia 5
+U.S. Georgia 6
+U.S. Georgia 7
+U.S. Georgia 8
+U.S. Illinois 1
+U.S. Illinois 2
+U.S. Illinois 3
+U.S. Illinois 4
+U.S. Illinois 5
+U.S. Illinois 6
+U.S. Illinois 7
+U.S. Illinois 8
+U.S. Illinois 10
+U.S. Illinois 11
+U.S. Illinois 12
+U.S. Missouri 1
+U.S. Missouri 2
+U.S. Missouri 3
+U.S. Nevada
+U.S. New Jersey 1
+U.S. New Jersey 2
+U.S. New Mexico
+U.S. New York 1
+U.S. New York 2
+U.S. New York 3
+U.S. New York 4
+U.S. New York 5
+U.S. New York 7
+U.S. New York 8
+U.S. New York 9
+U.S. New York 10
+U.S. New York 11
+U.S. New York 12
+U.S. New York 13
+U.S. North Carolina 1
+U.S. North Carolina 2
+U.S. North Carolina 3
+U.S. Pennsylvania 1
+U.S. Pennsylvania 2
+U.S. Texas 1
+U.S. Texas 2
+U.S. Texas 3
+U.S. Texas 4
+U.S. Texas 5
+U.S. Texas 6
+U.S. Texas 7
+U.S. Texas 8
+U.S. Texas 9
+U.S. Texas 10
+U.S. Utah 1
+U.S. Utah 2
+U.S. Utah 3
+U.S. Virginia
+U.S. Washington 1
+U.S. Washington 2
+U.S. Washington 3
+U.S. Washington 4
+U.S. Washington 5
+U.S. Washington D.C. 1
+U.S. Washington D.C. 2
+U.S. Washington D.C. 3
+Ukraine 1
+Ukraine 2
+Ukraine 3
+Ukraine 4
+Ukraine 5
+Ukraine 6
+Ukraine 7
+Ukraine 8
+United Kingdom 1
+United Kingdom 2
+United Kingdom 3
+United Kingdom 4
+United Kingdom 5
+United Kingdom 6
+United Kingdom 7
+United Kingdom 8
+United Kingdom 9
+United Kingdom 10
+United Kingdom 11
+United Kingdom 12
+United Kingdom 13
+United Kingdom 14
+
+The below content is an excerpt from http://www.ft.com/home/uk to certify the date of today.
+
+Dr Google assists in robotic surgery
+Fri, 27 Mar 2015 17:16:25 GMT
+Collaboration with J&amp;J on platform using data collected from millions of procedures
+http://www.ft.com/cms/s/0/23f5ae52-d499-11e4-a87e-00144feab7de.html?ftcamp=published_links%2Frss%2Fhome_uk%2Ffeed%2F%2Fproduct
+
+Business fears SNP-Labour ‘nightmare’
+Fri, 27 Mar 2015 13:13:34 GMT
+‘Nationalist and separatist agenda . . . would be a concern’
+http://www.ft.com/cms/s/0/05174470-d474-11e4-8be8-00144feab7de.html?ftcamp=published_links%2Frss%2Fhome_uk%2Ffeed%2F%2Fproduct
+
+Ellen Pao loses Kleiner gender bias case
+Fri, 27 Mar 2015 22:36:15 GMT
+Jury finds in favour of Silicon Valley firm on all counts
+http://www.ft.com/cms/s/0/26c5d25c-d4ca-11e4-a87e-00144feab7de.html?ftcamp=published_links%2Frss%2Fhome_uk%2Ffeed%2F%2Fproduct
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQIcBAEBAgAGBQJVFm75AAoJELTW+eQz56D2IKgP/irXJVlCNuua9980r54o4Pul
+oQDVboUE0wLEFBcsNuqXyA/nFaCLEyzm9svrW1RilADYJAgjPNGmZX5MyKljKYy5
+DpnCdvUmn4JNx1BJ2LWcFXdXT62LnayBgI5SZnDPg+9UJW/dgx39oGRFshIX8uig
+YeDHSYgRvBQ7gabASFCZua1JyRs7dxa7Vfh5KrmixkIpEWJ2h/xJEiph6QYMBXWk
+MkRY+poa/W2bAeaRQyNytFGzZ8/8jgrP03okrb1J/p5y1qNg6efGeXQ3mwzGQ/XJ
+zOLkRDConRBw900G+3c95vC+NThyzMDN28MFFseqjlRifdT3dLOd1gDRDErKicLV
+xD5Xs6H2sLi3DwBxwMcN+iScZ1jPPGXrqToQ/ZYfepicS2C31MK+Ex6vS9+8FbPk
+4CYCoJuPC7wn147R5DQbhpkfeaPQhWREf5qJGYYfMpQ2yAB/jLlumXXqJPozv/QI
+6vkzhgftVyrPv70Lh2iqCVWBhBcH8JJ9z7Fbh99cY1wC1wo4iFQ8pdqToFmOgutm
+DN2Bi+DvfnPXj5E/GGhk2LgWBk+u/jiBc3CVwMwKnNUdq5xuEH25cOc6xC2MTOyi
+/GcdRX6NLU4X0MMmrsQ10ay/Bkkyg3qBZ0nQsk4wrETe9Kv+V3cOB8YPx+sZQpy/
+Gx1v3oHCM5OqJiRr0/xe
+=UZ5U
+-----END PGP SIGNATURE-----
+
+You may find the public key of the author of this crypto-message there: http://proxy.sh/sysop.pubkey.txt
+
+NB:
+
+This notice is not 100% bulletproof. It is clearly signed by us, and the idea is that, while we may be forced not to talk about an intervention, we cannot be prevented from actually remaining silent. The contrary would mean that we are forced both not to talk, and, to keep talking. Despite this non-sense, a legal onus exists and lies in whether we could be forced to keep publishing such notice no matter if it is proven false -- in other words, the question is whether we may be forced to state false information for the benefit of the underlying investigation. By deciding to move forward with this notice, Proxy.sh hereby clarifies its standpoint on whether it is ready to challenge the ambiguities of the law for the sake of its customer's privacy.
