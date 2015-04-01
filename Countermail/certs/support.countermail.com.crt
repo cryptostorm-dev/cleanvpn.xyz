@@ -1,0 +1,108 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            11:21:75:ac:d3:4e:a5:88:2c:8b:3d:ab:78:0a:b5:c0:aa:3b
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign Domain Validation CA - SHA256 - G2
+        Validity
+            Not Before: Jan  6 19:26:22 2015 GMT
+            Not After : Feb  7 19:55:36 2016 GMT
+        Subject: OU=Domain Control Validated, CN=*.countermail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e7:42:81:c6:af:58:ce:b9:5c:67:cd:69:df:d9:
+                    30:57:3b:6a:39:e7:29:49:65:b2:e2:d5:78:df:9a:
+                    82:04:fd:5b:23:c3:95:50:3f:7d:88:ba:c7:0f:1e:
+                    59:0b:48:93:6e:94:c3:bb:ba:8b:ae:32:d4:b0:38:
+                    55:77:ab:0e:b6:83:83:14:df:97:84:2c:13:8d:46:
+                    69:7f:10:a3:ba:b0:7b:7f:57:81:88:4e:b7:4e:10:
+                    65:fc:37:7c:fa:93:94:6b:67:5b:3e:36:ec:19:96:
+                    1c:47:27:14:47:1c:13:13:0d:87:ac:a0:d2:e5:b9:
+                    66:42:ca:40:a6:79:77:3e:40:63:83:64:22:25:d2:
+                    0e:67:2d:ef:f8:49:64:a1:ee:b4:3e:da:9f:f6:a7:
+                    5b:c9:4c:5b:c3:08:61:27:7f:b3:e2:95:fe:2c:4f:
+                    60:14:b6:78:44:fa:bb:bc:84:f8:86:47:50:92:25:
+                    f4:fe:6d:43:4d:00:fe:ea:5a:1e:9d:92:b8:be:ac:
+                    5a:80:df:85:1f:10:d8:7b:fe:e0:5b:69:75:f7:24:
+                    3a:9c:58:86:f2:01:2b:b8:9f:cd:ac:b1:1d:ef:10:
+                    84:ba:cb:57:21:0e:e6:a9:6f:0f:3a:2a:04:08:50:
+                    ec:be:65:f6:26:bf:f8:3c:85:9e:c9:e9:4d:53:8e:
+                    a8:d1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+                  CPS: https://www.globalsign.com/repository/
+
+            X509v3 Subject Alternative Name: 
+                DNS:*.countermail.com, DNS:countermail.com
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.globalsign.com/gs/gsdomainvalsha2g2.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://secure.globalsign.com/cacert/gsdomainvalsha2g2r1.crt
+                OCSP - URI:http://ocsp2.globalsign.com/gsdomainvalsha2g2
+
+            X509v3 Subject Key Identifier: 
+                82:BC:3C:67:39:6B:A1:2A:20:F8:16:28:CF:ED:EA:52:DE:3C:E4:E1
+            X509v3 Authority Key Identifier: 
+                keyid:EA:4E:7C:D4:80:2D:E5:15:81:86:26:8C:82:6D:C0:98:A4:CF:97:0F
+
+    Signature Algorithm: sha256WithRSAEncryption
+         08:16:ca:54:9c:b4:ec:be:91:f9:09:8a:82:6f:5f:8c:a5:32:
+         b3:fb:e3:f9:f4:f2:68:06:3a:9b:b0:85:9d:ca:59:63:72:1c:
+         42:36:98:89:64:45:f5:f6:4c:84:f1:f2:5c:ea:79:54:36:79:
+         45:81:b1:dd:af:5b:f1:9a:b4:60:b6:96:68:09:e8:10:bf:19:
+         e1:f7:56:07:09:95:93:51:93:99:48:61:f9:94:2f:d0:ce:82:
+         35:9a:46:45:91:c6:cd:41:ee:37:b9:fd:75:2a:10:84:c2:3f:
+         24:40:11:24:5f:18:a4:37:53:80:cc:97:65:a1:03:2d:34:df:
+         24:63:97:3f:59:e6:e7:3a:73:24:a5:1e:2b:40:21:02:b1:c9:
+         80:e1:80:a7:40:ca:32:d7:bc:d5:9b:8a:74:e7:7f:6b:90:99:
+         86:7b:4b:b2:2e:4c:39:50:94:1b:6d:d1:87:d4:f9:dc:f1:e3:
+         cc:f4:3d:14:c0:41:35:51:ce:f4:97:51:36:6a:89:77:e2:37:
+         81:49:78:bd:06:1a:73:ce:66:ca:0c:bf:ce:50:67:81:7f:31:
+         86:5f:55:38:6d:ae:aa:01:3e:7e:73:df:4f:4e:80:52:7e:3d:
+         5f:9a:8b:56:c5:ba:57:b3:1e:30:15:c9:e2:02:bb:25:4e:f5:
+         66:32:18:1f
+
+
+-----BEGIN CERTIFICATE-----
+MIIFATCCA+mgAwIBAgISESF1rNNOpYgsiz2reAq1wKo7MA0GCSqGSIb3DQEBCwUA
+MGAxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMTYwNAYD
+VQQDEy1HbG9iYWxTaWduIERvbWFpbiBWYWxpZGF0aW9uIENBIC0gU0hBMjU2IC0g
+RzIwHhcNMTUwMTA2MTkyNjIyWhcNMTYwMjA3MTk1NTM2WjA/MSEwHwYDVQQLExhE
+b21haW4gQ29udHJvbCBWYWxpZGF0ZWQxGjAYBgNVBAMMESouY291bnRlcm1haWwu
+Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA50KBxq9YzrlcZ81p
+39kwVztqOecpSWWy4tV435qCBP1bI8OVUD99iLrHDx5ZC0iTbpTDu7qLrjLUsDhV
+d6sOtoODFN+XhCwTjUZpfxCjurB7f1eBiE63ThBl/Dd8+pOUa2dbPjbsGZYcRycU
+RxwTEw2HrKDS5blmQspApnl3PkBjg2QiJdIOZy3v+Elkoe60Ptqf9qdbyUxbwwhh
+J3+z4pX+LE9gFLZ4RPq7vIT4hkdQkiX0/m1DTQD+6loenZK4vqxagN+FHxDYe/7g
+W2l19yQ6nFiG8gEruJ/NrLEd7xCEustXIQ7mqW8POioECFDsvmX2Jr/4PIWeyelN
+U46o0QIDAQABo4IB1DCCAdAwDgYDVR0PAQH/BAQDAgWgMEkGA1UdIARCMEAwPgYG
+Z4EMAQIBMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3Lmdsb2JhbHNpZ24uY29t
+L3JlcG9zaXRvcnkvMC0GA1UdEQQmMCSCESouY291bnRlcm1haWwuY29tgg9jb3Vu
+dGVybWFpbC5jb20wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYB
+BQUHAwIwQwYDVR0fBDwwOjA4oDagNIYyaHR0cDovL2NybC5nbG9iYWxzaWduLmNv
+bS9ncy9nc2RvbWFpbnZhbHNoYTJnMi5jcmwwgZQGCCsGAQUFBwEBBIGHMIGEMEcG
+CCsGAQUFBzAChjtodHRwOi8vc2VjdXJlLmdsb2JhbHNpZ24uY29tL2NhY2VydC9n
+c2RvbWFpbnZhbHNoYTJnMnIxLmNydDA5BggrBgEFBQcwAYYtaHR0cDovL29jc3Ay
+Lmdsb2JhbHNpZ24uY29tL2dzZG9tYWludmFsc2hhMmcyMB0GA1UdDgQWBBSCvDxn
+OWuhKiD4FijP7epS3jzk4TAfBgNVHSMEGDAWgBTqTnzUgC3lFYGGJoyCbcCYpM+X
+DzANBgkqhkiG9w0BAQsFAAOCAQEACBbKVJy07L6R+QmKgm9fjKUys/vj+fTyaAY6
+m7CFncpZY3IcQjaYiWRF9fZMhPHyXOp5VDZ5RYGx3a9b8Zq0YLaWaAnoEL8Z4fdW
+BwmVk1GTmUhh+ZQv0M6CNZpGRZHGzUHuN7n9dSoQhMI/JEARJF8YpDdTgMyXZaED
+LTTfJGOXP1nm5zpzJKUeK0AhArHJgOGAp0DKMte81ZuKdOd/a5CZhntLsi5MOVCU
+G23Rh9T53PHjzPQ9FMBBNVHO9JdRNmqJd+I3gUl4vQYac85mygy/zlBngX8xhl9V
+OG2uqgE+fnPfT06AUn49X5qLVsW6V7MeMBXJ4gK7JU71ZjIYHw==
+-----END CERTIFICATE-----
