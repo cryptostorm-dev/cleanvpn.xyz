@@ -1,0 +1,88 @@
+https://luminati.io/cp/api_example
+
+https://github.com/Agiley/Luminati
+
+----------
+
+curl --proxy zproxy.luminati.io:22225 --proxy-user lum-customer-CUSTOMER-zone-YOURZONE:YOURPASS "http://www.telize.com/geoip"
+
+----------
+
+#!/usr/bin/env node
+require('request-promise')({
+    url: 'http://www.telize.com/geoip',
+    proxy: 'http://lum-customer-CUSTOMER-zone-YOURZONE:YOURPASS@zproxy.luminati.io:22225'
+}).then(function(data){ console.log(data); }, function(err){ console.error(err); });
+
+----------
+
+package example;
+
+import org.apache.http.HttpHost;
+import org.apache.http.client.fluent.*;
+
+public class Example {
+    public static void main(String[] args) throws Exception {
+        HttpHost proxy = new HttpHost("zproxy.luminati.io", 22225);
+        String res = Executor.newInstance()
+            .auth(proxy, "lum-customer-CUSTOMER-zone-YOURZONE", "YOURPASS")
+            .execute(Request.Get("http://www.telize.com/geoip").viaProxy(proxy))
+            .returnContent().asString();
+        System.out.println(res);
+    }
+}
+
+----------
+
+using System;
+using System.Net;
+
+class Example
+{
+    static void Main()
+    {
+        var client = new WebClient();
+        client.Proxy = new WebProxy("zproxy.luminati.io:22225");
+        client.Proxy.Credentials = new NetworkCredential("lum-customer-CUSTOMER-zone-YOURZONE", "YOURPASS");
+        Console.WriteLine(client.DownloadString("http://www.telize.com/geoip"));
+    }
+}
+
+----------
+
+Imports System.Net
+
+Module Example
+    Sub Main()
+        Dim Client As New WebClient
+        Client.Proxy = New WebProxy("http://zproxy.luminati.io:22225")
+        Client.Proxy.Credentials = New NetworkCredential("lum-customer-CUSTOMER-zone-YOURZONE", "YOURPASS")
+        Console.WriteLine(Client.DownloadString("http://www.telize.com/geoip"))
+    End Sub
+End Module
+
+----------
+
+<?php
+$curl = curl_init('http://www.telize.com/geoip');
+curl_setopt($curl, CURLOPT_PROXY, 'http://zproxy.luminati.io:22225');
+curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'lum-customer-CUSTOMER-zone-YOURZONE:YOURPASS');
+curl_exec($curl);
+?>
+
+----------
+
+#!/usr/bin/env python
+import urllib2
+opener = urllib2.build_opener(urllib2.ProxyHandler({'http': 'http://lum-customer-CUSTOMER-zone-YOURZONE:YOURPASS@zproxy.luminati.io:22225'}))
+print(opener.open('http://www.telize.com/geoip').read())
+
+----------
+
+#!/usr/bin/perl
+use LWP::UserAgent;
+my $agent = LWP::UserAgent->new();
+$agent->proxy(['http', 'https'], "http://lum-customer-CUSTOMER-zone-YOURZONE:YOURPASS\@zproxy.luminati.io:22225");
+print $agent->get('http://www.telize.com/geoip')->content();
+
+----------
