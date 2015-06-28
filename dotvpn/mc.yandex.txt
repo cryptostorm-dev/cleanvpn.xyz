@@ -1,0 +1,19 @@
+response header: 
+HTTP/1.1 200 OK
+Server: nginx/1.6.2
+Date: Sun, 28 Jun 2015 08:13:23 GMT
+Content-Type: image/gif
+Content-Length: 43
+Connection: keep-alive
+P3P: CP="NOI DEVa TAIa OUR BUS UNI STA"
+Last-Modified: Sun, 28 Jun 2015 08:13:23 GMT
+Expires: Sun, 28 Jun 2015 08:13:23 GMT
+Cache-Control: private, no-cache, no-store, must-revalidate, max-age=0
+Pragma: no-cache
+Access-Control-Allow-Origin: https://dotvpn.com
+Access-Control-Allow-Credentials: true
+Strict-Transport-Security: max-age=31536000
+
+
+Response:
+GIF89a!ù,D;
