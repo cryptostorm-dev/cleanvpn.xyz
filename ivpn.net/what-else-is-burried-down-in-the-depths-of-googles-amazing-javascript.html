@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What else is burried down in the depth&#8217;s of Google&#8217;s amazing JavaScript? &#8211; Infrequently Noted</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="http://infrequently.org/wp-content/themes/sandbox/style.css">
+  <link rel="stylesheet" type="text/css" href="//infrequently.org/14/stretchtext.js/src/stretchtext.css">
+  <script defer src="//infrequently.org/14/stretchtext.js/src/stretchtext.js"></script>
+  
+<!--[if gte IE 9]><!-->
+<link href="//fonts.googleapis.com/css?family=Lato:100,700,700italic" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Infrequently Noted &raquo; What else is burried down in the depth&#8217;s of Google&#8217;s amazing JavaScript? Comments Feed" href="https://infrequently.org/2006/02/what-else-is-burried-down-in-the-depths-of-googles-amazing-javascript/feed/" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://infrequently.org/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://infrequently.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://infrequently.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='OSCON &#8217;06 JavaScript/Ajax Track' href='https://infrequently.org/2006/01/oscon-06-javascriptajax-track/' />
+<link rel='next' title='Updated DHTML Universe Map' href='https://infrequently.org/2006/02/updated-dhtml-universe-map/' />
+<meta name="generator" content="WordPress 4.2.2" />
+<link rel='canonical' href='https://infrequently.org/2006/02/what-else-is-burried-down-in-the-depths-of-googles-amazing-javascript/' />
+<link rel='shortlink' href='https://infrequently.org/?p=538' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<link rel="alternate" type="application/rss+xml" href="https://infrequently.org/feed/" title="Infrequently Noted latest posts" />
+	<link rel="alternate" type="application/rss+xml" href="https://infrequently.org/comments/feed/" title="Infrequently Noted latest comments" />
+	<link rel="pingback" href="http://infrequently.org/xmlrpc.php" />
+</head>
+
+<body class="wordpress y2015 m06 d30 h22 single postid-538 s-y2006 s-m02 s-d12 s-h12 s-category-dhtml s-category-javascript s-category-programming s-category-webdev s-tag-vim s-author-alex">
+
+<div id="wrapper" class="hfeed">
+
+	<div id="header">
+		<h1 id="blog-title"><span><a href="https://infrequently.org/" title="Infrequently Noted" rel="home">Infrequently Noted</a></span></h1>
+		<div id="blog-description">Alex Russell on browsers, standards, and the process of progress.</div>
+	</div><!--  #header -->
+
+	<div id="access">
+    <!--
+		<div class="skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+    -->
+		<div id="menu"><ul><li class="page_item page-item-525"><a href="https://infrequently.org/about-me/">About Me</a></li></ul></div>
+	</div>
+
+	<div id="container">
+		<div id="content">
+
+
+			<div id="nav-above" class="navigation">
+				<div class="nav-previous"><a href="https://infrequently.org/2006/01/oscon-06-javascriptajax-track/" rel="prev"><span class="meta-nav">&laquo;</span> OSCON &#8217;06 JavaScript/Ajax Track</a></div>
+				<div class="nav-next"><a href="https://infrequently.org/2006/02/updated-dhtml-universe-map/" rel="next">Updated DHTML Universe Map <span class="meta-nav">&raquo;</span></a></div>
+			</div>
+
+			<div id="post-538" class="hentry p1 post publish author-alex category-dhtml category-javascript category-programming category-webdev tag-vim y2006 m02 d12 h12">
+				<h2 class="entry-title">What else is burried down in the depth&#8217;s of Google&#8217;s amazing JavaScript?</h2>
+				<div class="entry-content">
+<p>So the new GTalk interface in GMail is pretty rad. Congrats to <a href="http://pupius.co.uk/">Dan</a> and the rest of the team that made it &#8220;go&#8221;. </p>
+<p>The talk feature is cool not just from a UI perspective as the code is also chock full of little gems. I&#8217;m kind of a dork about low-latency data transport to the browser. HTTP wasn&#8217;t meant to be used this way&#8230;so of <em>course</em> I&#8217;m interested! Ever since <a href="http://troutgirl.com/blog/">Joyce</a> got me involved in the rewrite of mod_pubsub I&#8217;ve had my eye on the various ways that servers can push data to browsers and the kinds of technology that will prevent a server that&#8217;s doing this from melting down (hellooooooooo <a href="http://twistedmatrix.com">Twisted</a>). Using just what&#8217;s available to the browser, it&#8217;s possible to have the server push data encapsulated in &lt;script&gt; blocks and rely on a progressive rendering behavior that every modern browser implements to dispatch events in near real-time (compared to full page refresh or polling delay). There are a mountain of browser quirks that of course play into this process. The least desirable of these to the user are the &#8220;phantom click&#8221; and the &#8220;throbber of doom&#8221; that afflict IE users.</p>
+<p>When a page (or an iframe it hosts) is loading content, your browser usually shows some sort of &#8220;I&#8217;m working&#8221; indicator. In the bottom &#8220;taskbar&#8221; there is usually some sort of progress meter. In the upper right (on IE) the &#8220;throbber&#8221; will continue to animate until the work is done. Of course in the scenario I&#8217;m describing the sent page is <em>never</em> done. The whole point is that the server keeps the connection open. Combine this with the IE behavior of producing a &#8220;click&#8221; like sound when an iframe is navigated to a different URL, and you&#8217;ve got a pretty poor user experience.</p>
+<p>But couldn&#8217;t you do something with XMLHTTP? Short answer: <a href="http://alex.dojotoolkit.org/?p=503">yes</a>, but not as portably and it won&#8217;t get you around IE&#8217;s 2-connection limit either so there&#8217;s not much of a win. For the long answer, <a href="http://conferences.oreillynet.com/cs/et2006/view/e_sess/7995">see my talk at ETech</a> or wait for me to post the slides. At the end of the day, the hidden &lt;iframe&gt; hack scales best and is the most portable. Especially if you can lick the UX problems.</p>
+<p>Which Google has.</p>
+<p>How? By cleverly abusing <em>another</em> safe-for-scripting ActiveX control in IE. Here&#8217;s the basic structure of the hack:</p>
+<pre>
+  // we were served from child.example.com but 
+  // have already set document.domain to example.com
+  var currentDomain = "http://exmaple.com/"; 
+  var dataStreamUrl = currentDomain+"path/to/server.cgi";
+  var transferDoc = new ActiveXObject("htmlfile"); // !?!
+  // make sure it's really scriptable
+  transferDoc.open();
+  transferDoc.write("&lt;html&gt;");
+  transferDoc.write("&lt;script&gt;document.domain='"+currentDomain+"';&lt;/script&gt;");
+  transferDoc.write("&lt;/html&gt;");
+  transferDoc.close();
+  // set the iframe up to call the server for data
+  var ifrDiv = transferDoc.createElement("div");
+  transferDoc.appendChild(ifrDiv);
+  // start communicating
+  ifrDiv.innerHTML = "&lt;iframe src='"+dataStreamUrl+"'&gt;&lt;/iframe&gt;";
+</pre>
+<p>This is the kind of fundamental technique that is critical to making the next generation of interactive experiences a reality. Server tools like mod_pubsub and LivePage (and perhaps even JMS buses) are starting to come into their own and the benefits of event-driven IO are starting to become well understood by server-side devs. It&#8217;s only a matter of time before server-push data hits an inflection point in the same way that background single-request/single-response data transfer did with Ajax. Dojo will, of course, have infrastructure to support this kind of thing when the borader developer community is ready (most if it is already in place).</p>
+<p>From long and painful experience and amazingly deep respect, I take my hat off and bow to whoever it was on the GMail/GTalk team that figured this out. It&#8217;s a hell of a hack. It&#8217;s no wonder that Google has been able to attract and develop <a href="http://massless.org">the best</a> <a href="http://youngpup.net">DHTML</a> <a href="http://erik.eae.net">hackers</a> <a href="http://glenmurphy.com/projects/">in the</a> <a href="http://brevity.org/">world</a>.</p>
+<p><b>Update</b>: so just to be *very* clear, I worked on the rewrite of the mod_pubsub *client*. The server rewrite was handled by some folks who are much smarter than I am.</p>
+
+				</div>
+				<div class="entry-meta">
+					This entry was written by <span class="author vcard"><a class="url fn n" href="https://infrequently.org/author/alex/" title="View all posts by alex">alex</a></span>, posted on <abbr class="published" title="2006-02-12T19:11:17+0000">February 12, 2006 at 7:11 pm</abbr>, filed under <a href="https://infrequently.org/category/dhtml/" rel="category tag">dhtml</a>, <a href="https://infrequently.org/category/javascript/" rel="category tag">javascript</a>, <a href="https://infrequently.org/category/programming/" rel="category tag">programming</a>, <a href="https://infrequently.org/category/webdev/" rel="category tag">webdev</a> and tagged <a href="https://infrequently.org/tag/vim/" rel="tag">vim</a>. Bookmark the <a href="https://infrequently.org/2006/02/what-else-is-burried-down-in-the-depths-of-googles-amazing-javascript/" title="Permalink to What else is burried down in the depth&#8217;s of Google&#8217;s amazing JavaScript?" rel="bookmark">permalink</a>. Follow any comments here with the <a href="https://infrequently.org/2006/02/what-else-is-burried-down-in-the-depths-of-googles-amazing-javascript/feed/" title="Comments RSS to What else is burried down in the depth&#8217;s of Google&#8217;s amazing JavaScript?" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.
+					Both comments and trackbacks are currently closed.
+				</div>
+			</div><!-- .post -->
+
+			<div id="nav-below" class="navigation">
+				<div class="nav-previous"><a href="https://infrequently.org/2006/01/oscon-06-javascriptajax-track/" rel="prev"><span class="meta-nav">&laquo;</span> OSCON &#8217;06 JavaScript/Ajax Track</a></div>
+				<div class="nav-next"><a href="https://infrequently.org/2006/02/updated-dhtml-universe-map/" rel="next">Updated DHTML Universe Map <span class="meta-nav">&raquo;</span></a></div>
+			</div>
+
+			<div id="comments">
+
+
+				<div id="comments-list" class="comments">
+					<h3><span>67</span> Comments</h3>
+
+					<ol>
+						<li id="comment-178" class="comment c0 c-y2006 c-m02 c-d12 c-h19 alt">
+							<div class="comment-author vcard"> <span class="fn n">robert</span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 2:17 am <span class="meta-sep">|</span> <a href="#comment-178" title="Permalink to this comment">Permalink</a></div>
+							<p>So, how does this work in Firefox then? Another technique?</p>
+						</li>
+						<li id="comment-179" class="comment c1 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d12 c-h19">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 2:27 am <span class="meta-sep">|</span> <a href="#comment-179" title="Permalink to this comment">Permalink</a></div>
+							<p>On FF (1.5), the communication iframe only makes the statusbar say &#8220;Transfering data from example.com&#8230;&#8221; while the throbber stops when a subsequent HTTP request has finished. It&#8217;s much less distracting. While not perfect, it sure beats having the top thinger spinning, and a solution for the 85%+ browser is *much* more important for the acceptance of the technique.</p>
+						</li>
+						<li id="comment-180" class="comment c2 c-y2006 c-m02 c-d12 c-h19 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://simon.incutio.com/' rel='external nofollow' class='url url'>Simon Willison</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 2:31 am <span class="meta-sep">|</span> <a href="#comment-180" title="Permalink to this comment">Permalink</a></div>
+							<p>Is the htmlfile object documented <em>anywhere</em>? I can&#8217;t find it on MSDN (but then I can never find anything on MSDN).</p>
+						</li>
+						<li id="comment-181" class="comment c3 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d12 c-h20">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 3:01 am <span class="meta-sep">|</span> <a href="#comment-181" title="Permalink to this comment">Permalink</a></div>
+							<p>Not sure. I think the above syntax gives you a document that implements IHTMLDocument2: </p>
+<p><a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/browser/mshtml/reference/ifaces/document2/document2.asp" rel="nofollow">http://msdn.microsoft.com/library/default.asp?url=/workshop/browser/mshtml/reference/ifaces/document2/document2.asp</a></p>
+<p>Regards</p>
+						</li>
+						<li id="comment-183" class="comment c4 c-y2006 c-m02 c-d12 c-h20 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://progrium.com' rel='external nofollow' class='url url'>Jeff Lindsay</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 3:32 am <span class="meta-sep">|</span> <a href="#comment-183" title="Permalink to this comment">Permalink</a></div>
+							<p>How&#8217;s the rewrite of mod_pubsub going?</p>
+						</li>
+						<li id="comment-184" class="comment c5 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d12 c-h20">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 3:35 am <span class="meta-sep">|</span> <a href="#comment-184" title="Permalink to this comment">Permalink</a></div>
+							<p>It&#8217;s done but not yet released as Open Source software. You might ping Joyce to see what the current price for a copy is.</p>
+						</li>
+						<li id="comment-185" class="comment c6 c-y2006 c-m02 c-d12 c-h20 alt">
+							<div class="comment-author vcard"> <span class="fn n">Sjors Pals</span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 3:54 am <span class="meta-sep">|</span> <a href="#comment-185" title="Permalink to this comment">Permalink</a></div>
+							<p>Nice, but this is still a &#8220;hack&#8221;, the problem is that HTML is just not suitable for RIA&#8217;s. I believe that &#8220;ajax&#8221; can be used for small parts of a website, but its totally not suitable for complete webbased applications with rich interaction. One of the worst things about Ajax is that techniques are based on hacks, and not on standards. An other problem is that HTML is just not suitable for rich internet, example: if you need an accordion element, tree structure, or tab interface, you have to build it still in HTML. While in flash its just adding 1 tag and its completely rendered on the client.</p>
+						</li>
+						<li id="comment-186" class="comment c7 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d12 c-h21">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 4:03 am <span class="meta-sep">|</span> <a href="#comment-186" title="Permalink to this comment">Permalink</a></div>
+							<p>Sjors,</p>
+<p>Of course it&#8217;s a hack. Welcome to the web. This is how real work gets done out here in the world of universal deployment.</p>
+<p>As for Flash and components, I invite you to check out the widgets we&#8217;re building in Dojo. They make building richer interfaces easier, to the extent that declaring rich components can be as little as a couple of tags. These components aren&#8217;t Flash, but that&#8217;s both a benefit and a liability.</p>
+<p>Regards</p>
+						</li>
+						<li id="comment-187" class="comment c8 c-y2006 c-m02 c-d12 c-h23 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.jaketracey.com' rel='external nofollow' class='url url'>Jake</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 6:25 am <span class="meta-sep">|</span> <a href="#comment-187" title="Permalink to this comment">Permalink</a></div>
+							<p>Tables were hacks too, and look at how using them turned out. I have a feeling that we&#8217;re going to be repeating history with applications based on code like this.</p>
+						</li>
+						<li id="comment-188" class="comment c9 c-y2006 c-m02 c-d13 c-h03">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.lazycoder.com' rel='external nofollow' class='url url'>Scott</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 10:12 am <span class="meta-sep">|</span> <a href="#comment-188" title="Permalink to this comment">Permalink</a></div>
+							<p>Forgive the denseness, but how is this different from programatically or manually (via a click) changing the src of the iframe to a dynamic page and writing out the javascript data using some server side technology? (e.g. the &#8220;back in the old days&#8221; method) Or if you prefer, changing the location of a 0px w/h or hiddent frame?</p>
+						</li>
+						<li id="comment-189" class="comment c10 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d13 c-h04 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 11:18 am <span class="meta-sep">|</span> <a href="#comment-189" title="Permalink to this comment">Permalink</a></div>
+							<p>Scott,</p>
+<p>It&#8217;s unique in several ways. It builds on the programmaticaly &#8220;moving&#8221; an iframe to a different URL, but with the cooperation of the server streams events down the wire without closing the connection. Furthermore, unlike hosting the iframe directly under the spawning document, this technique avoids the background &#8220;click&#8221; noise and prevents the throbber from spinning. It&#8217;s a usability enhancement to a well-known technique (at least in the small community of people that care about low-latency data to the browser).</p>
+<p>Regards</p>
+						</li>
+						<li id="comment-190" class="comment c11 c-y2006 c-m02 c-d13 c-h04">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://pupius.co.uk' rel='external nofollow' class='url url'>Dan Pupius</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 11:47 am <span class="meta-sep">|</span> <a href="#comment-190" title="Permalink to this comment">Permalink</a></div>
+							<p>Cheers Alex.  The team are glad to know people are noticing the technical achievements of Gmail Chat.  As you know, I joined the team quite late on and was equally impressed when I found out how they were handling the persistant connection, it&#8217;s a stroke of Genius.</p>
+						</li>
+						<li id="comment-191" class="comment c12 c-y2006 c-m02 c-d13 c-h04 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://pupius.co.uk' rel='external nofollow' class='url url'>Dan Pupius</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 11:47 am <span class="meta-sep">|</span> <a href="#comment-191" title="Permalink to this comment">Permalink</a></div>
+							<p>(For the record I only played a small role in this launch)</p>
+						</li>
+						<li id="comment-193" class="comment c13 c-y2006 c-m02 c-d13 c-h06">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://glazkov.com/' rel='external nofollow' class='url url'>Dimitri Glazkov</a></span></div>
+							<div class="comment-meta">Posted February 13, 2006 at 1:59 pm <span class="meta-sep">|</span> <a href="#comment-193" title="Permalink to this comment">Permalink</a></div>
+							<p>That&#8217;s pretty cute. Indeed, the call will return IHTMLDocument2. I wonder if this leaks any?</p>
+						</li>
+						<li id="comment-200" class="comment c14 c-y2006 c-m02 c-d13 c-h21 alt">
+							<div class="comment-author vcard"> <span class="fn n">lescoste</span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 4:48 am <span class="meta-sep">|</span> <a href="#comment-200" title="Permalink to this comment">Permalink</a></div>
+							<p>Hi, Nice job going thru the js code.<br />
+But did you found how gmail talk detects when you are away ?</p>
+						</li>
+						<li id="comment-202" class="comment c15 c-y2006 c-m02 c-d13 c-h21">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.obrienit.se' rel='external nofollow' class='url url'>Tim</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 4:58 am <span class="meta-sep">|</span> <a href="#comment-202" title="Permalink to this comment">Permalink</a></div>
+							<p>Thanks for the insight.</p>
+<p>It&#8217;s amazing how irritating that iframe click is on the sites that use that method.</p>
+						</li>
+						<li id="comment-203" class="comment c16 c-y2006 c-m02 c-d13 c-h21 alt">
+							<div class="comment-author vcard"> <span class="fn n">Hull</span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 4:58 am <span class="meta-sep">|</span> <a href="#comment-203" title="Permalink to this comment">Permalink</a></div>
+							<p>The problem I see is that common web hosts aren&#8217;t likely to be very happy, are they? As far as I can tell, using this technique with any common web host will tie up Apache workers, reducing the number of &#8216;ready to serve&#8217; Apache workers, introducing various performance side effects, say from the number of requests going through per minute to how well you can withstand a slashdotting.</p>
+						</li>
+						<li id="comment-205" class="comment c17 c-y2006 c-m02 c-d14 c-h00">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.jonathangoldsboro.com' rel='external nofollow' class='url url'>Jonathan</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 7:14 am <span class="meta-sep">|</span> <a href="#comment-205" title="Permalink to this comment">Permalink</a></div>
+							<p>I think this is pretty cool, I just find the inconsistency  that exist with AJAX implementation is a bit of a pain. Until the standard&#8217;s grow I just don&#8217;t see the movement of AJAX going any further, all we do is hack out some code for small little apps when developing the page using AJAX instead of using a standard built in method. Anyway&#8217;s this was a great read!</p>
+						</li>
+						<li id="comment-207" class="comment c18 c-y2006 c-m02 c-d14 c-h01 alt">
+							<div class="comment-author vcard"> <span class="fn n">Tim</span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 8:05 am <span class="meta-sep">|</span> <a href="#comment-207" title="Permalink to this comment">Permalink</a></div>
+							<p>What about the up and coming Windows Smart Client tools?  I don&#8217;t know much about it but I had heard it will make the &#8220;Desktop over internet&#8221; experiance even more a reality.  It sounds very promising.</p>
+						</li>
+						<li id="comment-208" class="comment c19 c-y2006 c-m02 c-d14 c-h02">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.filipdewaard.com' rel='external nofollow' class='url url'>Filip de Waard</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 9:33 am <span class="meta-sep">|</span> <a href="#comment-208" title="Permalink to this comment">Permalink</a></div>
+							<p>A potential downside of this approach is the need to send the complete HTML to the client, while with XmlHttpRequest you could send a more efficient XML format and let JavaScript reformat the output. This means you have to deal with more &#8216;live&#8217; data and bandwith usage. Of course, both approaches have their advantages and the &#8216;right tool for the job&#8217; rule applies, but I&#8217;d like to mention this nevertheless&#8230;</p>
+						</li>
+						<li id="comment-209" class="comment c20 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d14 c-h02 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 9:48 am <span class="meta-sep">|</span> <a href="#comment-209" title="Permalink to this comment">Permalink</a></div>
+							<p>Hull: this stuff won&#8217;t run on today&#8217;s Apache (hence the link to Tiwsted). The current worker setup is just too resource intensive for &#8220;zombie&#8221; connections.</p>
+<p>Tim: as I&#8217;ve said here before, you can develop richer interactions in whatever environment you like, but please don&#8217;t make any mistake that if it&#8217;s not HTML, CSS and JavaScript, it&#8217;s not the web.</p>
+<p>Filip: You&#8217;re not sending &#8220;the complete html&#8221;, you&#8217;re sending small datagrams encoded in a script tag envelope. The data on the wire is usually some sort of JSON data structure.</p>
+						</li>
+						<li id="comment-210" class="comment c21 c-y2006 c-m02 c-d14 c-h03">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://Sandy.McArhur.org/' rel='external nofollow' class='url url'>Sandy McArthur</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 10:33 am <span class="meta-sep">|</span> <a href="#comment-210" title="Permalink to this comment">Permalink</a></div>
+							<p>This isn&#8217;t really new, just got associated with the shiny buzzword AJAX now. The concept of an open pending http connection exactly what iTunes does when sharing between two computers. iTunes&#8217; DAAP is really just a HTTP service between two clients. They keep an open HTTP request and if the server needs to tell the client something now it just sends a response back over that request.</p>
+						</li>
+						<li id="comment-211" class="comment c22 c-y2006 c-m02 c-d14 c-h03 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.trueshot.com' rel='external nofollow' class='url url'>George</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 10:34 am <span class="meta-sep">|</span> <a href="#comment-211" title="Permalink to this comment">Permalink</a></div>
+							<p>I have been doing an AJAX like technology for several years now.  Instead of using an ActiveX object, I simply define a number of script tags and then use javascript to assign them to send and retreive data from the server.</p>
+<p>function loadCustomer(McustId) { document.all.general1.src=&#8221;getCust.php?&#8221;+McustId<br />
+}</p>
+<p>&#8230;<br />
+The php returns executable javascript, which obviously works like regular javascript.  Instead of using XML, I format it so that it renders the data in the form needed for each specific case.</p>
+<p>The issue of PUSH is interesting to me.  There are many times that I would like my local application to know about events.  I use polling currently.  I have thought about using Flash, which has notification capabilities.  Really, all that is needed is to say &#8220;Hey, its time to check the server.&#8221;  </p>
+<p>I am unclear about the server aspect of this particular approach (Tiwsted)</p>
+						</li>
+						<li id="comment-213" class="comment c23 c-y2006 c-m02 c-d14 c-h08">
+							<div class="comment-author vcard"> <span class="fn n">Tree</span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 3:13 pm <span class="meta-sep">|</span> <a href="#comment-213" title="Permalink to this comment">Permalink</a></div>
+							<p>multipart http content type is what you are looking for.  Netscape already has invented that back in the 90&#8217;s.<br />
+<a href="http://wp.netscape.com/assist/net_sites/pushpull.html" rel="nofollow">http://wp.netscape.com/assist/net_sites/pushpull.html</a></p>
+<p>They were just too far ahead of their time. Web weren&#8217;t mature enough to use it. Here is a link on how you can implement  &#8220;Serverside-Push&#8221; web application. Combine with iframe and XMLHTTPRequest Object (AKA Ajax) you can build a realtime application.  Althougth according to how most server side scripting language (PHP, Perl, Python and Ruby)are integrated into the web server (each process doesn&#8217;t know about other process), they are not suitable for such task.</p>
+						</li>
+						<li id="comment-214" class="comment c24 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d14 c-h08 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 3:17 pm <span class="meta-sep">|</span> <a href="#comment-214" title="Permalink to this comment">Permalink</a></div>
+							<p>Tree,</p>
+<p>Multipart is *not* what we&#8217;re looking for. We need something portable, and multipart isn&#8217;t it. While I would personally prefer it if Opera, Safari, and IE would agree on a multipart boundary and encoding syntax, it hasn&#8217;t happened. Until then, the iframe hack is the lowest latency option.</p>
+<p>Regards</p>
+						</li>
+						<li id="comment-217" class="comment c25 c-y2006 c-m02 c-d14 c-h14">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.k4bb.org' rel='external nofollow' class='url url'>Peter Goodman</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 9:16 pm <span class="meta-sep">|</span> <a href="#comment-217" title="Permalink to this comment">Permalink</a></div>
+							<p>I just started playing around with this, but it&#8217;s got me stumped: I&#8217;ve added an onload event to the iframe, but I don&#8217;t expect that to give me anything useful. Do I simply continuously check to see if the iframe&#8217;s innerHTML has changed?</p>
+						</li>
+						<li id="comment-218" class="comment c26 c-y2006 c-m02 c-d14 c-h14 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.oracle.com/technology/products/integration/bam/index.html' rel='external nofollow' class='url url'>Tal Broda</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 9:55 pm <span class="meta-sep">|</span> <a href="#comment-218" title="Permalink to this comment">Permalink</a></div>
+							<p>This is not new technology. It has been around for at least 6 years. The guy who invented it works for Oracle, and so Oracle now owns the patent on it.</p>
+<p>I came to Oracle when it acquired PeopleSoft, which acquired a startup I was the architect for called istante software. </p>
+<p>We use this technology in Oracle BAM to keep our business activity monitoring dashboard up to date in real time. In fact we guarantee that the time elapsed between our backend server getting a transaction committed and the time it shows up in all of the dashboard that are affected is not more than 2-5 behinds real time.</p>
+<p>We use 1 connecion for all of the dashboard a use has on his desktop, and we &#8220;multiplex&#8221; the ActiveData through that connection (which is one of our pending patents).</p>
+<p>We send down XML documents that only have the change each view needs to get, and not complete HTML like someone was suggesting here&#8230;</p>
+<p>Using Oracle BAM users can build real time dashboards and alerts on any data model they define, and doing all of that happens also in 100% thin and rich web based applications (which are also using Ajax when it makes sense).</p>
+<p>The first version n our product with all of what I mentioned shipped in 2003.</p>
+						</li>
+						<li id="comment-220" class="comment c27 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d14 c-h16">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 11:35 pm <span class="meta-sep">|</span> <a href="#comment-220" title="Permalink to this comment">Permalink</a></div>
+							<p>Hi Tal,</p>
+<p>I never claimed that the technique of streaming data down the wire was new. When I re-wrote the client for the Open Source&#8217;d version of mod_pubsub several years ago, the technique was old then. We even re-implemented the hack that allowed multiple browser windows to use the same connection (think IPC over cookies).</p>
+<p>What I *did* claim is that Google&#8217;s improvement on it with respect to IE *is* novel and that it removes a significant usability barrier. If Oracle implemented this particular browser-specific workaround, that would be good to know so credit can be given where it&#8217;s due.</p>
+<p>As for patents and timing, I suggest you contact KnowNow whose business started around this technique (I believe) prior to the date you mention. There is likely not only prior art, there is prior art for the multiplexing portion and all of the client techniques.</p>
+<p>I recommend that you do your homework on this one before claiming that your company has been wronged, that anyone is in breach of patent, or that I have stated something inaccurate. Well-informed corrections are welcome, however.</p>
+<p>Regards</p>
+						</li>
+						<li id="comment-221" class="comment c28 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d14 c-h16 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 14, 2006 at 11:38 pm <span class="meta-sep">|</span> <a href="#comment-221" title="Permalink to this comment">Permalink</a></div>
+							<p>Peter: what I blogged is only the smallest portion of the overall technique for streaming data to the client over HTTP. An onload event won&#8217;t get you where you want to go. The script tags sent down the wire themselves need to call the dispatchEvent() method (or whatever your version will call it).</p>
+						</li>
+						<li id="comment-222" class="comment c29 c-y2006 c-m02 c-d14 c-h22">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.filipdewaard.com' rel='external nofollow' class='url url'>Filip de Waard</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 5:41 am <span class="meta-sep">|</span> <a href="#comment-222" title="Permalink to this comment">Permalink</a></div>
+							<p>Oops, I misread the article. I concluded that the data going through is the final product: HTML. Of course, HTML is less compact then XML, so that would mean more bandwidth. Obviously, I was wrong because the format doesn&#8217;t have to be HTML.</p>
+<p>This approach actually seems to be quite a viable alternative to XmlHttpRequest in some cases, so I&#8217;m definitely going to check it out and learn more about it. Thanks for mentioning it :)</p>
+						</li>
+						<li id="comment-224" class="comment c30 c-y2006 c-m02 c-d15 c-h05 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.dripsandcastle.net/blog' rel='external nofollow' class='url url'>Andrew Collins</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 12:50 pm <span class="meta-sep">|</span> <a href="#comment-224" title="Permalink to this comment">Permalink</a></div>
+							<p>Isn&#8217;t this technique an updated form of &#8220;Pushlets?&#8221;</p>
+<p>Pushlets: Send events from servlets to DHTML client browsers<br />
+<a href="http://www.javaworld.com/javaworld/jw-03-2000/jw-03-pushlet.html" rel="nofollow">http://www.javaworld.com/javaworld/jw-03-2000/jw-03-pushlet.html</a></p>
+<p>Discover how pushlets, a servlet-based notification mechanism, enables server-side Java objects to call back JavaScript code within a client browser.</p>
+						</li>
+						<li id="comment-225" class="comment c31 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d15 c-h06">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 1:06 pm <span class="meta-sep">|</span> <a href="#comment-225" title="Permalink to this comment">Permalink</a></div>
+							<p>Andrew,</p>
+<p>It has gone by many names over the years. Pushlets was just one. IIRC, however, it scaled like a lead brick. Newer event-driven server environments that eschew Servelets and Threads in favor of CPS (Twisted and POE) or a single &#8220;keepalive dispatcher&#8221; (Apache Event MPM) allow the technique to finally scale well. Kernel level improvements like epoll and kqueue (wrapped in libevent) have accelerated this.</p>
+<p>As for how it looks on the wire and what the client strategy is, there are many ways to skin this cat. I&#8217;m only covering a single improvement by Google to one of the better-performing approaches.</p>
+<p>Regards</p>
+						</li>
+						<li id="comment-226" class="comment c32 c-y2006 c-m02 c-d15 c-h08 alt">
+							<div class="comment-author vcard"> <span class="fn n">james</span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 3:43 pm <span class="meta-sep">|</span> <a href="#comment-226" title="Permalink to this comment">Permalink</a></div>
+							<p>yawn, cgiirc works (has worked) on all modern browsers using an open connection to the web server.  this isn&#8217;t new.</p>
+						</li>
+						<li id="comment-227" class="comment c33 byuser comment-author-alex bypostauthor c-y2006 c-m02 c-d15 c-h08">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 3:47 pm <span class="meta-sep">|</span> <a href="#comment-227" title="Permalink to this comment">Permalink</a></div>
+							<p>James: you clearly didn&#8217;t read this. I didn&#8217;t claim that the technique of streaming data to the client was new. I claimed that Google&#8217;s variant on it that solves significant usability issues *is* novel.</p>
+						</li>
+						<li id="comment-228" class="comment c34 c-y2006 c-m02 c-d15 c-h11 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://blog.casalaina.net' rel='external nofollow' class='url url'>Marco Casalaina</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 6:55 pm <span class="meta-sep">|</span> <a href="#comment-228" title="Permalink to this comment">Permalink</a></div>
+							<p>A super-hidden IFrame, fair enough.  Does this work around the 2 max connections limit that exists in both browsers, though?  </p>
+<p>If not, has _anyone_ come up with a clever workaround for the 2 connections limit, other than changing the registry for IE and prefs.js for Firefox (which can have other undesirable side effects)?</p>
+						</li>
+						<li id="comment-229" class="comment c35 c-y2006 c-m02 c-d15 c-h13">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.oracle.com/technology/products/integration/bam/index.html' rel='external nofollow' class='url url'>Tal Broda</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 8:54 pm <span class="meta-sep">|</span> <a href="#comment-229" title="Permalink to this comment">Permalink</a></div>
+							<p>Alex,</p>
+<p>I never claimed that our company has been wronged, or that anyone is in breach of patent.</p>
+<p>We have checked prior art (including KnowNow) before we submitted the patent applications.</p>
+<p>I agree think that Google&#8217;s use of this technology is awesome, and I think that what we do with it in Oracle BAM is not less cool :)</p>
+<p>Tal.</p>
+						</li>
+						<li id="comment-230" class="comment c36 c-y2006 c-m02 c-d15 c-h13 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.oracle.com/technology/products/integration/bam/index.html' rel='external nofollow' class='url url'>Tal Broda</a></span></div>
+							<div class="comment-meta">Posted February 15, 2006 at 8:55 pm <span class="meta-sep">|</span> <a href="#comment-230" title="Permalink to this comment">Permalink</a></div>
+							<p>check out our website (soon we will have some live demos on it): <a href="http://www.oracle.com/technology/products/integration/bam/index.html" rel="nofollow">http://www.oracle.com/technology/products/integration/bam/index.html</a></p>
+<p>Tal.</p>
+						</li>
+						<li id="comment-235" class="comment c37 c-y2006 c-m02 c-d16 c-h20">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.mfranz.info' rel='external nofollow' class='url url'>Martin Franz</a></span></div>
+							<div class="comment-meta">Posted February 17, 2006 at 3:25 am <span class="meta-sep">|</span> <a href="#comment-235" title="Permalink to this comment">Permalink</a></div>
+							<p>Hey Alex,</p>
+<p>dont know if this is all obvious to you guys, but it took me some time to figure out:<br />
+in order to access a function &#8220;outside&#8221; the htmlfile ActiveX Object you&#8217;ll have to set a reference under the &#8220;parentWindow&#8221; property of the ActiveX Object.<br />
+e.g.<br />
+&#8212;<br />
+function foo() {&#8230;}<br />
+transferDoc = new ActiveXObject(&#8220;htmlfile&#8221;);<br />
+transferDoc.parentWindow.foo = foo;<br />
+&#8212;<br />
+// inside the iframe<br />
+parent.foo();<br />
+&#8212;<br />
+gmail does it the same way, so i guess there is no better solution ;)<br />
+in order to avoid the &#8220;browser keeps loading&#8221; syndrom on Mozilla gmail uses the XMLHttpRequest which supports, at least under Mozilla, the readyState &#8220;INTERACTIVE&#8221;. It allows access to the responseText while its still loading. Unfortunatelly there is no way to clear the responseText, so everytime the readyState occurs you&#8217;ll have to substr out the stream data that you received before in order to get the newly received data. So it might be a good idea to  reestablish the stream connection at some stage so the browser may free that memory. Certainly, this also applies to the iframe technique. (again, gmail does that aswell)</p>
+<p>greets from germany,</p>
+<p>martin</p>
+						</li>
+						<li id="comment-236" class="comment c38 c-y2006 c-m02 c-d16 c-h20 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.mfranz.info' rel='external nofollow' class='url url'>Martin Franz</a></span></div>
+							<div class="comment-meta">Posted February 17, 2006 at 3:30 am <span class="meta-sep">|</span> <a href="#comment-236" title="Permalink to this comment">Permalink</a></div>
+							<p>oops, i didnt know that a tripple dash does some formating stuff. would you please correct that and delete this post here?</p>
+<p>thanx!</p>
+<p>greets,<br />
+martin</p>
+						</li>
+						<li id="comment-941" class="comment c39 c-y2006 c-m03 c-d13 c-h07">
+							<div class="comment-author vcard"> <span class="fn n">Rui Pinheiro</span></div>
+							<div class="comment-meta">Posted March 13, 2006 at 2:28 pm <span class="meta-sep">|</span> <a href="#comment-941" title="Permalink to this comment">Permalink</a></div>
+							<p>Amazing stuff. I wonder about the possibility of doing the reverse, i.e., making the file upload process much smarter.</p>
+<p>Imagine resume, upload in blocks, etc. Besides being useful in a P2P-like situation, would be great where clients have to upload LARGE files to the server.</p>
+<p>I know, I&#8217;m a dreamer ;)</p>
+						</li>
+						<li id="comment-1528" class="comment c40 c-y2006 c-m03 c-d25 c-h02 alt">
+							<div class="comment-author vcard"> <span class="fn n">Willem Mulder</span></div>
+							<div class="comment-meta">Posted March 25, 2006 at 9:28 am <span class="meta-sep">|</span> <a href="#comment-1528" title="Permalink to this comment">Permalink</a></div>
+							<p>So&#8230; Why does Google nog use this to check if there&#8217;s new mail&#8230; For as much as I know, there&#8217;s still a click on the &#8216;inbox&#8217; link required to find out if there&#8217;s new mail&#8230; (or maybe it does check, but not often enough?)</p>
+						</li>
+						<li id="comment-2229" class="comment c41 c-y2006 c-m03 c-d29 c-h14">
+							<div class="comment-author vcard"> <span class="fn n">Jon</span></div>
+							<div class="comment-meta">Posted March 29, 2006 at 9:05 pm <span class="meta-sep">|</span> <a href="#comment-2229" title="Permalink to this comment">Permalink</a></div>
+							<p>Sorry to join the conversation so late; you wrote waaay back at the start of all this:</p>
+<p>&#8220;On FF (1.5), the communication iframe only makes the statusbar say “Transfering data from example.com…��? while the throbber stops when a subsequent HTTP request has finished.&#8221;</p>
+<p>I&#8217;ve been having a very hard time reproducing that result, and I wonder if you could clarify a bit.  Is it any old HTTP request on the page (i.e. an image or something), or does something fancy need to be done to make the spinner stop for Firefox?</p>
+<p>Thanks very much!</p>
+						</li>
+						<li id="comment-2326" class="comment c42 c-y2006 c-m04 c-d01 c-h13 alt">
+							<div class="comment-author vcard"> <span class="fn n">Jon</span></div>
+							<div class="comment-meta">Posted April 1, 2006 at 8:42 pm <span class="meta-sep">|</span> <a href="#comment-2326" title="Permalink to this comment">Permalink</a></div>
+							<p>Something fancy DOES need to happen.  I&#8217;ve managed to reproduce it, but I&#8217;m not entirely sure where the magic is&#8230;</p>
+						</li>
+						<li id="comment-3614" class="comment c43 c-y2006 c-m04 c-d08 c-h04">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://none' rel='external nofollow' class='url url'>sam</a></span></div>
+							<div class="comment-meta">Posted April 8, 2006 at 11:20 am <span class="meta-sep">|</span> <a href="#comment-3614" title="Permalink to this comment">Permalink</a></div>
+							<p>Has anyone experimented with this &#8220;htmlfile&#8221; object to try multiple synchronous ajax requests?  Seems like you could just use this instead of XMLHttpRequest.</p>
+						</li>
+						<li id="comment-9953" class="comment c44 c-y2006 c-m05 c-d06 c-h04 alt">
+							<div class="comment-author vcard"> <span class="fn n">Nutz</span></div>
+							<div class="comment-meta">Posted May 6, 2006 at 11:17 am <span class="meta-sep">|</span> <a href="#comment-9953" title="Permalink to this comment">Permalink</a></div>
+							<p>Can someone (Alex?) post a working code example so we can see this Comet stuff in action ?</p>
+<p>Would/could it work with Microsoft IIS ?</p>
+<p>Thanks</p>
+						</li>
+						<li id="comment-37667" class="comment c45 c-y2006 c-m06 c-d09 c-h09">
+							<div class="comment-author vcard"> <span class="fn n">Gordon</span></div>
+							<div class="comment-meta">Posted June 9, 2006 at 4:22 pm <span class="meta-sep">|</span> <a href="#comment-37667" title="Permalink to this comment">Permalink</a></div>
+							<p>Maybe this is a stupid question, but I&#8217;m wondering one more thing. When a user (let&#8217;s call them the sender) clicks on another user&#8217;s name (the receiver) to chat, the sender opens up a small iframe window to chat and all this code does its magic. But how does the receiver&#8217;s window know to likewise open an iframe?</p>
+<p>My best guess is that as soon as anyone logs into Gmail, a persistent connection is established and is constantly left open, even when no one is chatting. Do you know if this is the case?</p>
+						</li>
+						<li id="comment-37824" class="comment c46 c-y2006 c-m06 c-d09 c-h12 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.spellingcow.com' rel='external nofollow' class='url url'>Craig</a></span></div>
+							<div class="comment-meta">Posted June 9, 2006 at 7:42 pm <span class="meta-sep">|</span> <a href="#comment-37824" title="Permalink to this comment">Permalink</a></div>
+							<p>This rules!  I&#8217;m in the process of releasing an IFRAME based AJAX implementation that is able to get around the browser &#8220;same origin&#8221; policy (<a href="http://en.wikipedia.org/wiki/Same_origin_policy" rel="nofollow">http://en.wikipedia.org/wiki/Same_origin_policy</a>).  I thought I was pretty hot stuff&#8230; until I turned off the mute button on my computer&#8230;. click, click, click, click&#8230;.. ARRRRG!</p>
+<p>However, using this ActiveXObject(&#8220;htmlfile&#8221;) solved my woes!  No more clicks or annoying visual queues in IE!  I need to stick with the &#8220;single-request&#8221; method rather than going for a persistent connection b/c it&#8217;s fundamental to the way I&#8217;m able to skirt same origin (except for Opera which is known to be overly sensitive with iframe security).</p>
+<p>Since this appears to be a well versed community, out of curiosity does anyone else here have asynchronous communcations working outside of the same origin?  Would be nice to know if my architecture is as unique as I think it is, or if I simply reinvented the wheel ;)</p>
+<p>Thanks,<br />
+-Craig</p>
+						</li>
+						<li id="comment-41174" class="comment c47 c-y2006 c-m06 c-d28 c-h02">
+							<div class="comment-author vcard"> <span class="fn n">Scott</span></div>
+							<div class="comment-meta">Posted June 28, 2006 at 9:18 am <span class="meta-sep">|</span> <a href="#comment-41174" title="Permalink to this comment">Permalink</a></div>
+							<p>Hi Alex,</p>
+<p>I am very interested in using DOJO for a new website. We require realtime push, just like the google dynamic iframe solution provides. Do you have any idea when this would be implemented in DOJO?</p>
+<p>Thanks<br />
+ Scott</p>
+						</li>
+						<li id="comment-42193" class="comment c48 c-y2006 c-m07 c-d22 c-h23 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://abhinavmaheshwari.blogspot.com' rel='external nofollow' class='url url'>Abhinav</a></span></div>
+							<div class="comment-meta">Posted July 23, 2006 at 6:17 am <span class="meta-sep">|</span> <a href="#comment-42193" title="Permalink to this comment">Permalink</a></div>
+							<p>Thanks Andrew,</p>
+<p>I remembered having seen this  technique at work, but could not recall it was Pushlets :)</p>
+<p>Alex,<br />
+Would it be correct to say that the client side is exactly same as Pushlets while the server side is implemented differently&#8230;or I am missing something here ? As you said, I am also curious about what other names it has gone by !</p>
+<p>Warm regards,<br />
+Abhinav</p>
+						</li>
+						<li id="comment-43054" class="comment c49 c-y2006 c-m08 c-d15 c-h17">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.ruturaj.net/' rel='external nofollow' class='url url'>Ruturaj K. Vartak</a></span></div>
+							<div class="comment-meta">Posted August 16, 2006 at 12:30 am <span class="meta-sep">|</span> <a href="#comment-43054" title="Permalink to this comment">Permalink</a></div>
+							<p>That was an awesome article, still have to go through all the other links that are present.</p>
+<p>But all these &#8220;hacks&#8221; against the browser shouldn&#8217;t go unnoticed. These new Applications, are changing the way we browse the web.</p>
+<p>Soon I hope browsers should come up with the &#8220;Back&#8221; button for the &#8220;Last Ajax based event&#8221;. I don&#8217;t know how are devs @ Mozilla working towards it, probably Firefox 3.</p>
+						</li>
+						<li id="comment-44452" class="comment c50 c-y2006 c-m08 c-d24 c-h03 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://pixellogik.de' rel='external nofollow' class='url url'>michael</a></span></div>
+							<div class="comment-meta">Posted August 24, 2006 at 10:51 am <span class="meta-sep">|</span> <a href="#comment-44452" title="Permalink to this comment">Permalink</a></div>
+							<p>	Hi you all,</p>
+<p>i tried the code on ie5.5 on win98 and end up with:<br />
+	function rpc_iframe()</p>
+<p>{</p>
+<p>  var currentDomain = “localhost/��?;</p>
+<p>  var dataStreamUrl = currentDomain+��?rpc-test/server.php��?;</p>
+<p>  var transferDoc = new ActiveXObject(��?htmlfile��?); // neue Seite</p>
+<p>  transferDoc.open();</p>
+<p>  transferDoc.write(��?&#8221;);</p>
+<p>transferDoc.write(��?document.domain=’��?+currentDomain+��?‘;��?);</p>
+<p>  transferDoc.write(��?&#8221;);</p>
+<p>  transferDoc.close();</p>
+<p>  var ifrDiv = transferDoc.createElement(��?div��?);</p>
+<p>  transferDoc.appendChild(ifrDiv);</p>
+<p>  ifrDiv.innerHTML = “��?;</p>
+<p>}</p>
+<p>Everything went fine… except the window wont close.</p>
+<p>Any ideas to manage it?<br />
+	Thanks in advance</p>
+<p>M.</p>
+						</li>
+						<li id="comment-45055" class="comment c51 c-y2006 c-m09 c-d05 c-h02">
+							<div class="comment-author vcard"> <span class="fn n">Affonso Loyola</span></div>
+							<div class="comment-meta">Posted September 5, 2006 at 9:01 am <span class="meta-sep">|</span> <a href="#comment-45055" title="Permalink to this comment">Permalink</a></div>
+							<p>So. How do we retrieve the content from the iframe?<br />
+I&#8217;m trying some remote scripting calling &#8220;window.parent.callback&#8221; but<br />
+it seems that the iframe doesn&#8217;t have any reference to the &#8220;outter&#8221; document.<br />
+So anyone knows how does it work?<br />
+Affonso</p>
+						</li>
+						<li id="comment-45056" class="comment c52 c-y2006 c-m09 c-d05 c-h02 alt">
+							<div class="comment-author vcard"> <span class="fn n">Affonso Loyola</span></div>
+							<div class="comment-meta">Posted September 5, 2006 at 9:43 am <span class="meta-sep">|</span> <a href="#comment-45056" title="Permalink to this comment">Permalink</a></div>
+							<p> I&#8217;ve tryed what Martin Franz decribed, setting the:<br />
+transferDoc.parentWindow.foo = foo;<br />
+But I cant make it work!<br />
+Someone&nbsp;successfull on that?<br />
+Affonso</p>
+						</li>
+						<li id="comment-45057" class="comment c53 c-y2006 c-m09 c-d05 c-h03">
+							<div class="comment-author vcard"> <span class="fn n">Affonso Loyola</span></div>
+							<div class="comment-meta">Posted September 5, 2006 at 10:52 am <span class="meta-sep">|</span> <a href="#comment-45057" title="Permalink to this comment">Permalink</a></div>
+							<p>I think iI might not setting the domain rigth on the outter&nbsp;document and<br />
+in the iframe. I&#8217;m sunning my application on localhost. Is that a problem?<br />
+&nbsp;<br />
+Affonso&nbsp;</p>
+						</li>
+						<li id="comment-45447" class="comment c54 c-y2006 c-m09 c-d14 c-h11 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.fbajax.com' rel='external nofollow' class='url url'>fishbone</a></span></div>
+							<div class="comment-meta">Posted September 14, 2006 at 6:59 pm <span class="meta-sep">|</span> <a href="#comment-45447" title="Permalink to this comment">Permalink</a></div>
+							<p>so,if the iframe is appened to the htmlfile activex object,<br />
+how does the iframe frame&#8217;s javascript code call&nbsp;its parent frame&#8217;s functions?&nbsp;<br />
+just like the code &#8220;parent.transData(&#8216;test&#8217;)&#8221; in the iframe.</p>
+						</li>
+						<li id="comment-45454" class="comment c55 c-y2006 c-m09 c-d15 c-h13">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.fbajax.com/823' rel='external nofollow' class='url url'>fishbone</a></span></div>
+							<div class="comment-meta">Posted September 15, 2006 at 8:01 pm <span class="meta-sep">|</span> <a href="#comment-45454" title="Permalink to this comment">Permalink</a></div>
+							<p>transferDoc.parentWindow.foo = foo;<br />
+It works well,<br />
+but I discover another fatal problem,the &#8220;htmlfile&#8221; activexobject will timeout after about 30s autolly,And the iframe doesn&#8217;t output anything.</p>
+						</li>
+						<li id="comment-45995" class="comment c56 c-y2006 c-m09 c-d24 c-h03 alt">
+							<div class="comment-author vcard"> <span class="fn n">Bench</span></div>
+							<div class="comment-meta">Posted September 24, 2006 at 10:48 am <span class="meta-sep">|</span> <a href="#comment-45995" title="Permalink to this comment">Permalink</a></div>
+							<p>Interesting, but how do you call functions IN the window that opens the transferDoc FROM the iframe inside the transferDoc ?</p>
+<p>I see no logic with this at all:</p>
+<p>transferDoc.parentWindow.foo = foo;</p>
+						</li>
+						<li id="comment-45998" class="comment c57 c-y2006 c-m09 c-d24 c-h09">
+							<div class="comment-author vcard"> <span class="fn n">Bench</span></div>
+							<div class="comment-meta">Posted September 24, 2006 at 4:06 pm <span class="meta-sep">|</span> <a href="#comment-45998" title="Permalink to this comment">Permalink</a></div>
+							<p>incidentally, what would be the equivalent to this:</p>
+<p>var transferDoc = new ActiveXObject(&#8220;htmlfile&#8221;); // !?!</p>
+<p>for Firefox?</p>
+						</li>
+						<li id="comment-57868" class="comment c58 c-y2006 c-m11 c-d13 c-h19 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.firefox2.fr' rel='external nofollow' class='url url'>KooKiz</a></span></div>
+							<div class="comment-meta">Posted November 14, 2006 at 2:20 am <span class="meta-sep">|</span> <a href="#comment-57868" title="Permalink to this comment">Permalink</a></div>
+							<p> I don&#8217;t think there&#8217;s something equivalent for firefox&#8230;</p>
+						</li>
+						<li id="comment-61451" class="comment c59 c-y2006 c-m11 c-d30 c-h21">
+							<div class="comment-author vcard"> <span class="fn n">rick</span></div>
+							<div class="comment-meta">Posted December 1, 2006 at 4:15 am <span class="meta-sep">|</span> <a href="#comment-61451" title="Permalink to this comment">Permalink</a></div>
+							<p>Is here anybody who have found out the solution in firefox?</p>
+						</li>
+						<li id="comment-61453" class="comment c60 byuser comment-author-alex bypostauthor c-y2006 c-m11 c-d30 c-h21 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://alex.dojotoolkit.org' rel='external nofollow' class='url url'>alex</a></span></div>
+							<div class="comment-meta">Posted December 1, 2006 at 4:19 am <span class="meta-sep">|</span> <a href="#comment-61453" title="Permalink to this comment">Permalink</a></div>
+							<p> </p>
+						</li>
+						<li id="comment-65851" class="comment c61 c-y2006 c-m12 c-d19 c-h04">
+							<div class="comment-author vcard"> <span class="fn n">Ivan Garavito</span></div>
+							<div class="comment-meta">Posted December 19, 2006 at 11:02 am <span class="meta-sep">|</span> <a href="#comment-65851" title="Permalink to this comment">Permalink</a></div>
+							<p>Hi Alex,</p>
+<p>It seems that lots of them can&#8217;t try something new (to them). I&#8217;ve been tracking some of the Dojo Toolkit. It&#8217;s really amazing and interisting, but currently I understand that dojo uses Ajax to interact with the server. Do you, the Dojo&#8217;s development team, plan to adopt, port or migrate to &#8220;Comet&#8221; model? I know Dojo has the Cometd project, but is this a separated project? or will be integrated into dojo&#8217;s javascript libraries? If so, which version will include it?</p>
+<p>Regards,<br />
+Ivan Garavito</p>
+						</li>
+						<li id="comment-71717" class="comment c62 c-y2007 c-m01 c-d12 c-h22 alt">
+							<div class="comment-author vcard"> <span class="fn n"><a href='http://www.rustyspigot.com' rel='external nofollow' class='url url'>rusty</a></span></div>
+							<div class="comment-meta">Posted January 13, 2007 at 5:15 am <span class="meta-sep">|</span> <a href="#comment-71717" title="Permalink to this comment">Permalink</a></div>
+							<p>Is this the same as the oracle htmlfile object?</p>
+						</li>
+						<li id="comment-85248" class="comment c63 c-y2007 c-m03 c-d02 c-h05">
+							<div class="comment-author vcard"> <span class="fn n">Dok</span></div>
+							<div class="comment-meta">Posted March 2, 2007 at 12:08 pm <span class="meta-sep">|</span> <a href="#comment-85248" title="Permalink to this comment">Permalink</a></div>
+							<p>In Firefox you don&#8217;t need to mess with frames as the XmlHttpRequest will return data as it&#8217;s being loaded and there is no &#8220;throbbing&#8221; problem.</p>
+<p>For IE, has anyone confirmed that you can call code in the parent of the &#8220;htmlfile&#8221; frame?</p>
+<p>Alex, you have comments in the cometd.js code to the effect of &#8220;TODO: improve with Gmail fix&#8221;. Any luck?</p>
+<p>The IE iframe issue being solved, how does gmail get around the 2-connections limit?<br />
+What are the possible approaches for that as it&#8217;s a common problem in FF <b><i>and</i></b> IE?</p>
+<p>The obvious is to change the browser behavior. Good luck with that! We need solutions that work now.<br />
+ (<a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-November/007599.html" rel="nofollow">http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-November/007599.html</a></p>
+						</li>
+						<li id="comment-85594" class="comment c64 c-y2007 c-m03 c-d03 c-h10 alt">
+							<div class="comment-author vcard"> <span class="fn n">Aaron</span></div>
+							<div class="comment-meta">Posted March 3, 2007 at 5:17 pm <span class="meta-sep">|</span> <a href="#comment-85594" title="Permalink to this comment">Permalink</a></div>
+							<p>This is quite neat, ajax is pretty neat I just wish they would make it simpler, or turn it into a standard so that instead of opening a big xmlhttp request just have like a line or two of code that could send data and recieve data, or have an option to keep an open connection.</p>
+<p>Be kinda cool to see if they make web pages in the future be run off of ajax or something similiar so browsers never have to refresh.</p>
+<p>Regards.</p>
+						</li>
+						<li id="comment-174441" class="comment c65 c-y2007 c-m09 c-d10 c-h05">
+							<div class="comment-author vcard"> <span class="fn n">Jason</span></div>
+							<div class="comment-meta">Posted September 10, 2007 at 12:21 pm <span class="meta-sep">|</span> <a href="#comment-174441" title="Permalink to this comment">Permalink</a></div>
+							<p>See this link for info on how to do this in Firefox/Mozilla:<a href="http://meteorserver.org/browser-techniques/" rel="nofollow">http://meteorserver.org/browser-techniques/</a></p>
+						</li>
+						<li id="comment-236405" class="comment c66 c-y2009 c-m09 c-d04 c-h13 alt">
+							<div class="comment-author vcard"> <span class="fn n">Matthew</span></div>
+							<div class="comment-meta">Posted September 4, 2009 at 8:19 pm <span class="meta-sep">|</span> <a href="#comment-236405" title="Permalink to this comment">Permalink</a></div>
+							<p>I&#8217;ve been searching around for this thing called &#8220;Comet&#8221; or &#8220;HTTP streaming&#8221; for the past hour or so, and now I find out it&#8217;s just a lame hack.  Why doesn&#8217;t someone just give JavaScript a socket object, and then we can just do things in a more straightforward way that makes sense?  Geez.  Do I have to take the overhead of Java or Flash every time I want to open a normal socket connection?</p>
+						</li>
+
+					</ol>
+				</div><!-- #comments-list .comments -->
+
+
+				<div id="trackbacks-list" class="comments">
+					<h3><span>16</span> Trackbacks</h3>
+
+					<ol>
+
+						<li id="comment-182" class="pingback t0 c-y2006 c-m02 c-d12 c-h20 alt">
+							<div class="comment-author">By <a href='http://jean.wordpress.com/2006/02/13/open-http-connections-the-next-ajax/' rel='external nofollow' class='url'>jean&#8217;s Blog &raquo; Open HTTP Connections - The Next Ajax</a> on February 13, 2006 at 3:24 am</div>
+							<p>[&#8230;] read more&nbsp;|&nbsp;digg story [&#8230;]</p>
+						</li>
+
+						<li id="comment-192" class="pingback t1 c-y2006 c-m02 c-d13 c-h04">
+							<div class="comment-author">By <a href='http://www.lazycoder.com/weblog/index.php/archives/2006/02/13/a-few-quick-links/' rel='external nofollow' class='url'>Lazycoder &raquo; A few quick links</a> on February 13, 2006 at 11:53 am</div>
+							<p>[&#8230;] What else is burried down in the depth&#8217;s of Google&#8217;s amazing Javascript? &#8211; At first I was confused. It looks just like the old hidden frame/iframe technique. But, Alex revealed the difference in the comments. [&#8230;]</p>
+						</li>
+
+						<li id="comment-201" class="pingback t2 c-y2006 c-m02 c-d13 c-h21 alt">
+							<div class="comment-author">By <a href='http://lescoste.homeip.net/blog/?p=97' rel='external nofollow' class='url'>lescoste.net &raquo; Blog Archive &raquo; What else is burried down in the depth’s of Google’s amazing JavaScript?</a> on February 14, 2006 at 4:51 am</div>
+							<p>[&#8230;] Continuing Intermittent Incoherency » What else is burried down in the depth’s of Google’s amazing JavaScript? [&#8230;]</p>
+						</li>
+
+						<li id="comment-204" class="pingback t3 c-y2006 c-m02 c-d14 c-h00">
+							<div class="comment-author">By <a href='http://marksdigital.com/blog/2006/02/14/the-next-ajax/' rel='external nofollow' class='url'>&raquo; The Next Ajax? &laquo; marksdigital</a> on February 14, 2006 at 7:06 am</div>
+							<p>[&#8230;] read more&nbsp;|&nbsp;digg story [&#8230;]</p>
+						</li>
+
+						<li id="comment-212" class="pingback t4 c-y2006 c-m02 c-d14 c-h04 alt">
+							<div class="comment-author">By <a href='http://www.ajaxlessons.com/2006/02/15/open-http-connections-the-next-ajax/' rel='external nofollow' class='url'>Ajax Lessons &raquo; Blog Archive &raquo; Open HTTP Connections - The Next Ajax</a> on February 14, 2006 at 11:38 am</div>
+							<p>[&#8230;] Using just what’s available to the browser, it’s possible to have the server push data encapsulated in blocks and rely on a progressive rendering behavior that every modern browser implements to dispatch events in near real-time (compared to full page refresh or polling delay).read more&nbsp;|&nbsp;digg story [&#8230;]</p>
+						</li>
+
+						<li id="comment-215" class="pingback t5 c-y2006 c-m02 c-d14 c-h10">
+							<div class="comment-author">By <a href='http://dietrich.wordpress.com/2006/02/15/links-for-2006-02-15/' rel='external nofollow' class='url'>Dietrich&#8217;s Blog &raquo; Blog Archive &raquo; links for 2006-02-15</a> on February 14, 2006 at 5:36 pm</div>
+							<p>[&#8230;] Continuing Intermittent Incoherency » What else is burried down in the depth’s of Google’s amazing JavaScript? (tags: javascript ajax communication) [&#8230;]</p>
+						</li>
+
+						<li id="comment-216" class="pingback t6 c-y2006 c-m02 c-d14 c-h13 alt">
+							<div class="comment-author">By <a href='http://www.spankmecharlotte.com/archives/27' rel='external nofollow' class='url'>spank me, charlotte! &raquo; Open HTTP Connections - The Next Ajax</a> on February 14, 2006 at 8:54 pm</div>
+							<p>[&#8230;] Using just whatâ��s available to the browser, itâ��s possible to have the server push data encapsulated in blocks and rely on a progressive rendering behavior that every modern browser implements to dispatch events in near real-time (compared to full page refresh or polling delay).read more | digg story    &nbsp; [&#8230;]</p>
+						</li>
+
+						<li id="comment-238" class="pingback t7 c-y2006 c-m02 c-d17 c-h06">
+							<div class="comment-author">By <a href='http://bohr.wordpress.com/2006/02/14/links-for-2006-02-13/' rel='external nofollow' class='url'>Bohr&#8217;s Blog &raquo; links for 2006-02-13</a> on February 17, 2006 at 1:18 pm</div>
+							<p>[&#8230;] What else is burried down in the depth’s of Google’s amazing JavaScript? [&#8230;]</p>
+						</li>
+
+						<li id="comment-242" class="pingback t8 c-y2006 c-m02 c-d19 c-h07 alt">
+							<div class="comment-author">By <a href='http://www.perham.net/mike/log/?p=399' rel='external nofollow' class='url'>Mutterings &raquo; Blog Archive &raquo; Scalable Browser-based Applications</a> on February 19, 2006 at 2:45 pm</div>
+							<p>[&#8230;] As it turns out, there is but it requires some hacking. Google has been leading this effort &#8211; they recently integrated their Google Talk service with Gmail and so now it requires more resources. Instead of polling the mail server every 5 minutes for new mail, you need to poll the chat server every 3-5 seconds. So they discovered how to use the PUSH model in modern browsers. Incredible. [&#8230;]</p>
+						</li>
+
+						<li id="comment-246" class="pingback t9 c-y2006 c-m02 c-d20 c-h07">
+							<div class="comment-author">By <a href='http://gasparolo.com/gabriel/?p=48' rel='external nofollow' class='url'>Continuing Intermittent Incoherency » What else is burried down in the depth’s of Google’s amazing JavaScript? at The Gasparolo Times</a> on February 20, 2006 at 2:40 pm</div>
+							<p>[&#8230;] Continuing Intermittent Incoherency » What else is burried down in the depth’s of Google’s amazing JavaScript? :: Google lo hizo de nuevo: Ha integrado Talk dentro de GMail explotando funcionalidades de la web que siempre estuvieron ahí. Funciona muy bien. [&#8230;]</p>
+						</li>
+
+						<li id="comment-277" class="pingback t10 c-y2006 c-m03 c-d01 c-h12 alt">
+							<div class="comment-author">By <a href='http://www.orbeon.com/blog/?p=81' rel='external nofollow' class='url'>XForms Everywhere &raquo; Kudos to Google For The Google Talk Integration in Gmail</a> on March 1, 2006 at 7:56 pm</div>
+							<p>[&#8230;] However, this method has a significant downside: while the document is loading in the iframe, on IE the logo on the top right of the window keeps spinning. This gives a wrong impression to the user. The clever people at Google found a solution to this IE-specific problem: instead of using an invisible iframe directly in the page, they create an instance of the &#8220;htmlfile&#8221; ActiveX object, and create the iframe in that object. Alex Russell discovered this clever hack in the Gmail code, and I totally agree with him on this:  From long and painful experience and amazingly deep respect, I take my hat off and bow to whoever it was on the GMail/GTalk team that figured this out. It’s a hell of a hack. It’s no wonder that Google has been able to attract and develop the best DHTML hackers in the world. [&#8230;]</p>
+						</li>
+
+						<li id="comment-496" class="pingback t11 c-y2006 c-m03 c-d12 c-h00">
+							<div class="comment-author">By <a href='http://jacky.seezone.net/2006/02/15/1540/' rel='external nofollow' class='url'>網絡暴民 Jacky&#8217;s Blog &raquo; 20060215網摘 - 香港諧音字文化</a> on March 12, 2006 at 7:45 am</div>
+							<p>[&#8230;] What else is burried down in the depth&rsquo;s of Google&rsquo;s amazing JavaScript? Gmail talk ��?使用的��?��? connection 的秘技 [&#8230;]</p>
+						</li>
+
+						<li id="comment-1806" class="pingback t12 c-y2006 c-m03 c-d26 c-h11 alt">
+							<div class="comment-author">By <a href='https://csshyamsundar.wordpress.com/2006/03/27/beyond-ajax-the-comet-or-pushlets-web-application-model/' rel='external nofollow' class='url'>CS Shyam Sundar&#8217;s Weblog &raquo; Blog Archive &raquo; Beyond AJAX., the COMET web application model</a> on March 26, 2006 at 6:10 pm</div>
+							<p>[&#8230;] As with Ajax, those of us who build technology are now faced with another communication challenge. We have a hard problem for which solutions are available (and have been for some time) but no way to communicate about them. Terminology is again the missing link. Today, keeping an HTTP connection open for doing low-latency data transfer to the browser has no digestible name. When I describe a cool new hack, there&rsquo;s nothing to associate it with. When people say &ldquo;how the hell did they do that?&rdquo;, we don&rsquo;t have a compact answer. Therefore, in the spirit of improved communication (and not technology invention), I&rsquo;m proposing a new name for this stuff. [&#8230;]</p>
+						</li>
+
+						<li id="comment-192253" class="pingback t13 c-y2007 c-m10 c-d25 c-h02">
+							<div class="comment-author">By <a href='http://cometdaily.com/2007/10/25/http-streaming-and-internet-explorer/' rel='external nofollow' class='url'>Comet Daily &raquo; Blog Archive &raquo; HTTP Streaming and Internet Explorer</a> on October 25, 2007 at 9:24 am</div>
+							<p>[&#8230;] In early 2006, Alex Russell posted about a neat hack that the Google Talk team in Gmail use to support Comet in Internet Explorer, a trick which works as far back as IE 5.01. What great news! A reliable way to stream Comet messages to Microsoft&#8217;s browsers. If only it were that easy. [&#8230;]</p>
+						</li>
+
+						<li id="comment-220129" class="trackback t14 c-y2007 c-m12 c-d29 c-h08 alt">
+							<div class="comment-author">By <a href='http://http:www.avg-free.org.uk' rel='external nofollow' class='url'>Antivirus free downloads</a> on December 29, 2007 at 3:32 pm</div>
+							<p><strong>AVG free</strong></p>
+						</li>
+
+						<li id="comment-228233" class="pingback t15 c-y2008 c-m01 c-d24 c-h06">
+							<div class="comment-author">By <a href='http://cometdaily.com/2008/01/24/canonical-comet-apps/' rel='external nofollow' class='url'>Comet Daily &raquo; Blog Archive &raquo; Canonical Comet Apps</a> on January 24, 2008 at 1:25 pm</div>
+							<p>[&#8230;] Shortly after Google launched Google Talk, they added chat to the Gmail interface, providing low-latency IM to all Gmail users. Alex Russell quickly dissected their implementation and learned that Google uses the forever-frame technique. Michael Carter made progress on understanding the htmlfile hack for Internet Explorer. [&#8230;]</p>
+						</li>
+
+					</ol>
+				</div><!-- #trackbacks-list .comments -->
+
+
+			</div><!-- #comments -->
+
+		</div><!-- #content -->
+	</div><!-- #container -->
+
+	<div id="primary" class="sidebar">
+		<ul class="xoxo">
+
+			<li id="text-3" class="widget widget_text">
+				<h3 class="widgettitle">What&#8217;s All This Then?</h3>
+			<div class="textwidget"><p>I'm <a href="http://infrequently.org/about-me/">Alex Russell</a>, a <span style="text-decoration: line-through;">web</span> developer working on Chrome, <a href="http://www.chromium.org/blink">Blink</a>, and the Web Platform at Google. I'm guilty of many <a href="//github.com/slightlyoff/">JavaScript</a> <a href="http://dojotoolkit.org">transgressions</a>. </p>
+<p>I help lead the <a href="http://www.cnet.com/news/with-fizz-google-hopes-to-bring-new-power-to-mobile-web/">team</a> building a new <a href="http://blog.chromium.org/2015/03/chrome-42-beta-push-notifications_12.html">application model for the web</a>, and serve on <a href="http://www.ecma-international.org/memento/TC39.htm">ECMA TC39 (the standards body for JavaScript)</a>. I'm an elected member of the <a href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group</a> and am Tech Lead for Standards inside the Chrome team. I design and advocate for <a href="http://extensiblewebmanifesto.org/">extensible, layered, data-driven evolution of the web platform</a>.</p>
+<p>My professional aim is to make the web a better platform and to the extent that I can keep politics and economics from creeping in, that's what this blog is about.</p>
+<p>Other facets available upon HTTP request: <a href="http://twitter.com/slightlylate">twitter</a>, <a href="http://facebook.com/slightlyoff">facebook</a>, <a href="http://flickr.com/photos/slightlyoff">flickr</a>, <a href="http://www.linkedin.com/pub/alex-russell/0/842/320">linkedin</a>, <a href="http://lanyrd.com/profile/slightlylate/">lanyrd</a>, and <a href="http://www.quora.com/Alex-Russell">quora</a>. Expect less self-restraint there.</p>
+<p>I'm proud husband to <a href="http://fberriman.com/">Frances Berriman</a>. We <a href="http://sensorsandsensibility.com/">live</a> and work in San Francsico.</p>
+</div>
+		
+			</li>
+
+			<li id="recent-comments-3" class="widget widget_recent_comments">
+				<h3 class="widgettitle">Recent Comments</h3>
+<ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">just a typo</span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254936">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://infrequently.org' rel='external nofollow' class='url'>alex</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254930">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://tbassetto.github.io' rel='external nofollow' class='url'>Thomas</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254929">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://infrequently.org' rel='external nofollow' class='url'>alex</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254928">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.brucelawson.co.uk' rel='external nofollow' class='url'>bruce</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254927">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://infrequently.org' rel='external nofollow' class='url'>alex</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254926">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://neverfriday.com' rel='external nofollow' class='url'>Rudolf Olah</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254925">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://stegriff.co.uk' rel='external nofollow' class='url'>Stephen Griffiths</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254923">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://blog.geddski.com' rel='external nofollow' class='url'>geddski</a></span> on <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/comment-page-1/#comment-254921">Progressive Apps: Escaping Tabs Without Losing Our Soul</a></li><li class="recentcomments"><span class="comment-author-link">Kevin</span> on <a href="https://infrequently.org/2014/09/uncomfortably-excited/comment-page-1/#comment-254708">Uncomfortably Excited</a></li></ul>
+			</li>
+		</ul>
+	</div><!-- #primary .sidebar -->
+
+	<div id="secondary" class="sidebar">
+		<ul class="xoxo">
+			
+			<li id="search" class="widget widget_search">				
+				<h3 class="widgettitle"><label for="s">Search</label></h3>
+				<form id="searchform" class="blog-search" method="get" action="https://infrequently.org">
+					<div>
+						<input id="s" name="s" type="text" class="text" value="" size="10" tabindex="1" />
+						<input type="submit" class="button" value="Find" tabindex="2" />
+					</div>
+				</form>
+			
+			</li>
+
+			<li id="archives-3" class="widget widget_archive">
+				<h3 class="widgettitle">Archives</h3>
+		<label class="screen-reader-text" for="archives-dropdown-3">Archives</label>
+		<select id="archives-dropdown-3" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+			
+			<option value="">Select Month</option>
+				<option value='https://infrequently.org/2015/06/'> June 2015 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2014/12/'> December 2014 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2014/09/'> September 2014 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2013/11/'> November 2013 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2013/09/'> September 2013 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2013/07/'> July 2013 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2013/06/'> June 2013 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2013/05/'> May 2013 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2013/04/'> April 2013 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2013/02/'> February 2013 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2012/12/'> December 2012 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2012/11/'> November 2012 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2012/08/'> August 2012 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2012/05/'> May 2012 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2012/04/'> April 2012 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2012/03/'> March 2012 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2012/02/'> February 2012 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2011/11/'> November 2011 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2011/10/'> October 2011 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2011/09/'> September 2011 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2011/08/'> August 2011 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2011/03/'> March 2011 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2011/02/'> February 2011 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2011/01/'> January 2011 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2010/12/'> December 2010 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2010/11/'> November 2010 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2010/10/'> October 2010 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2010/09/'> September 2010 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2010/08/'> August 2010 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2010/07/'> July 2010 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2010/06/'> June 2010 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2010/04/'> April 2010 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2010/03/'> March 2010 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2010/01/'> January 2010 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2009/12/'> December 2009 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2009/11/'> November 2009 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2009/10/'> October 2009 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2009/09/'> September 2009 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2009/08/'> August 2009 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2009/07/'> July 2009 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2009/06/'> June 2009 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2009/05/'> May 2009 &nbsp;(8)</option>
+	<option value='https://infrequently.org/2009/04/'> April 2009 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2009/03/'> March 2009 &nbsp;(9)</option>
+	<option value='https://infrequently.org/2009/02/'> February 2009 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2009/01/'> January 2009 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2008/12/'> December 2008 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2008/11/'> November 2008 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2008/10/'> October 2008 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2008/09/'> September 2008 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2008/08/'> August 2008 &nbsp;(8)</option>
+	<option value='https://infrequently.org/2008/07/'> July 2008 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2008/06/'> June 2008 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2008/05/'> May 2008 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2008/04/'> April 2008 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2008/03/'> March 2008 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2008/02/'> February 2008 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2008/01/'> January 2008 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2007/12/'> December 2007 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2007/11/'> November 2007 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2007/10/'> October 2007 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2007/09/'> September 2007 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2007/08/'> August 2007 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2007/07/'> July 2007 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2007/03/'> March 2007 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2007/02/'> February 2007 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2007/01/'> January 2007 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2006/12/'> December 2006 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2006/11/'> November 2006 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2006/10/'> October 2006 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2006/09/'> September 2006 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2006/08/'> August 2006 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2006/07/'> July 2006 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2006/06/'> June 2006 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2006/05/'> May 2006 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2006/04/'> April 2006 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2006/03/'> March 2006 &nbsp;(9)</option>
+	<option value='https://infrequently.org/2006/02/'> February 2006 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2006/01/'> January 2006 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2005/12/'> December 2005 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2005/11/'> November 2005 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2005/10/'> October 2005 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2005/09/'> September 2005 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2005/08/'> August 2005 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2005/07/'> July 2005 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2005/06/'> June 2005 &nbsp;(6)</option>
+	<option value='https://infrequently.org/2005/05/'> May 2005 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2005/04/'> April 2005 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2005/03/'> March 2005 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2005/02/'> February 2005 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2005/01/'> January 2005 &nbsp;(9)</option>
+	<option value='https://infrequently.org/2004/12/'> December 2004 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2004/11/'> November 2004 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2004/10/'> October 2004 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2004/09/'> September 2004 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2004/08/'> August 2004 &nbsp;(9)</option>
+	<option value='https://infrequently.org/2004/07/'> July 2004 &nbsp;(12)</option>
+	<option value='https://infrequently.org/2004/06/'> June 2004 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2004/05/'> May 2004 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2004/04/'> April 2004 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2004/03/'> March 2004 &nbsp;(13)</option>
+	<option value='https://infrequently.org/2004/02/'> February 2004 &nbsp;(1)</option>
+	<option value='https://infrequently.org/2004/01/'> January 2004 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2003/12/'> December 2003 &nbsp;(3)</option>
+	<option value='https://infrequently.org/2003/11/'> November 2003 &nbsp;(2)</option>
+	<option value='https://infrequently.org/2003/10/'> October 2003 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2003/09/'> September 2003 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2003/08/'> August 2003 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2003/07/'> July 2003 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2003/06/'> June 2003 &nbsp;(10)</option>
+	<option value='https://infrequently.org/2003/05/'> May 2003 &nbsp;(4)</option>
+	<option value='https://infrequently.org/2003/04/'> April 2003 &nbsp;(5)</option>
+	<option value='https://infrequently.org/2003/03/'> March 2003 &nbsp;(12)</option>
+	<option value='https://infrequently.org/2003/02/'> February 2003 &nbsp;(7)</option>
+	<option value='https://infrequently.org/2003/01/'> January 2003 &nbsp;(12)</option>
+	<option value='https://infrequently.org/2002/12/'> December 2002 &nbsp;(11)</option>
+	<option value='https://infrequently.org/2002/11/'> November 2002 &nbsp;(18)</option>
+	<option value='https://infrequently.org/2002/10/'> October 2002 &nbsp;(22)</option>
+	<option value='https://infrequently.org/2002/09/'> September 2002 &nbsp;(17)</option>
+	<option value='https://infrequently.org/2002/08/'> August 2002 &nbsp;(24)</option>
+	<option value='https://infrequently.org/2002/07/'> July 2002 &nbsp;(26)</option>
+	<option value='https://infrequently.org/2002/06/'> June 2002 &nbsp;(23)</option>
+	<option value='https://infrequently.org/2002/05/'> May 2002 &nbsp;(18)</option>
+	<option value='https://infrequently.org/2002/04/'> April 2002 &nbsp;(24)</option>
+	<option value='https://infrequently.org/2002/03/'> March 2002 &nbsp;(14)</option>
+	<option value='https://infrequently.org/2002/02/'> February 2002 &nbsp;(28)</option>
+	<option value='https://infrequently.org/2002/01/'> January 2002 &nbsp;(25)</option>
+	<option value='https://infrequently.org/2001/12/'> December 2001 &nbsp;(28)</option>
+	<option value='https://infrequently.org/2001/11/'> November 2001 &nbsp;(17)</option>
+	<option value='https://infrequently.org/2001/10/'> October 2001 &nbsp;(14)</option>
+
+		</select>
+
+			</li>
+		
+			<li id="rss_links" class="widget widget_rss_links">			
+				<h3 class="widgettitle">RSS Links</h3>
+			<ul>
+				<li><a href="https://infrequently.org/feed/" title="Infrequently Noted Posts RSS feed" rel="alternate" type="application/rss+xml">All posts</a></li>
+				<li><a href="https://infrequently.org/comments/feed/" title="Infrequently Noted Comments RSS feed" rel="alternate" type="application/rss+xml">All comments</a></li>
+			</ul>
+		
+			</li>
+		</ul>
+	</div><!-- #secondary .sidebar -->
+
+	<div id="footer">
+    <!--
+		<span id="generator-link"><a href="http://wordpress.org/" title="WordPress" rel="generator">WordPress</a></span>
+		<span class="meta-sep">|</span>
+		<span id="theme-link"><a href="http://www.plaintxt.org/themes/sandbox/" title="Sandbox theme for WordPress" rel="designer">Sandbox</a></span>
+    -->
+
+		<script defer>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-753609-2']);
+			_gaq.push(['_setSiteSpeedSampleRate', 100]);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</div><!-- #footer -->
+
+</div><!-- #wrapper .hfeed -->
+
+
+</body>
+</html>
