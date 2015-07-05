@@ -1,0 +1,103 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 98280 (0x17fe8)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, O=GeoTrust Inc., CN=RapidSSL SHA256 CA - G3
+        Validity
+            Not Before: Jan  7 01:22:54 2015 GMT
+            Not After : Jan  9 09:56:10 2019 GMT
+        Subject: OU=GT16849482, OU=See www.rapidssl.com/resources/cps (c)15, OU=Domain Control Validated - RapidSSL(R), CN=*.choopa.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:9e:ca:10:c6:b2:cd:bd:f7:73:61:97:bc:df:b7:
+                    fa:a6:82:d8:3e:fc:f9:8a:7c:48:f6:e2:d9:bb:b4:
+                    f9:73:7e:69:ec:42:60:d9:f0:43:56:d1:cc:91:9e:
+                    ef:16:84:9d:20:57:f1:d5:3e:b1:1d:12:a5:b0:98:
+                    17:ca:13:9b:07:81:dd:41:c9:a7:07:c6:09:38:ca:
+                    51:fb:c0:4d:0c:fb:7d:4c:87:f3:68:60:74:89:cd:
+                    b6:0a:bb:fe:12:4f:93:13:76:24:6f:3c:d8:5b:2e:
+                    27:cf:d4:04:5b:1e:a3:e2:58:57:8a:c8:e9:18:0e:
+                    88:b1:5f:17:9f:7c:ce:b1:40:f2:8f:1d:d4:5b:51:
+                    07:a4:be:2d:c6:91:4a:cc:11:62:63:e9:1e:77:49:
+                    91:a9:75:97:e3:7b:a2:d4:63:1c:a5:1a:25:cf:80:
+                    fe:f1:19:3f:c1:ef:78:d7:2d:f3:02:77:8f:a4:f1:
+                    a0:01:67:2f:4d:52:f4:ac:c9:f2:50:c7:86:4d:d1:
+                    fa:5f:58:a8:cf:03:61:15:d2:8a:0a:6a:90:08:19:
+                    b8:12:76:b2:ce:84:1e:47:67:14:78:ab:22:0f:5d:
+                    06:04:9c:4c:17:f4:4a:f3:bd:b7:e3:7c:83:7e:33:
+                    15:48:1a:94:cf:39:d6:4a:c5:6d:67:3c:2b:51:fd:
+                    a9:03
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:C3:9C:F3:FC:D3:46:08:34:BB:CE:46:7F:A0:7C:5B:F3:E2:08:CB:59
+
+            Authority Information Access: 
+                OCSP - URI:http://gv.symcd.com
+                CA Issuers - URI:http://gv.symcb.com/gv.crt
+
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Subject Alternative Name: 
+                DNS:*.choopa.com, DNS:choopa.com
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://gv.symcb.com/gv.crl
+
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Certificate Policies: 
+                Policy: 2.16.840.1.113733.1.7.54
+                  CPS: https://www.rapidssl.com/legal
+
+    Signature Algorithm: sha256WithRSAEncryption
+         96:12:c2:73:35:3d:b5:21:1d:a4:5f:b4:47:5e:bd:48:fa:3a:
+         a8:c6:7b:07:78:2c:11:97:7c:31:02:d2:e6:61:4b:ac:da:44:
+         9e:41:16:f9:1e:b1:40:3e:6e:31:fe:c4:64:4c:3d:30:87:76:
+         c8:ba:8b:78:7e:ab:6f:2d:42:ed:cd:27:89:e4:51:65:d7:41:
+         d7:0a:ff:6d:f7:36:17:32:ec:19:ec:bf:b7:71:eb:37:cb:4a:
+         0c:d6:8e:87:ee:89:33:76:59:55:92:de:a6:6d:ad:a6:e1:65:
+         93:d4:7b:db:24:29:b5:f7:b8:86:d5:66:ea:ef:09:81:ba:09:
+         28:ca:c0:16:43:84:90:3a:45:eb:e1:b0:03:f2:11:5e:38:24:
+         e0:9d:d9:65:0c:01:da:82:44:57:d7:2b:b3:34:3f:26:ef:e0:
+         bc:0f:2a:1a:44:27:6c:3b:22:83:03:cc:f3:0e:1a:c5:92:dc:
+         2a:b5:66:5d:55:63:6f:c3:70:7a:c2:9c:b1:ab:db:e3:89:cb:
+         22:f7:b9:6e:11:dc:fe:d5:f0:33:c6:2f:be:ac:76:c2:4f:c6:
+         ab:49:5e:2c:a1:8c:43:c3:70:aa:06:6a:41:01:46:65:8f:c4:
+         3e:fe:a5:5c:4f:dc:77:ad:61:3f:ef:f3:f0:78:ab:7f:31:4b:
+         9c:ba:9e:39
+         
+         
+-----BEGIN CERTIFICATE-----
+MIIEqzCCA5OgAwIBAgIDAX/oMA0GCSqGSIb3DQEBCwUAMEcxCzAJBgNVBAYTAlVT
+MRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMuMSAwHgYDVQQDExdSYXBpZFNTTCBTSEEy
+NTYgQ0EgLSBHMzAeFw0xNTAxMDcwMTIyNTRaFw0xOTAxMDkwOTU2MTBaMIGQMRMw
+EQYDVQQLEwpHVDE2ODQ5NDgyMTEwLwYDVQQLEyhTZWUgd3d3LnJhcGlkc3NsLmNv
+bS9yZXNvdXJjZXMvY3BzIChjKTE1MS8wLQYDVQQLEyZEb21haW4gQ29udHJvbCBW
+YWxpZGF0ZWQgLSBSYXBpZFNTTChSKTEVMBMGA1UEAwwMKi5jaG9vcGEuY29tMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnsoQxrLNvfdzYZe837f6poLY
+Pvz5inxI9uLZu7T5c35p7EJg2fBDVtHMkZ7vFoSdIFfx1T6xHRKlsJgXyhObB4Hd
+QcmnB8YJOMpR+8BNDPt9TIfzaGB0ic22Crv+Ek+TE3YkbzzYWy4nz9QEWx6j4lhX
+isjpGA6IsV8Xn3zOsUDyjx3UW1EHpL4txpFKzBFiY+ked0mRqXWX43ui1GMcpRol
+z4D+8Rk/we941y3zAnePpPGgAWcvTVL0rMnyUMeGTdH6X1iozwNhFdKKCmqQCBm4
+EnayzoQeR2cUeKsiD10GBJxMF/RK872343yDfjMVSBqUzznWSsVtZzwrUf2pAwID
+AQABo4IBVDCCAVAwHwYDVR0jBBgwFoAUw5zz/NNGCDS7zkZ/oHxb8+IIy1kwVwYI
+KwYBBQUHAQEESzBJMB8GCCsGAQUFBzABhhNodHRwOi8vZ3Yuc3ltY2QuY29tMCYG
+CCsGAQUFBzAChhpodHRwOi8vZ3Yuc3ltY2IuY29tL2d2LmNydDAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMCMGA1UdEQQcMBqC
+DCouY2hvb3BhLmNvbYIKY2hvb3BhLmNvbTArBgNVHR8EJDAiMCCgHqAchhpodHRw
+Oi8vZ3Yuc3ltY2IuY29tL2d2LmNybDAMBgNVHRMBAf8EAjAAMEUGA1UdIAQ+MDww
+OgYKYIZIAYb4RQEHNjAsMCoGCCsGAQUFBwIBFh5odHRwczovL3d3dy5yYXBpZHNz
+bC5jb20vbGVnYWwwDQYJKoZIhvcNAQELBQADggEBAJYSwnM1PbUhHaRftEdevUj6
+OqjGewd4LBGXfDEC0uZhS6zaRJ5BFvkesUA+bjH+xGRMPTCHdsi6i3h+q28tQu3N
+J4nkUWXXQdcK/233Nhcy7Bnsv7dx6zfLSgzWjofuiTN2WVWS3qZtrabhZZPUe9sk
+KbX3uIbVZurvCYG6CSjKwBZDhJA6RevhsAPyEV44JOCd2WUMAdqCRFfXK7M0Pybv
+4LwPKhpEJ2w7IoMDzPMOGsWS3Cq1Zl1VY2/DcHrCnLGr2+OJyyL3uW4R3P7V8DPG
+L76sdsJPxqtJXiyhjEPDcKoGakEBRmWPxD7+pVxP3HetYT/v8/B4q38xS5y6njk=
+-----END CERTIFICATE-----
