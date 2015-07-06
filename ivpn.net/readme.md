@@ -1,5 +1,11 @@
 Working directory for some ivpn.net cleanvpn forensics... no formal conclusions just yet.
 
+Just added:
+
+Note that the windows installer drops file nsdialogs.dll (SHA1: b1e30808198a3ae6d6d1cca62df8893dc2a7ad43); virustotal gives it a pretty clean bill of health (https://www.virustotal.com/en/file/e31ad6c6e82e603378cb6b80e67d0e0dcd9cf384e1199ac5a65cb4935680021a/analysis/)... however, threatexpert shows it as not only packaged with some nasty stuff indeed (http://www.threatexpert.com/report.aspx?md5=adb8661f9d9f2820b195913d330a1cc3), but itself flagged as as threat in 93% of observed submissions via heuristic analyses (http://www.threatexpert.com/files/nsDialogs.dll.html). Which, on balance, is a rather dark picture for this shallow a dive into the analysis: the first installer reviewed (Windows), using off the shelf forensic sweeps in VM'd test sandboxes...
+
+(according to threatexpert, the file itself is found in close association with Trojandownloader.Win32.Lipler [Ikarus], in fact)
+
 Some helpful URLs, to keep them from being lost in the shuffle:
 
 https://malwr.com/analysis/ZjIyZjUyMWJkNzkxNDZkMGIyMjc0YzcyZGU0ZjI2YWY/
