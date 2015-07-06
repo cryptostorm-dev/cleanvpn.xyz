@@ -8,6 +8,8 @@ https://www.google.fr/search?q=c17103ae9072a06da581dec998343fc1&oq=c17103ae9072a
 
 https://www.virustotal.com/en/file/dc58d8ad81cacb0c1ed72e33bff8f23ea40b5252b5bb55d393a0903e6819ae2f/analysis/1387427909/
 
+https://www.virustotal.com/en/file/e31ad6c6e82e603378cb6b80e67d0e0dcd9cf384e1199ac5a65cb4935680021a/analysis/
+
 http://www.malware-traffic-analysis.net/2013/12/19/index.html
 
 [quote]The malware acts like a Trojan dropper.  I didn't notice any callback traffic; however, it dropped two files in the AppData\Local\Temp directory:
