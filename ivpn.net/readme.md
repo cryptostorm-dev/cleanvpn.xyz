@@ -6,6 +6,14 @@ Note that the windows installer drops file nsdialogs.dll (SHA1: b1e30808198a3ae6
 
 (according to threatexpert, the file itself is found in close association with Trojandownloader.Win32.Lipler [Ikarus], in fact)
 
+more data on that trojan package: 
+
+http://www.microsoft.com/security/portal/threat/encyclopedia/entry.aspx?Name=TrojanDownloader:Win32/Wintrim.CB
+
+https://www.google.fr/search?q=Trojan-Downloader.Win32.Lipler+%5BIkarus%5D&oq=Trojan-Downloader.Win32.Lipler+%5BIkarus%5D
+
+
+
 Some helpful URLs, to keep them from being lost in the shuffle:
 
 https://malwr.com/analysis/ZjIyZjUyMWJkNzkxNDZkMGIyMjc0YzcyZGU0ZjI2YWY/
