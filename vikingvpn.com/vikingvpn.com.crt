@@ -1,0 +1,111 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            06:53:e5:d6:28:31:e4:6d:bb:4c:6c:2f:3d:09:f9:81
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Domain Validation Secure Server CA
+        Validity
+            Not Before: Mar 21 00:00:00 2015 GMT
+            Not After : Mar 28 23:59:59 2016 GMT
+        Subject: OU=Domain Control Validated, OU=PositiveSSL, CN=vikingvpn.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b2:5d:90:7b:5a:cf:c4:8d:a6:6f:e2:9a:c8:2c:
+                    7b:81:5f:a4:4f:24:a0:1d:8d:cf:2b:ce:11:7d:86:
+                    b5:11:5f:cb:37:cb:8d:46:9d:6e:63:f7:dc:ce:34:
+                    97:a2:76:bb:31:83:80:7a:da:ac:e3:e7:99:ec:ec:
+                    f6:1b:d9:78:3b:03:bc:96:85:4d:0c:ec:6f:d2:9e:
+                    62:a9:9a:39:d3:7e:fe:2a:68:85:57:9d:cc:f0:c9:
+                    bb:67:66:e5:f0:63:e9:39:0b:76:83:de:41:8c:d9:
+                    a5:ec:f3:95:48:53:f5:ab:6d:fb:0f:67:3a:23:fe:
+                    3c:de:1c:d2:b8:fd:fc:64:64:c4:01:1e:68:20:a8:
+                    3d:8e:4c:2f:9b:b6:2e:29:7a:74:c2:27:a9:ee:0e:
+                    af:1b:60:2e:c2:d1:d4:4f:16:e9:73:7a:0d:1a:d5:
+                    2a:20:56:f4:fd:6b:b0:a1:cc:85:d5:91:b6:ee:6b:
+                    b9:a7:ac:0d:55:56:4a:4c:0d:df:22:95:24:cf:ff:
+                    86:00:4a:40:b6:e6:c7:4e:57:1b:9f:37:aa:d2:40:
+                    7c:c2:46:ad:6f:32:f4:a1:f0:0b:fd:22:d3:32:dd:
+                    b8:32:f5:fd:c2:43:5b:65:ab:90:68:b3:f2:b7:b2:
+                    37:cb:c5:57:ac:20:2f:f1:71:41:6e:f0:6f:af:4c:
+                    2f:6d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:90:AF:6A:3A:94:5A:0B:D8:90:EA:12:56:73:DF:43:B4:3A:28:DA:E7
+
+            X509v3 Subject Key Identifier: 
+                FE:49:5F:97:D3:3E:16:E9:D6:CA:40:A5:0F:6F:4B:3A:E2:74:45:60
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.6449.1.2.2.7
+                  CPS: https://secure.comodo.com/CPS
+                Policy: 2.23.140.1.2.1
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://crt.comodoca.com/COMODORSADomainValidationSecureServerCA.crt
+                OCSP - URI:http://ocsp.comodoca.com
+
+            X509v3 Subject Alternative Name: 
+                DNS:vikingvpn.com, DNS:www.vikingvpn.com
+    Signature Algorithm: sha256WithRSAEncryption
+         0e:9f:da:6b:3f:66:3f:83:74:48:0b:8f:6f:d1:37:c8:5b:b0:
+         28:63:61:63:10:0a:66:38:ef:b2:ee:7f:58:fa:0e:35:a1:14:
+         83:ae:1c:78:14:f1:7c:38:27:8c:b2:9b:26:de:5d:34:07:29:
+         36:7b:6a:00:a1:c8:ba:94:4f:8c:07:13:54:e5:26:1c:d0:04:
+         0f:66:64:09:5c:f1:f2:a8:03:e4:cd:da:83:bc:e5:c7:cc:9f:
+         83:54:2b:5a:e9:b5:75:d0:d6:db:c5:07:9e:b1:64:c8:ab:56:
+         9b:44:77:e7:17:d7:69:33:b4:e2:9e:8b:cd:8d:2d:4f:a4:71:
+         36:ba:d2:8f:f0:00:82:92:c5:e1:41:81:87:24:19:85:08:7c:
+         c5:48:af:9c:77:46:aa:1b:7c:08:3f:5e:28:fb:47:41:b0:84:
+         fa:f0:ac:0d:34:d8:3a:b0:86:73:ae:30:1c:cb:ca:10:08:9f:
+         42:15:26:74:c3:c7:3f:80:95:68:f1:f1:26:48:a3:f3:d7:42:
+         2f:c9:f0:ef:c0:9e:e9:50:0d:ca:8b:28:fc:ba:be:24:4c:b0:
+         b0:8e:5f:4a:77:bf:88:04:f5:f5:8b:50:18:23:96:db:b5:d0:
+         d1:84:25:13:17:e0:e5:54:53:e3:7b:94:25:00:0b:56:f1:41:
+         ca:62:63:01
+         
+         
+-----BEGIN CERTIFICATE-----
+MIIFSzCCBDOgAwIBAgIQBlPl1igx5G27TGwvPQn5gTANBgkqhkiG9w0BAQsFADCB
+kDELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxNjA0BgNV
+BAMTLUNPTU9ETyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD
+QTAeFw0xNTAzMjEwMDAwMDBaFw0xNjAzMjgyMzU5NTlaMFExITAfBgNVBAsTGERv
+bWFpbiBDb250cm9sIFZhbGlkYXRlZDEUMBIGA1UECxMLUG9zaXRpdmVTU0wxFjAU
+BgNVBAMTDXZpa2luZ3Zwbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCyXZB7Ws/EjaZv4prILHuBX6RPJKAdjc8rzhF9hrURX8s3y41GnW5j99zO
+NJeidrsxg4B62qzj55ns7PYb2Xg7A7yWhU0M7G/SnmKpmjnTfv4qaIVXnczwybtn
+ZuXwY+k5C3aD3kGM2aXs85VIU/WrbfsPZzoj/jzeHNK4/fxkZMQBHmggqD2OTC+b
+ti4penTCJ6nuDq8bYC7C0dRPFulzeg0a1SogVvT9a7ChzIXVkbbua7mnrA1VVkpM
+Dd8ilSTP/4YASkC25sdOVxufN6rSQHzCRq1vMvSh8Av9ItMy3bgy9f3CQ1tlq5Bo
+s/K3sjfLxVesIC/xcUFu8G+vTC9tAgMBAAGjggHdMIIB2TAfBgNVHSMEGDAWgBSQ
+r2o6lFoL2JDqElZz30O0Oija5zAdBgNVHQ4EFgQU/klfl9M+FunWykClD29LOuJ0
+RWAwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB
+BQUHAwEGCCsGAQUFBwMCME8GA1UdIARIMEYwOgYLKwYBBAGyMQECAgcwKzApBggr
+BgEFBQcCARYdaHR0cHM6Ly9zZWN1cmUuY29tb2RvLmNvbS9DUFMwCAYGZ4EMAQIB
+MFQGA1UdHwRNMEswSaBHoEWGQ2h0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9E
+T1JTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcmwwgYUGCCsGAQUF
+BwEBBHkwdzBPBggrBgEFBQcwAoZDaHR0cDovL2NydC5jb21vZG9jYS5jb20vQ09N
+T0RPUlNBRG9tYWluVmFsaWRhdGlvblNlY3VyZVNlcnZlckNBLmNydDAkBggrBgEF
+BQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMCsGA1UdEQQkMCKCDXZpa2lu
+Z3Zwbi5jb22CEXd3dy52aWtpbmd2cG4uY29tMA0GCSqGSIb3DQEBCwUAA4IBAQAO
+n9prP2Y/g3RIC49v0TfIW7AoY2FjEApmOO+y7n9Y+g41oRSDrhx4FPF8OCeMspsm
+3l00Byk2e2oAoci6lE+MBxNU5SYc0AQPZmQJXPHyqAPkzdqDvOXHzJ+DVCta6bV1
+0NbbxQeesWTIq1abRHfnF9dpM7TinovNjS1PpHE2utKP8ACCksXhQYGHJBmFCHzF
+SK+cd0aqG3wIP14o+0dBsIT68KwNNNg6sIZzrjAcy8oQCJ9CFSZ0w8c/gJVo8fEm
+SKPz10IvyfDvwJ7pUA3Kiyj8ur4kTLCwjl9Kd7+IBPX1i1AYI5bbtdDRhCUTF+Dl
+VFPje5QlAAtW8UHKYmMB
+-----END CERTIFICATE-----
