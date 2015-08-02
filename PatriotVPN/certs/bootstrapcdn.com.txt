@@ -1,3 +1,81 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            11:21:85:68:a1:15:00:ef:27:d6:20:1d:94:42:8a:b5:4f:1a
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign Domain Validation CA - SHA256 - G2
+        Validity
+            Not Before: Jun  9 23:44:35 2014 GMT
+            Not After : Jun  9 23:44:35 2019 GMT
+        Subject: OU=Domain Control Validated, CN=*.bootstrapcdn.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c6:c1:20:a6:3c:53:ee:ae:55:db:7f:7b:59:df:
+                    06:ef:6c:86:63:14:8b:c1:1f:39:69:05:36:1f:a4:
+                    52:c9:b5:30:61:a9:a3:06:56:2b:f4:d3:42:b1:35:
+                    f1:c4:11:fd:98:a9:44:16:91:10:1b:86:8f:76:ff:
+                    58:cd:be:21:c1:bf:a1:38:ef:1d:35:bf:8e:3f:c3:
+                    75:2c:00:85:57:d6:5f:44:5d:eb:c1:bc:55:53:61:
+                    e4:8e:8b:fd:9a:7a:8d:fd:a1:39:36:70:b6:dc:7f:
+                    e2:28:ac:5f:a7:91:33:c0:19:37:e3:07:0b:b4:60:
+                    0d:b4:aa:30:d4:b8:22:10:78:b3:8f:ae:d9:c6:33:
+                    0c:ed:e0:e4:60:d4:a7:02:66:97:64:87:86:03:46:
+                    15:e4:bc:87:e8:8e:1b:12:e3:a0:e9:df:8b:3c:98:
+                    7e:e2:9c:a6:7f:c8:31:ce:3a:04:80:be:62:7c:f7:
+                    f9:30:52:37:32:ee:ac:5e:60:93:a9:fe:b6:27:2d:
+                    52:0b:11:cc:2e:a4:11:dd:32:2b:35:97:89:ab:64:
+                    2c:da:14:c9:04:9b:bc:c5:28:81:8e:49:fb:05:db:
+                    43:ea:d3:22:4e:2a:b8:ad:63:63:ba:65:eb:01:36:
+                    10:45:fe:58:be:0e:65:47:4b:bb:9d:8e:64:41:6b:
+                    a5:25
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+                  CPS: https://www.globalsign.com/repository/
+
+            X509v3 Subject Alternative Name: 
+                DNS:*.bootstrapcdn.com, DNS:bootstrapcdn.com
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.globalsign.com/gs/gsdomainvalsha2g2.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://secure.globalsign.com/cacert/gsdomainvalsha2g2r1.crt
+                OCSP - URI:http://ocsp2.globalsign.com/gsdomainvalsha2g2
+
+            X509v3 Subject Key Identifier: 
+                D4:BC:81:23:07:3C:55:F9:92:ED:B7:2E:32:50:45:4B:5E:84:96:4A
+            X509v3 Authority Key Identifier: 
+                keyid:EA:4E:7C:D4:80:2D:E5:15:81:86:26:8C:82:6D:C0:98:A4:CF:97:0F
+
+    Signature Algorithm: sha256WithRSAEncryption
+         3e:7c:ec:4b:6d:29:c7:b0:41:a8:1d:f6:f6:af:1c:5c:a9:ec:
+         e9:c2:f5:f4:32:79:44:4c:f3:e4:9c:91:12:18:f3:e2:cb:c5:
+         30:ed:5b:97:df:be:a0:cd:80:7a:ac:71:d4:77:ac:a0:4b:8d:
+         46:a5:ef:0c:78:8c:be:b2:1c:7b:bf:31:c7:a7:85:5c:ec:b8:
+         f9:9f:5f:d7:b3:50:18:11:5f:60:17:b7:d7:c6:63:29:d7:fe:
+         91:93:20:fe:6a:91:6e:da:02:b6:8f:87:93:13:40:e1:4f:f9:
+         ce:3d:ca:b7:e0:82:5d:e1:f5:4c:85:6f:57:e3:79:53:c5:12:
+         9d:d0:a9:17:23:62:da:9f:cd:ab:0d:11:d8:b4:51:5d:2c:7e:
+         f3:3f:e5:38:97:6a:de:08:19:df:3e:0c:a8:a5:bf:92:c3:0c:
+         35:a3:07:17:ff:77:ec:33:6f:20:5a:7e:83:23:b6:a7:a6:4f:
+         d4:a7:e6:a9:64:6a:0f:0a:6e:ec:ab:9a:41:3d:63:88:f3:bd:
+         b7:fb:1c:bd:1d:5a:1e:28:dc:d7:c5:bf:72:82:21:e6:2c:95:
+         43:07:19:f1:8c:c7:7d:08:dd:50:90:4d:f6:59:90:71:e4:f6:
+         ef:18:2f:18:58:74:37:1a:d0:49:a9:57:86:d6:96:14:89:6f:
+         f1:80:71:77
+
 Certification path for "*.bootstrapcdn.com"
 Subject: OU=Domain Control Validated,CN=*.bootstrapcdn.com
 Issuer: C=BE,O=GlobalSign nv-sa,CN=GlobalSign Domain Validation CA - SHA256 - G2
