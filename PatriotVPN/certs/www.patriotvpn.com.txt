@@ -1,0 +1,109 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            3f:79:b9:70:a6:b1:cc:58:45:2e:55:8f:08:9f:5e:81
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Domain Validation Secure Server CA
+        Validity
+            Not Before: Mar  5 00:00:00 2015 GMT
+            Not After : Mar  4 23:59:59 2016 GMT
+        Subject: OU=Domain Control Validated, OU=PositiveSSL, CN=www.patriotvpn.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b5:6e:51:5c:18:71:1a:d0:8f:b3:66:0f:ef:04:
+                    96:db:37:ad:fd:03:4d:f8:10:b8:af:ce:71:30:3d:
+                    e9:eb:48:ae:9a:f8:99:05:05:61:38:dd:e1:b7:85:
+                    8b:37:4f:ee:b7:65:f4:57:34:03:99:94:6a:7b:8d:
+                    22:6b:72:19:3c:ac:fe:db:99:61:64:2c:a0:28:f1:
+                    66:43:fc:86:57:4c:e2:d7:d3:d0:3e:4b:f9:4c:75:
+                    42:54:2b:07:98:02:25:4c:66:b6:96:b5:a1:d2:31:
+                    b0:65:8d:95:ca:a5:36:85:85:2e:df:8c:a1:bf:e9:
+                    d5:43:3a:a4:95:0d:9f:8b:07:5b:9d:d6:fc:c0:72:
+                    74:ca:c2:0d:f1:e6:fd:c4:cf:5f:87:a5:d8:1f:ce:
+                    57:0e:6d:c8:1e:54:37:d4:4f:c3:36:64:95:ce:ef:
+                    8c:db:c7:20:a2:ff:ab:c7:6d:8b:7d:c9:cf:8e:d4:
+                    4b:16:de:ff:72:2b:2c:0c:65:51:d1:16:83:a9:b1:
+                    89:8f:39:90:b6:19:45:db:ec:ba:07:22:67:89:84:
+                    0f:17:fd:b8:b3:dc:0c:7d:dc:c3:25:f5:d4:cb:80:
+                    80:18:4e:38:96:d7:a5:11:13:8c:aa:63:e2:04:e4:
+                    f5:81:4f:b3:a0:d2:cb:83:f5:e4:6a:ac:f1:80:3c:
+                    f5:3b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:90:AF:6A:3A:94:5A:0B:D8:90:EA:12:56:73:DF:43:B4:3A:28:DA:E7
+
+            X509v3 Subject Key Identifier: 
+                46:BE:41:DE:26:3F:F2:E4:F6:C1:10:22:4A:12:B4:A5:58:1B:BB:EB
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.6449.1.2.2.7
+                  CPS: https://secure.comodo.com/CPS
+                Policy: 2.23.140.1.2.1
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://crt.comodoca.com/COMODORSADomainValidationSecureServerCA.crt
+                OCSP - URI:http://ocsp.comodoca.com
+
+            X509v3 Subject Alternative Name: 
+                DNS:www.patriotvpn.com, DNS:patriotvpn.com
+    Signature Algorithm: sha256WithRSAEncryption
+         2a:96:25:49:8f:40:99:21:32:dc:34:c7:50:b1:2d:86:65:13:
+         b5:09:7c:97:47:7e:aa:be:26:ca:54:e0:cf:9b:fe:09:1f:9a:
+         76:a5:03:10:b3:82:52:24:5b:36:b8:77:be:40:dd:94:b7:d0:
+         83:a4:ae:84:72:7d:ca:ac:2d:40:80:5b:f8:00:0d:61:af:44:
+         4e:58:e1:27:1d:66:2b:9f:e9:89:0d:0c:95:b2:64:73:7b:e3:
+         04:8a:9f:2f:7c:f3:71:24:68:75:d0:88:aa:3c:ee:ed:9e:aa:
+         80:81:29:bf:5f:72:e8:12:8a:23:d2:99:24:13:32:f9:96:38:
+         f6:70:f8:16:59:35:a1:19:17:83:17:3b:61:e4:4c:1b:98:65:
+         4d:a7:a7:91:b2:fc:45:a9:77:be:e8:fa:b7:85:c5:b6:ec:2d:
+         5a:4d:0a:56:ff:17:56:55:96:54:3a:8e:41:95:c5:3c:81:56:
+         64:2f:f6:f7:3c:34:64:83:7e:ae:94:2e:57:cb:6f:23:d9:aa:
+         2f:4e:89:4f:fd:d9:33:68:8f:53:fa:6d:18:9c:e4:e9:8e:08:
+         f3:f7:65:46:4c:d5:e0:09:6c:5a:d7:65:74:03:01:a3:f7:65:
+         2d:c7:60:d9:f8:14:f6:f8:4e:26:2b:f9:ad:27:ea:e6:b0:04:
+         df:09:90:e0
+-----BEGIN CERTIFICATE-----
+MIIFUjCCBDqgAwIBAgIQP3m5cKaxzFhFLlWPCJ9egTANBgkqhkiG9w0BAQsFADCB
+kDELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxNjA0BgNV
+BAMTLUNPTU9ETyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD
+QTAeFw0xNTAzMDUwMDAwMDBaFw0xNjAzMDQyMzU5NTlaMFYxITAfBgNVBAsTGERv
+bWFpbiBDb250cm9sIFZhbGlkYXRlZDEUMBIGA1UECxMLUG9zaXRpdmVTU0wxGzAZ
+BgNVBAMTEnd3dy5wYXRyaW90dnBuLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALVuUVwYcRrQj7NmD+8Elts3rf0DTfgQuK/OcTA96etIrpr4mQUF
+YTjd4beFizdP7rdl9Fc0A5mUanuNImtyGTys/tuZYWQsoCjxZkP8hldM4tfT0D5L
++Ux1QlQrB5gCJUxmtpa1odIxsGWNlcqlNoWFLt+Mob/p1UM6pJUNn4sHW53W/MBy
+dMrCDfHm/cTPX4el2B/OVw5tyB5UN9RPwzZklc7vjNvHIKL/q8dti33Jz47USxbe
+/3IrLAxlUdEWg6mxiY85kLYZRdvsugciZ4mEDxf9uLPcDH3cwyX11MuAgBhOOJbX
+pRETjKpj4gTk9YFPs6DSy4P15Gqs8YA89TsCAwEAAaOCAd8wggHbMB8GA1UdIwQY
+MBaAFJCvajqUWgvYkOoSVnPfQ7Q6KNrnMB0GA1UdDgQWBBRGvkHeJj/y5PbBECJK
+ErSlWBu76zAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAU
+BggrBgEFBQcDAQYIKwYBBQUHAwIwTwYDVR0gBEgwRjA6BgsrBgEEAbIxAQICBzAr
+MCkGCCsGAQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8uY29tL0NQUzAIBgZn
+gQwBAgEwVAYDVR0fBE0wSzBJoEegRYZDaHR0cDovL2NybC5jb21vZG9jYS5jb20v
+Q09NT0RPUlNBRG9tYWluVmFsaWRhdGlvblNlY3VyZVNlcnZlckNBLmNybDCBhQYI
+KwYBBQUHAQEEeTB3ME8GCCsGAQUFBzAChkNodHRwOi8vY3J0LmNvbW9kb2NhLmNv
+bS9DT01PRE9SU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3J0MCQG
+CCsGAQUFBzABhhhodHRwOi8vb2NzcC5jb21vZG9jYS5jb20wLQYDVR0RBCYwJIIS
+d3d3LnBhdHJpb3R2cG4uY29tgg5wYXRyaW90dnBuLmNvbTANBgkqhkiG9w0BAQsF
+AAOCAQEAKpYlSY9AmSEy3DTHULEthmUTtQl8l0d+qr4mylTgz5v+CR+adqUDELOC
+UiRbNrh3vkDdlLfQg6SuhHJ9yqwtQIBb+AANYa9ETljhJx1mK5/piQ0MlbJkc3vj
+BIqfL3zzcSRoddCIqjzu7Z6qgIEpv19y6BKKI9KZJBMy+ZY49nD4Flk1oRkXgxc7
+YeRMG5hlTaenkbL8Ral3vuj6t4XFtuwtWk0KVv8XVlWWVDqOQZXFPIFWZC/29zw0
+ZIN+rpQuV8tvI9mqL06JT/3ZM2iPU/ptGJzk6Y4I8/dlRkzV4AlsWtdldAMBo/dl
+Lcdg2fgU9vhOJiv5rSfq5rAE3wmQ4A==
+-----END CERTIFICATE-----
