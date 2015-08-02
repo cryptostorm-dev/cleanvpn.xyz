@@ -1,0 +1,13 @@
+https://www.robtex.com/en/advisory/dns/com/patriotvpn/
+
+
+The IP addresses of the delegated name servers of patriotvpn.com (9 shown)
+5.135.128.216
+69.197.21.26
+72.20.38.137
+162.252.53.61
+173.245.58.17
+173.245.58.45
+173.245.59.16
+173.245.59.40
+184.171.163.92
