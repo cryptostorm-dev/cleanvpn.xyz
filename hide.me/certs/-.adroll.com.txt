@@ -1,0 +1,112 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            14:b2:be:5a:5b:28:12:b4:89:8f:b5:46:29:d2:ab:50:85:45:6f:dc
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=NL, L=Amsterdam, O=Verizon Enterprise Solutions, OU=Cybertrust, CN=Verizon Akamai SureServer CA G14-SHA1
+        Validity
+            Not Before: Feb  8 23:02:30 2015 GMT
+            Not After : Feb  8 23:02:27 2016 GMT
+        Subject: C=US, ST=CA, L=San Francisco, O=AdRoll.com, OU=Akamai Wildcard SSL, CN=*.adroll.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:fa:10:31:51:47:4c:c9:9e:1d:8b:fe:f7:d0:1a:
+                    e7:bb:f7:e6:0a:18:bd:fb:2d:d0:a0:d5:61:17:ff:
+                    31:8e:b2:94:40:09:03:fe:b7:65:b4:d4:a9:a1:9c:
+                    e5:64:f6:db:18:cc:de:14:56:fb:83:8e:71:b8:7d:
+                    4a:52:66:ac:5d:48:9a:28:c1:53:4f:37:98:64:f8:
+                    4a:57:30:30:1d:f9:c2:2f:d1:26:80:2b:cf:6f:8d:
+                    2b:1b:60:cd:ce:ac:8f:8a:4a:28:7c:f8:1a:97:37:
+                    61:d2:5c:bb:85:bc:a6:23:f8:21:77:c8:7f:a1:af:
+                    58:45:5d:0d:13:53:7f:b1:ec:91:c9:a3:68:f2:4f:
+                    35:df:1b:a5:a6:68:e3:a4:62:94:8a:1c:7d:82:bb:
+                    7b:91:a0:32:52:fd:7c:5c:73:c2:92:da:49:4e:03:
+                    22:12:8e:3e:96:ce:5e:32:51:87:12:ac:dd:c7:a0:
+                    53:36:ca:a4:da:04:05:e1:af:a4:fd:8f:66:69:2e:
+                    53:93:0a:7e:ec:ba:a7:9f:86:4f:36:99:b5:c1:e6:
+                    68:e3:bd:76:dd:a6:aa:41:83:6d:d6:df:04:2b:bc:
+                    81:3f:93:e9:6f:d7:dc:5f:2f:65:b4:05:b6:8a:70:
+                    e5:b0:e0:d0:8a:50:d7:9f:c6:5d:f0:d6:66:e5:2a:
+                    b2:3b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.6334.1.50
+                  CPS: https://secure.omniroot.com/repository
+
+            Authority Information Access: 
+                OCSP - URI:http://vassg141.ocsp.omniroot.com
+                CA Issuers - URI:https://cacert.a.omniroot.com/vassg141.crt
+                CA Issuers - URI:https://cacert.a.omniroot.com/vassg141.der
+
+            X509v3 Subject Alternative Name: 
+                DNS:*.adroll.com
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Authority Key Identifier: 
+                keyid:DD:6C:80:7C:BA:B5:32:17:A5:84:41:40:F0:D2:04:66:13:2F:A9:90
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://vassg141.crl.omniroot.com/vassg141.crl
+
+            X509v3 Subject Key Identifier: 
+                80:B4:09:4B:7B:73:40:B2:D6:8B:90:15:2A:85:FE:3B:69:62:C0:A3
+    Signature Algorithm: sha1WithRSAEncryption
+         58:f7:37:66:22:8d:0a:0f:f6:88:1a:d6:ef:57:5a:06:d5:db:
+         ab:4e:68:4b:40:c1:bb:d7:3b:af:a9:cf:6a:50:51:c2:b8:f5:
+         45:ce:a6:2a:1e:a0:85:32:3d:97:5b:e4:07:8a:45:57:50:df:
+         f5:80:11:90:36:b4:17:af:74:f4:48:fb:23:9f:6e:ef:b6:0a:
+         75:16:3f:73:1c:da:8c:93:50:bf:b3:c1:50:d0:62:d8:34:7e:
+         38:76:54:d0:9e:dc:d5:aa:8c:73:d1:60:f5:37:76:69:da:d7:
+         69:2f:af:3b:0e:ed:26:94:6a:99:97:21:a4:f6:ce:f1:74:b1:
+         ef:8d:63:c3:f3:0e:a6:ed:70:f1:e1:9b:1e:32:a9:58:ed:99:
+         9c:b5:85:15:cf:27:51:4f:e5:03:23:7b:33:cd:74:4c:67:ba:
+         b0:29:c0:cf:99:a0:ac:29:5f:dd:c1:64:ca:6b:05:be:0a:69:
+         5e:f3:ef:25:ee:a9:d4:43:ef:51:69:29:d8:8c:cd:72:8d:be:
+         65:ec:4f:79:90:2e:ce:3b:6e:af:75:1a:65:98:b3:98:09:89:
+         e7:17:9d:d9:31:de:cd:aa:19:64:05:2a:d0:d9:0d:ea:16:01:
+         c1:c7:20:8b:82:95:8b:76:49:b3:c9:db:b5:35:37:20:99:c5:
+         28:58:b8:ab
+
+
+-----BEGIN CERTIFICATE-----
+MIIFdDCCBFygAwIBAgIUFLK+WlsoErSJj7VGKdKrUIVFb9wwDQYJKoZIhvcNAQEF
+BQAwgY0xCzAJBgNVBAYTAk5MMRIwEAYDVQQHEwlBbXN0ZXJkYW0xJTAjBgNVBAoT
+HFZlcml6b24gRW50ZXJwcmlzZSBTb2x1dGlvbnMxEzARBgNVBAsTCkN5YmVydHJ1
+c3QxLjAsBgNVBAMTJVZlcml6b24gQWthbWFpIFN1cmVTZXJ2ZXIgQ0EgRzE0LVNI
+QTEwHhcNMTUwMjA4MjMwMjMwWhcNMTYwMjA4MjMwMjI3WjB8MQswCQYDVQQGEwJV
+UzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xEzARBgNVBAoT
+CkFkUm9sbC5jb20xHDAaBgNVBAsTE0FrYW1haSBXaWxkY2FyZCBTU0wxFTATBgNV
+BAMMDCouYWRyb2xsLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+APoQMVFHTMmeHYv+99Aa57v35goYvfst0KDVYRf/MY6ylEAJA/63ZbTUqaGc5WT2
+2xjM3hRW+4OOcbh9SlJmrF1ImijBU083mGT4SlcwMB35wi/RJoArz2+NKxtgzc6s
+j4pKKHz4Gpc3YdJcu4W8piP4IXfIf6GvWEVdDRNTf7HskcmjaPJPNd8bpaZo46Ri
+lIocfYK7e5GgMlL9fFxzwpLaSU4DIhKOPpbOXjJRhxKs3cegUzbKpNoEBeGvpP2P
+ZmkuU5MKfuy6p5+GTzaZtcHmaOO9dt2mqkGDbdbfBCu8gT+T6W/X3F8vZbQFtopw
+5bDg0IpQ15/GXfDWZuUqsjsCAwEAAaOCAdowggHWMAwGA1UdEwEB/wQCMAAwTAYD
+VR0gBEUwQzBBBgkrBgEEAbE+ATIwNDAyBggrBgEFBQcCARYmaHR0cHM6Ly9zZWN1
+cmUub21uaXJvb3QuY29tL3JlcG9zaXRvcnkwga8GCCsGAQUFBwEBBIGiMIGfMC0G
+CCsGAQUFBzABhiFodHRwOi8vdmFzc2cxNDEub2NzcC5vbW5pcm9vdC5jb20wNgYI
+KwYBBQUHMAKGKmh0dHBzOi8vY2FjZXJ0LmEub21uaXJvb3QuY29tL3Zhc3NnMTQx
+LmNydDA2BggrBgEFBQcwAoYqaHR0cHM6Ly9jYWNlcnQuYS5vbW5pcm9vdC5jb20v
+dmFzc2cxNDEuZGVyMBcGA1UdEQQQMA6CDCouYWRyb2xsLmNvbTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB8GA1UdIwQYMBaA
+FN1sgHy6tTIXpYRBQPDSBGYTL6mQMD4GA1UdHwQ3MDUwM6AxoC+GLWh0dHA6Ly92
+YXNzZzE0MS5jcmwub21uaXJvb3QuY29tL3Zhc3NnMTQxLmNybDAdBgNVHQ4EFgQU
+gLQJS3tzQLLWi5AVKoX+O2liwKMwDQYJKoZIhvcNAQEFBQADggEBAFj3N2YijQoP
+9oga1u9XWgbV26tOaEtAwbvXO6+pz2pQUcK49UXOpioeoIUyPZdb5AeKRVdQ3/WA
+EZA2tBevdPRI+yOfbu+2CnUWP3Mc2oyTUL+zwVDQYtg0fjh2VNCe3NWqjHPRYPU3
+dmna12kvrzsO7SaUapmXIaT2zvF0se+NY8PzDqbtcPHhmx4yqVjtmZy1hRXPJ1FP
+5QMjezPNdExnurApwM+ZoKwpX93BZMprBb4KaV7z7yXuqdRD71FpKdiMzXKNvmXs
+T3mQLs47bq91GmWYs5gJiecXndkx3s2qGWQFKtDZDeoWAcHHIIuClYt2SbPJ27U1
+NyCZxShYuKs=
+-----END CERTIFICATE-----
