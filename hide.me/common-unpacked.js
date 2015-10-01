@@ -1,5 +1,3 @@
-// https://www.hybrid-analysis.com/sample/5010b59e7f1430e298b1120201b195373b0cd800566caecae1188a52fc9ff8e7?environmentId=1
-
 ! function(a, b) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function(a) {
         if (!a.document) throw new Error("jQuery requires a window with a document");
