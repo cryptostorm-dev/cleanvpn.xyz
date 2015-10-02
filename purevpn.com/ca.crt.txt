@@ -1,0 +1,86 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 15901090780684045736 (0xdcac05d143e94da8)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=HK, ST=HK, L=HongKong, O=PureVPN, OU=IT, CN=PureVPN/name=PureVPN/emailAddress=mail@host.domain
+        Validity
+            Not Before: Apr 10 07:29:49 2014 GMT
+            Not After : Apr  7 07:29:49 2024 GMT
+        Subject: C=HK, ST=HK, L=HongKong, O=PureVPN, OU=IT, CN=PureVPN/name=PureVPN/emailAddress=mail@host.domain
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:96:2a:b5:49:10:4e:57:ff:a4:77:06:5e:eb:88:
+                    23:c4:b7:a5:f2:34:7f:01:5b:b3:b9:7f:d5:13:f7:
+                    9d:7d:e7:bf:5b:f2:ba:f2:e2:ee:1d:23:5a:c8:09:
+                    53:45:cc:ec:b2:72:c2:24:45:27:cc:ec:30:b1:fb:
+                    29:99:c8:83:b6:ec:71:be:74:19:8e:f9:58:8a:bb:
+                    0b:63:67:5a:79:d2:ef:3c:f2:08:29:b6:5c:3f:f6:
+                    c5:93:f2:9b:69:55:47:2b:69:9d:62:5b:a5:e9:92:
+                    4b:a1:dd:cf:bc:48:de:ad:85:9a:2c:6e:05:ad:6d:
+                    e4:57:8a:b1:77:de:68:61:a0:fa:88:70:2e:f6:a6:
+                    9c:61:c9:61:46:2e:dc:db:b4:11:65:73:cf:2e:70:
+                    81:3d:1c:d8:2e:63:95:e1:b1:97:79:31:46:29:83:
+                    f0:5a:67:94:05:5d:ab:2b:74:89:bf:df:7f:d5:da:
+                    9d:aa:2d:4a:8a:48:1d:46:66:a5:88:d3:fa:e7:51:
+                    0b:6f:a1:6a:b9:4d:2a:f3:97:62:00:d1:97:59:a9:
+                    8a:60:af:97:31:16:a5:90:28:f1:dc:81:0b:15:a5:
+                    c6:50:48:4f:c3:80:f2:b8:a6:1a:2d:57:be:29:27:
+                    b8:e9:56:bb:67:06:8b:5d:d4:83:c9:82:1b:43:23:
+                    39:0d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                B7:ED:6F:27:65:F6:86:8D:76:3D:40:E1:76:8D:82:B1:21:D8:5D:B6
+            X509v3 Authority Key Identifier: 
+                keyid:B7:ED:6F:27:65:F6:86:8D:76:3D:40:E1:76:8D:82:B1:21:D8:5D:B6
+                DirName:/C=HK/ST=HK/L=HongKong/O=PureVPN/OU=IT/CN=PureVPN/name=PureVPN/emailAddress=mail@host.domain
+                serial:DC:AC:05:D1:43:E9:4D:A8
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha1WithRSAEncryption
+         02:12:d0:42:69:0a:58:97:72:1a:a8:0c:48:a3:96:5d:22:8d:
+         d9:65:d3:0e:32:1d:6f:d6:ca:43:cb:87:7a:ad:0b:60:27:0f:
+         a1:18:7c:55:82:60:d9:7e:14:59:1f:ca:3b:da:4a:68:6f:a2:
+         64:9c:38:26:ac:f8:19:02:63:8c:92:ca:1d:fb:16:c2:3e:fd:
+         d1:ac:b4:ed:4e:4a:4f:4f:2a:9b:11:5a:c5:95:18:9f:ae:b7:
+         1f:d6:f4:f9:9b:9d:d6:ca:53:b1:32:63:55:ed:5e:a1:19:3a:
+         20:36:db:07:83:8c:53:33:7d:cf:25:84:9f:a7:ab:c6:2e:a5:
+         94:80:23:41:7d:6a:b6:50:50:6a:c9:93:01:b4:6d:6d:2b:02:
+         b1:90:31:2f:69:17:ca:c5:0b:21:d2:eb:40:fd:22:4e:03:10:
+         aa:a9:2f:e7:3b:e9:74:42:8d:dd:c8:8a:09:df:0e:1c:48:47:
+         3a:50:30:03:4f:c3:37:2d:dd:83:71:2d:d0:5d:a1:34:c0:c9:
+         86:a3:29:c5:7b:1b:2a:d1:89:fe:bc:c6:5d:01:76:81:e1:15:
+         cc:b6:40:a3:8d:88:d7:00:4e:49:92:d3:5f:57:ce:d6:09:77:
+         80:01:92:f5:a6:20:e6:8d:f5:ae:ba:41:2b:34:1e:c2:2b:49:
+         80:8b:9c:f9
+-----BEGIN CERTIFICATE-----
+MIIEoTCCA4mgAwIBAgIJANysBdFD6U2oMA0GCSqGSIb3DQEBBQUAMIGRMQswCQYD
+VQQGEwJISzELMAkGA1UECBMCSEsxETAPBgNVBAcTCEhvbmdLb25nMRAwDgYDVQQK
+EwdQdXJlVlBOMQswCQYDVQQLEwJJVDEQMA4GA1UEAxMHUHVyZVZQTjEQMA4GA1UE
+KRMHUHVyZVZQTjEfMB0GCSqGSIb3DQEJARYQbWFpbEBob3N0LmRvbWFpbjAeFw0x
+NDA0MTAwNzI5NDlaFw0yNDA0MDcwNzI5NDlaMIGRMQswCQYDVQQGEwJISzELMAkG
+A1UECBMCSEsxETAPBgNVBAcTCEhvbmdLb25nMRAwDgYDVQQKEwdQdXJlVlBOMQsw
+CQYDVQQLEwJJVDEQMA4GA1UEAxMHUHVyZVZQTjEQMA4GA1UEKRMHUHVyZVZQTjEf
+MB0GCSqGSIb3DQEJARYQbWFpbEBob3N0LmRvbWFpbjCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAJYqtUkQTlf/pHcGXuuII8S3pfI0fwFbs7l/1RP3nX3n
+v1vyuvLi7h0jWsgJU0XM7LJywiRFJ8zsMLH7KZnIg7bscb50GY75WIq7C2NnWnnS
+7zzyCCm2XD/2xZPym2lVRytpnWJbpemSS6Hdz7xI3q2FmixuBa1t5FeKsXfeaGGg
++ohwLvamnGHJYUYu3Nu0EWVzzy5wgT0c2C5jleGxl3kxRimD8FpnlAVdqyt0ib/f
+f9XanaotSopIHUZmpYjT+udRC2+harlNKvOXYgDRl1mpimCvlzEWpZAo8dyBCxWl
+xlBIT8OA8rimGi1XviknuOlWu2cGi13Ug8mCG0MjOQ0CAwEAAaOB+TCB9jAdBgNV
+HQ4EFgQUt+1vJ2X2ho12PUDhdo2CsSHYXbYwgcYGA1UdIwSBvjCBu4AUt+1vJ2X2
+ho12PUDhdo2CsSHYXbahgZekgZQwgZExCzAJBgNVBAYTAkhLMQswCQYDVQQIEwJI
+SzERMA8GA1UEBxMISG9uZ0tvbmcxEDAOBgNVBAoTB1B1cmVWUE4xCzAJBgNVBAsT
+AklUMRAwDgYDVQQDEwdQdXJlVlBOMRAwDgYDVQQpEwdQdXJlVlBOMR8wHQYJKoZI
+hvcNAQkBFhBtYWlsQGhvc3QuZG9tYWluggkA3KwF0UPpTagwDAYDVR0TBAUwAwEB
+/zANBgkqhkiG9w0BAQUFAAOCAQEAAhLQQmkKWJdyGqgMSKOWXSKN2WXTDjIdb9bK
+Q8uHeq0LYCcPoRh8VYJg2X4UWR/KO9pKaG+iZJw4Jqz4GQJjjJLKHfsWwj790ay0
+7U5KT08qmxFaxZUYn663H9b0+Zud1spTsTJjVe1eoRk6IDbbB4OMUzN9zyWEn6er
+xi6llIAjQX1qtlBQasmTAbRtbSsCsZAxL2kXysULIdLrQP0iTgMQqqkv5zvpdEKN
+3ciKCd8OHEhHOlAwA0/DNy3dg3Et0F2hNMDJhqMpxXsbKtGJ/rzGXQF2geEVzLZA
+o42I1wBOSZLTX1fO1gl3gAGS9aYg5o31rrpBKzQewitJgIuc+Q==
+-----END CERTIFICATE-----
