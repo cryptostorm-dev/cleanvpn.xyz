@@ -1,0 +1,417 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="rLAE_KoiOMv3DglW1_PMvdwwNnXOkHQgYDXcqkSi4tM" />
+        <title>PureVPN Debian Command Line – How To Setup PureVPN on Linux</title>
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="pingback" href="http://support.purevpn.com/xmlrpc.php" />
+        <link rel="shortcut icon" href="http://support.purevpn.com/wp-content/themes/helpguru/favicon.png">
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKNWDV"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WKNWDV');</script>
+        <!-- End Google Tag Manager -->
+
+        
+<!-- All in One SEO Pack 2.2.7.2 by Michael Torbert of Semper Fi Web Design[330,418] -->
+<meta name="description" itemprop="description" content="Here’s a simple tutorial on How To Setup PureVPN thorough PureVPN Debian Command Line. Linux users should follow it to install PureVPN" />
+
+<meta name="keywords" itemprop="keywords" content="purevpn debian command line" />
+<meta name="robots" content="index,follow,noodp" />
+
+<link rel="canonical" href="http://support.purevpn.com/command-line-setup-in-debian-linux" />
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="PureVPN Support &raquo; Feed" href="http://support.purevpn.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="PureVPN Support &raquo; Comments Feed" href="http://support.purevpn.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="PureVPN Support &raquo; Command Line Setup in Debian Linux Comments Feed" href="http://support.purevpn.com/command-line-setup-in-debian-linux/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/support.purevpn.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ht-theme-style-css'  href='http://support.purevpn.com/wp-content/themes/helpguru/css/style.css?ver=4.3.1' type='text/css' media='all' />
+<style id='ht-theme-style-inline-css' type='text/css'>
+a, a:visited, .bbp-author-name { color: #32a3cb; } a:hover { color: #32a3cb; } #site-header { background: #ffffff; } @media screen and (max-width: 720px) { #nav-primary-menu { background: #ffffff; } } #site-header, #site-header a, #site-header a:visited, #site-header a:hover { //color:#000000 !important; } #page-header { background: #30c1dd; } #page-header, #page-header a, #page-header a:visited, #page-header a:hover, #page-header #page-header-title { color:#ffffff; } #page-header #page-header-tagline { color:rgba(255,255,255,0.9); } #ht-site-container.ht-layout-boxed { max-width: 1200px; box-shadow: 0 0 55px rgba(0,0,0,0.15); }
+</style>
+<link rel='stylesheet' id='ht-kb-css'  href='http://support.purevpn.com/wp-content/themes/helpguru/css/ht-kb.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ht-google-font-css'  href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://support.purevpn.com/wp-content/themes/helpguru/inc/ht-core/libraries/font-awesome/css/font-awesome.min.css?ver=4.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://support.purevpn.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://support.purevpn.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://support.purevpn.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.1" />
+<link rel='shortlink' href='http://support.purevpn.com/?p=786' />
+<script type="text/javascript">
+  var __lc = {};
+  __lc.license = 4454601;
+
+  (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+</script><!--[if lt IE 9]><script src="http://support.purevpn.com/wp-content/themes/helpguru/inc/ht-core/js/html5.js"></script><![endif]--><!--[if (gte IE 6)&(lte IE 8)]><script src="http://support.purevpn.com/wp-content/themes/helpguru/inc/ht-core/js/selectivizr-min.js"></script><![endif]-->    </head>
+<body class="single single-ht_kb postid-786 single-format-standard chrome" itemtype="http://schema.org/WebPage" itemscope="itemscope">
+
+<!-- #ht-site-container -->
+<div id="ht-site-container" class="clearfix ht-layout-fullwidth">
+
+    <!-- #header -->
+    <header id="site-header" class="clearfix" role="banner" itemtype="http://schema.org/WPHeader" itemscope="itemscope">
+    <div class="ht-container clearfix">
+
+    <!-- #logo -->
+    <div id="logo">
+        <a title="PureVPN Support" href="http://support.purevpn.com">
+            <img alt="PureVPN Support" src="http://phpstack-271-15777-36599.cloudwaysapps.com/wp-content/uploads/2015/05/logo-5.png" />
+                        </a>
+    </div>
+    <!-- /#logo -->
+
+            <!-- #primary-nav -->
+        <nav id="nav-primary" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope">
+            <button id="ht-nav-toggle"><span>Menu</span></button>
+            <div id="nav-primary-menu" class="menu-primary-nav-container"><ul id="menu-primary-nav" class=""><li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-179"><a href="http://support.purevpn.com/">Home</a></li>
+<li id="menu-item-2500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2500"><a href="http://support.purevpn.com/knowledge-base/">Knowledge Base</a></li>
+<li id="menu-item-2498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2498"><a href="http://www.purevpn.com/blog/">Blog</a></li>
+<li id="menu-item-2495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2495"><a href="http://www.purevpn.com/order/">Pricing</a></li>
+<li id="menu-item-2496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2496"><a href="http://www.purevpn.com/download.php">Download</a></li>
+<li id="menu-item-181" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181"><a href="https://billing.purevpn.com/clientarea.php">Client Area Login</a></li>
+<li id="menu-item-2494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2494"><a href="http://billing.purevpn.com/submitticket.php">Support Ticket</a></li>
+</ul></div>        </nav>
+        <!-- /#primary-nav -->
+    
+    </div>
+    </header>
+    <!-- /#header -->
+
+
+
+<!-- #page-header -->
+<section id="page-header" class="clearfix   ph-align-center ph-large">
+<div class="ht-container">
+	
+    <h2 id="page-header-title">All the Help & Support You Need to Use PureVPN </h2>    
+			<div id="ht-kb-search" class="clearfix">
+	  				<div class="ht-kb-article-search">
+			<form role="search" method="get" id="searchform" class="searchform" action="http://support.purevpn.com/">
+				<label class="screen-reader-text" for="s">Search for:</label>
+				<input type="text" value="" placeholder="Search the Knowledge Base" name="s" id="s" autocomplete="off" />
+				<input type="hidden" name="ht-kb-search" value="1" />
+				<button type="submit" id="searchsubmit"> <i class="fa fa-search"></i> <!--span>Search</span--> </button>
+		</form>
+		</div>
+			  	</div>
+	</div>
+
+<div class="pg-hdr-btm">
+	Can’t find what you are looking for?<a target="_blank" href="https://secure.livechatinc.com/licence/4454601/open_chat.cgi">LIVE CHAT SUPPORT</a>
+</div>
+</section>
+<!-- /#page-header -->
+
+<!-- #page-header-breadcrumbs -->
+<!-- /#page-header -->
+<!-- #primary -->
+<!--div id="primary" class="sidebar-right clearfix"-->
+<div id="primary" class="clearfix">
+<div class="ht-container">
+<div class="page-wrap">
+<!-- #content -->
+<main id="content" role="main" itemprop="mainContentOfPage">
+
+<!-- #ht-kb -->
+<div id="ht-kb" class="ht-kb-single">
+
+
+
+	
+	<article id="post-786" class="post-786 ht_kb type-ht_kb status-publish format-standard hentry ht_kb_category-getting-started" itemtype="http://schema.org/CreativeWork" itemscope="itemscope">
+
+		<!-- .entry-header -->
+		<header class="entry-header">
+
+		
+			<h1 class="entry-title" itemprop="headline">
+				Command Line Setup in Debian Linux			</h1>
+
+													
+			<ul class="ht-kb-entry-meta clearfix">
+
+				<li class="ht-kb-em-date"> 
+				    <span>Created</span>
+				    <a href="http://support.purevpn.com/command-line-setup-in-debian-linux" rel="bookmark" itemprop="url"><time datetime="2014-07-07" itemprop="datePublished">July 7, 2014</time></a>
+				</li>
+				<li class="ht-kb-em-author">
+					<span>Author</span>
+					<a class="url fn n" href="http://support.purevpn.com/author/admin" title="admin" rel="me" itemprop="author">admin</a>
+				</li>
+									<li class="ht-kb-em-category">
+					    <span>Category</span>
+					     <a href="http://support.purevpn.com/article-categories/getting-started" rel="tag">Getting Started</a>					</li>
+								
+			</ul>
+
+					
+				    
+		</header>
+		<!-- /.entry-header -->
+
+		<!-- .entry-content -->
+		<div class="entry-content clearfix" itemprop="text">
+			<p>#install the PPTP software</p>
+<blockquote><p>apt-get install pptp-linux</p></blockquote>
+<p>#edit /etc/ppp/chap-secrets</p>
+<blockquote><p>vi /etc/ppp/chap-secrets</p></blockquote>
+<p>and insert the following:</p>
+<blockquote><p>Username PPTP Password *</p></blockquote>
+<p># replace Username with your PureVPN username<br />
+# replace Password with your PureVPN password</p>
+<p>#create /etc/ppp/peers/pure-us7 with something like the following:</p>
+<blockquote><p>vi /etc/ppp/peers/pure-us7</p></blockquote>
+<p>and add tthe following details:</p>
+<blockquote>
+<pre>pty "pptp us7.purevpn.net --nolaunchpppd"
+ name purevpnXXXX
+ remotename PPTP
+ file /etc/ppp/options.pptp
+ require-mppe-128
+ refuse-eap noauth</pre>
+</blockquote>
+<p>Adding a route to the routing table</p>
+<p>To automatically add an entry whenever a VPN connection is established create and edit the /etc/ppp/ip-up.d/pure-us7-route</p>
+<blockquote><p>vi /etc/ppp/ip-up.d/pure-us7-route</p></blockquote>
+<p>Add the following content</p>
+<blockquote><p>#!/bin/bash<br />
+route add -net 10.0.0.0/8 dev ppp0</p></blockquote>
+<p>Make the file executable</p>
+<blockquote><p>chmod +x /etc/ppp/ip-up.d/pure-us7-route</p></blockquote>
+<p>Now Connect VPN:</p>
+<blockquote><p>pppd call pure-us7</p></blockquote>
+<p>To check the logs run this command:</p>
+<blockquote><p>tail -f /var/log/messages</p></blockquote>
+<p><span style="box-sizing: border-box; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 25px; color: #ff0000;"><strong style="box-sizing: border-box;">Caution:</strong></span><span style="box-sizing: border-box; color: #4b4d4d; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 25px;"> If you are looking for higher security, then please follow this </span><a style="box-sizing: border-box; text-decoration: none; outline: 0px; -webkit-transition: color 0.15s ease-out; transition: color 0.15s ease-out; color: #32a3cb; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 25px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;" href="http://support.purevpn.com/how-to-disable-ipv6-linuxubuntu">guide to disable your IPv6</a></p>
+								<div class="tags">
+					</div>
+				</div>
+		<!-- /.entry-content -->
+
+		
+							<section id="ht-kb-rate-article">
+			
+				<h3 id="ht-kb-rate-article-title">Rate This Article</h3>
+								<div class="ht-voting" id ="ht-voting-post-786">
+															<div class="ht-voting-links ht-voting-none">
+					<a class="ht-voting-upvote enabled" data-direction="up" data-type="post" data-nonce="d069fcf916" data-id="786" data-allow="anon" data-display="standard" href="javascript:void(0)">Helpful</a>
+					<a class="ht-voting-downvote enabled" data-direction="down" data-type="post" data-nonce="d069fcf916" data-id="786" data-allow="anon" data-display="standard" href="javascript:void(0)">Not Helpful</a>
+				</div>
+                <!--
+				<div class="ht-voting-how-helpful" id="how-helpful-">
+					()
+				</div>-->
+			
+							</div><!-- /ht-voting -->
+						</section>
+		
+		
+		
+	
+<div id="disqus_thread">
+    </div>
+
+	 
+	</article>	
+
+
+</div>
+<!-- /#ht-kb -->
+
+</main>
+<!-- /#content -->
+
+</div>
+<!-- /.page-wrap -->
+</div>
+</div>
+<!-- /#primary -->
+
+<!-- #site-footer-widgets -->
+<!-- /#site-footer -->
+
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/plugins/ht-knowledge-base/js/jquery.livesearch.js?ver=4.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var framework = {"liveSearchUrl":"http:\/\/support.purevpn.com\/?ajax=1&ht-kb-search=1&s="};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/plugins/ht-knowledge-base/js/ht-kb-livesearch.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/themes/helpguru/js/functions.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-includes/js/comment-reply.min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/themes/helpguru/inc/ht-core/js/jquery-picture-min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/themes/helpguru/inc/ht-core/js/jquery.appear.js?ver=4.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var voting = {"log_in_required":"You must be logged in to vote on this","ajaxurl":"http:\/\/support.purevpn.com\/wp-admin\/admin-ajax.php","ajaxnonce":"4f3d6d5cd3"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/plugins/ht-voting/js/ht-voting-frontend-script.js?ver=1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.3.1","language":""},"disqusIdentifier":"786 http:\/\/dev.support-purevpn.com\/?p=786","disqusShortname":"supportpurevpn","disqusTitle":"Command Line Setup in Debian Linux","disqusUrl":"http:\/\/support.purevpn.com\/command-line-setup-in-debian-linux","options":{"manualSync":false},"postId":"786"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"supportpurevpn"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://support.purevpn.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.3.1'></script>
+
+</div>
+<!-- /#site-container -->
+
+
+<script>
+   /* $ = jQuery;
+
+    jQuery(document).ready(function() {
+        //jQuery('.ftr-nav > .sub-menu').hide();
+
+        jQuery(".ftr-nav > h2").click(function () {
+            console.log($(this).find("ul"));
+            $(this).find("ul").hide();
+            var that = this;
+             var obj = $(this).closest(".menu-item-has-children");
+             var widget = $(this).closest(".menu");
+             $(obj).removeClass("current");
+
+             if($(obj).find(".sub-menu").hasClass("open")) {
+             $(obj).find(".sub-menu").slideUp().removeClass("open");
+             $(obj).removeClass("current");
+             } else {
+             $(widget).find(".open").slideUp().removeClass("open").closest(".menu-item-has-children").removeClass("current");
+             $(obj).find(".sub-menu").slideDown().addClass("open");
+             $(obj).addClass("current");
+             }
+            return false;
+
+        });
+    });*/
+   $(function() {
+           $( "#accordion" ).accordion();
+       });
+
+ </script>
+<div id="footer">
+   <div id="ftr-wrap" class="ht-container">
+      <div class="ftr-nav">
+         <h2>Company</h2>
+         <ul class="accordion">
+            <li><a href="http://www.purevpn.com/company.php">About us</a></li>
+            <li><a href="http://www.purevpn.com/news_events.php">Latest News</a></li>
+            <li><a href="http://www.purevpn.com/sitemap.php">Sitemap</a></li>
+            <li><a href="http://www.purevpn.com/blog/">Blog</a></li>
+            <li><a href="http://www.purevpn.com/affiliate/vpn-affiliate.php">Affiliate Program</a></li>
+            <li><a href="http://www.purevpn
+            com/rs/">White Label Resellers</a></li>
+         </ul>
+      </div>
+      <div class="ftr-nav">
+         <h2>Links</h2>
+         <ul class="accordion">
+            <li><a href="http://www.purevpn.com/privacy-policy.php">Privacy Policy</a></li>
+            <li><a href="http://www.purevpn.com/refund-policy.php">Refund Policy</a></li>
+            <li><a href="http://www.purevpn.com/term-of-affiliate.php">Affiliate Policy</a></li>
+            <li><a href="http://www.purevpn.com/term.php">Terms of Usage</a></li>
+            <li><a href="http://www.purevpn.com/contact_us.php">Email us</a></li>
+            <li><a href="http://billing.purevpn.com/submitticket.php" target="_blank">Support Ticket</a></li>
+            <!--li><a href="http://support.purevpn.com/">FAQs</a></li>
+            <li><a href="http://forum.purevpn.com/" target="_blank">Forum</a></li-->
+         </ul>
+      </div>
+      <div class="ftr-nav">
+         <h2>Popular Links</h2>
+         <ul class="accordion">
+            <li><a href="http://www.purevpn.com/why-purevpn.php">Why PureVPN</a></li>
+            <li><a href="http://www.purevpn.com/benefits.php">VPN Benefits</a></li>
+            <li><a href="http://www.purevpn.com/how-to-unblock-sites.php">How to Unblock Sites</a></li>
+            <li><a href="http://www.purevpn.com/usa-vpn-services.php">USA VPN</a></li>
+            <li><a href="http://www.purevpn.com/uk-vpn-services.php">UK VPN</a></li>
+            <li><a href="http://www.purevpn.com/vpn-app-for-android.php">VPN for Android</a></li>
+            <li><a href="http://www.purevpn.com/vpn-app-for-ios.php">VPN for iPhone (IOS)</a></li>
+            <li><a href="http://www.purevpn.com/australia-vpn-service.php">Australia VPN</a></li>
+            <li><a href="http://www.purevpn.com/router-vpn.php">VPN for Router</a></li>
+            <li><a href="http://www.purevpn.com/blog/remote-access-vpn">Remote Access VPN</a></li>
+         </ul>
+      </div>
+      <div class="ftr-nav">
+         <h2>Tutorials</h2>
+         <ul class="accordion">
+            <li><a href="http://www.purevpn.com/tutorials.php">All Tutorials</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_1#section_1">Windows</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_2#section_2">Mac</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_3#section_3">Linux</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_10#section_10">HP WebOS</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_5#section_5">Android</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_4#section_4">iPhone, iPod, iPad</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_8#section_8">BlackBerry</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_12#section_12">Boxee Box</a></li>
+            <li><a href="http://www.purevpn.com/tutorials.php?section=section_7#section_7">DD-WRT Router</a></li>
+         </ul>
+      </div>
+      <div class="ftr-nav">
+         <h2>Free Download</h2>
+         <ul class="accordion">
+            <li><a href="http://www.purevpn.com/vpn-software-for-windows.php">Windows VPN</a></li>
+            <li><a href="http://www.purevpn.com/vpn-software-for-mac.php">Mac VPN</a></li>
+            <li><a href="http://www.purevpn.com/vpn-app-for-android.php">Android VPN</a></li>
+            <li><a href="http://www.purevpn.com/vpn-app-for-ios.php">iPhone VPN</a></li>
+         </ul>
+      </div>
+      <div class="hm_mcf" style="margin-top: -52px;"> <a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=purevpn.com"> <img width="115" height="32" border="0" src="//images.scanalert.com/meter/billing.purevpn.com/61.gif" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams"> </a> </div>
+      <div class="ftr-nav">
+         <h2>Connect to PureVPN</h2>
+         <ul class="ftr-social">
+            <li><a href="http://www.facebook.com/PureVPNcom" class="ftr-fb hide_text" target="_blank">Facebook</a></li>
+            <li><a href="http://twitter.com/purevpn" class="ftr-twt hide_text" target="_blank">Twitter</a></li>
+            <li><a href="http://www.youtube.com/purevpn" class="ftr-you hide_text" target="_blank">YouTube</a></li>
+            <li><a name="hong kong" href="https://plus.google.com/+Purevpncom" class="ftr-gpl hide_text" target="_blank">Google+</a></li>
+         </ul>
+      </div>
+      <!-- <br class="glb-clear" /> --> <!-- <br clear="all" /> --> <br class="glb-clear"> 
+   </div>
+   <div class="ftr-btm">
+      <div class="ht-container">
+         <div class="glb-fleft">© 2007 - 2014 PureVPN All Rights Reserved</div>
+         <div class="glb-fright">Company Registration No: 1544568</div>
+      </div>
+   </div>
+</div>
+</body>
+</html>
